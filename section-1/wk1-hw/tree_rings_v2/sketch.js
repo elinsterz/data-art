@@ -20,7 +20,7 @@ function setup() {
   loadJSON('HemlockData.json', callback);
 
   createCanvas(windowWidth, windowHeight);
-  background(210);
+  //background(238,232,221);
 }
 
 function callback(data) {
@@ -52,16 +52,22 @@ function draw() {
 //basic ring graph
 function drawViz() {
   for (let i = 0; i < treedata.length; i++) {
-    let ringSize = map(treedata[i]['RawRingWidth_mm'], 0, 1.5, 25, 400);
+    let ringSize = map(treedata[i]['RawRingWidth_mm'], 0, 1.5, 1, 900);
+
     push();
-    translate(width / 2, height / 2);
-    stroke(0, 30);
-    noFill();
-    ellipse(0, 0, ringSize);
+
+    let yPos = map(treedata[i]['year'], 1579, 2000, 25, windowHeight-25);
+    textSize(11);
+    textAlign(CENTER);
+    text(treedata[i]['year'], 25, yPos);
+
     pop();
   }
 }
 
-function textViz(){
 
+
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
