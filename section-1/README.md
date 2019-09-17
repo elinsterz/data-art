@@ -2,9 +2,6 @@
 
 * https://emilylin-itp.github.io/data-art/section-1/wk1-hw/tree_rings_line/index.html
 <br/><br/>
-  
 * https://emilylin-itp.github.io/data-art/section-1/wk1-hw/tree_rings_ellipse/index.html
-
 <br/><br/>
-  
 * https://emilylin-itp.github.io/data-art/section-1/wk1-hw/tree_rings_bargraph/index.html
