@@ -1,0 +1,108 @@
+@font-face {
+    font-family:'Ogg-Roman';
+    src: url('fonts/Ogg-Roman.eot');
+    src: url('fonts/Ogg-Roman.ttf');
+    format('truetype');
+}
+
+@font-face {
+    font-family:'agipo_bold_condensed';
+    src: url('fonts/agipo_bold_condensed.eot');
+    src: url('fonts/agipo_bold_condensed.ttf');
+    format('truetype');
+}
+
+/* FOR BREAKPOINTS - not working rn tho 
+@media only screen and (max-width: 400px) {
+    .col-6 {
+      clear: clear;
+      width: 100%;
+    }
+
+    .col-2 {
+        width: 100%;
+        width:auto;
+      }
+  }*/ 
+
+
+html, body{
+    background-color: #002B9C !important;
+    box-sizing: border-box;
+}
+
+/* div{
+    outline: 1px red solid;
+} */
+
+.container{
+    padding: 2%;
+}
+
+/* NAVBAR */
+#navbar-holder{
+    align-items: center;
+    font-family: 'agipo_bold_condensed';
+    text-transform: uppercase;
+    font-size: 11pt;
+    z-index: 2;
+}
+
+
+.col-6{
+    text-align: left;
+}
+
+.col{
+    text-align: right;
+}
+
+#a-daily, #a-overview, #a-analysis{
+    text-align: right;
+    padding-top: 5%;
+    color: #C3D4DD;
+    text-decoration: none;
+}
+
+#a-index{
+    padding-top: 5%;
+    color: #C3D4DD;
+    text-align: left;
+    text-decoration: none;
+}
+
+#a-daily:hover, #a-index:hover, #a-overview:hover, #a-analysis:hover {
+    color:#C3D4DD33; /* 50% opacity */
+}
+
+/* NAVBAR HR */
+.nav-hr{
+    border-top: 1pt #C3D4DD; 
+    border-style: dotted;
+    /* border-radius: 1px; */
+}
+
+
+/* HOME TITLE */
+#title-div{
+    margin: 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+}
+
+#home-title{
+    font-family: 'Ogg-Roman';
+    font-size: 36vw;
+    color: #C3D4DD;
+    text-align: center;
+    letter-spacing: 7pt;
+}
+
+audio{
+    bottom: 0px;
+    left: 0px;
+}
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A Week of Sorry</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <!--JS-->
+    <script src="main.js"></script>
+
+    <div class='container'>
+        <!--NAVBAR-->
+        <nav id="navbar-holder" class='row align-items-start'>
+            <div id='nav-home' class='col-6'>
+                <p><a id='a-index' href ="index.html">A Week of Sorry</a></p>
+            </div>
+
+            <div class='col'>
+                <p><a id='a-daily' href="daily.html">Daily</a></p>
+            </div>
+
+            <div class='col'>
+                <p><a id='a-overview' href="overview.html">Overview</a></p>
+            </div>
+
+            <div class='col'>
+                <p><a id='a-analysis' href="analysis.html">Analysis</a></p>
+            </div>
+        </nav>
+
+        <!--HR UNDERNEATH NAVBAR-->
+        <div><hr class = "nav-hr"></div>
+
+        <div class='row justify-content center'>
+            <div id='title-div' class='col-12 col md-8'>
+
+                <!--Sorry title-->
+                <h1 id='home-title'>sorry</h1>
+
+            </div>
+        </div>
+    </div>
+    <!--Audio-->
+    <audio controls>
+        <source src="viper.mp3" type="audio/mp3">
+        <source src="viper.ogg" type="audio/ogg">
+        <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a>
+            instead.
+        </p>
+    </audio>
+</body>
+
+</html>
