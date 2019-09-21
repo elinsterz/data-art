@@ -72,22 +72,11 @@ request.onload = function () {
         console.log(sorryWed);
         console.log(sorryThu);
 
-        forwardDates();
+        //gets me the why of index 0 of Friday
+        console.log("why: " + sorryFri[0].why);
+
         backwardDates();
-
-        //when mouse is on the date or arrow, change hover colors
-        // dateArrow = document.getElementById("date-arrow");
-        // dateArrow.addEventListener("mouseover", hoverColor);
-
-
-        // dateArrow.addEventListener('click', () => {
-        //     clearDiv();
-        //     addDivDays(sorrySat);
-        // });
-
-
-
-
+        forwardDates();
 
     } else {
         // We reached our target server, but it returned an error
@@ -104,80 +93,17 @@ request.send();
 
 
 
-////////////////*  FUNCTIONS *////////////////
+////////////////////////*  FUNCTIONS *////////////////////////
 
-
-//CLEAR SORRY'S OF THAT DIV
-function clearDiv() {
-    let sorryDateDiv = document.getElementById("date");
-    document.getElementById(sorryDateDiv.innerHTML = "");
-
-    let sorryCountIndexDiv = document.getElementById("sorry-count-index");
-    document.getElementById(sorryCountIndexDiv.innerHTML = "");
-}
-
-
-//TEMPLATE FUNCTION FOR ALL DAYS: ADD DIV BASED OF ARR LENGTH
-function addDivDays(day) {
-
-    //put sorryFri data into friArray
-    let dayArr = day;
-    let sorryDate = (dayArr[0].date);
-
-    // console.log('day:' + day);
-    // console.log('sorryDate: ' + sorryDate);
-    // console.log(day.length);
-
-    //get date html, add friday date to html
-    let sorryDateDiv = document.getElementById("date");
-    sorryDateDiv.innerHTML = sorryDate;
-
-    let sorryCountIndexDiv = document.getElementById("sorry-count-index");
-
-    //for loop to add a div with sorry for each friday array
-    for (let i = 0; i < day.length; i++) {
-        let h2 = document.createElement("h2");
-        h2.innerHTML = 'sorry';
-        // console.log(h2);
-        sorryCountIndexDiv.appendChild(h2);
-    }
-}
-
-
-//ADD FRI DIV BASED OF ARR LENGTH
-function friAddDiv() {
-
-    //put sorryFri data into friArray
-    let friArr = sorryFri;
-    let friDate = (friArr[0].date);
-    console.log('friArr:' + friArr);
-    console.log(friArr.length);
-    console.log(friDate);
-
-    //get date html, add friday date to html
-    let sorryDateDiv = document.getElementById("date");
-    sorryDateDiv.innerHTML = friDate;
-
-    let sorryCountIndexDiv = document.getElementById("sorry-count-index");
-    let sorryCountHolder = document.getElementById("sorry-count-holder");
-    //for loop to add a div with sorry for each friday array
-    for (let i = 0; i < friArr.length; i++) {
-        let h2 = document.createElement("h2");
-        h2.innerHTML = 'sorry';
-        // console.log(h2);
-        sorryCountIndexDiv.appendChild(h2);
-    }
-}
-
-
+//////////* GOING FORWARD IN DATES *///////
 function forwardDates() {
 
     //gives you day of week
     console.log(sorryFri[0].day);
 
+    clearDiv(sorryFri);
     addDivDays(sorryFri);
 
-    //////////* GOING FORWARD IN DATES *///////
     let dateRightArrow = document.getElementById("date-right-arrow");
 
     //compare json index with inner html, if same do function
@@ -247,7 +173,7 @@ function forwardDates() {
     }
 }
 
-
+//////////* GOING BACKWARD IN DATES *///////
 function backwardDates() {
 
     //gives you day of week
@@ -324,6 +250,124 @@ function backwardDates() {
         });
     }
 }
+
+
+//CLEAR SORRY'S OF THAT DIV
+function clearDiv() {
+    let sorryDateDiv = document.getElementById("date");
+    document.getElementById(sorryDateDiv.innerHTML = "");
+
+    let sorryCountIndexDiv = document.getElementById("sorry-count-index");
+    document.getElementById(sorryCountIndexDiv.innerHTML = "");
+}
+
+
+//TEMPLATE FUNCTION FOR ALL DAYS: ADD DIV BASED OF ARR LENGTH
+function addDivDays(day) {
+
+    //put sorryFri data into friArray
+    let dayArr = day;
+    let sorryDate = (dayArr[0].date);
+
+    // console.log('day:' + day);
+    // console.log('sorryDate: ' + sorryDate);
+    // console.log(day.length);
+
+    //get date html, add friday date to html
+    let sorryDateDiv = document.getElementById("date");
+    sorryDateDiv.innerHTML = sorryDate;
+
+    //get length of array for that day
+    let sorryLength = (dayArr.length);
+    console.log('sorry length: ' + sorryLength);
+
+    //var for all the getElements
+    let sorryCountIndexDiv = document.getElementById("sorry-count-index");
+    let sorryInfoIndex = document.getElementById('sorry-info-index');
+    let sorryInfoP = document.getElementById('sorry-info-p');
+
+    //put the total amount of sorry in "sorry-info-p" div
+    sorryInfoIndex.innerHTML = "I said sorry " + sorryLength + " times today";
+
+    //hide sorry info p and hr
+    sorryInfoP.style.visibility = "hidden";
+
+    let sorryInfoLoc = document.getElementById('sorry-info-location');
+    sorryInfoLoc.style.visibility = "hidden";
+
+    //for loop to add a div with sorry for each friday array
+    for (let i = 0; i < day.length; i++) {
+
+        //example stack overflow of how to set attribute to element created
+        // g = document.createElement('div');
+        // g.setAttribute("id", "Div1");
+
+        let h2 = document.createElement("h2");
+        h2.innerHTML = 'sorry';
+
+        h2.setAttribute("id", "head" + i)
+        sorryCountIndexDiv.appendChild(h2);
+        console.log(h2);
+
+        //get why
+        console.log("why:" + day[i].why);
+        //get time 
+        console.log("time:" + day[i].time);
+
+        //assign sorryH2 as attribute for each h2 
+        let sorryH2 = document.getElementById('head' + i);
+        console.log('head' + i);
+        console.log(sorryH2);
+
+        sorryH2.addEventListener('mouseover', hoverShowInfo);
+        sorryH2.addEventListener('mouseout', hideInfo)
+
+        function hoverShowInfo() {
+            let sorryInfoP = document.getElementById('sorry-info-p');
+            let sorryInfoIndex = document.getElementById('sorry-info-index');
+            let sorryInfoLoc = document.getElementById('sorry-info-location');
+
+            // console.log(h2Index);
+            console.log('mouseon working!');
+
+            //show visibility, show why data
+            sorryInfoP.style.visibility = "visible";
+            sorryInfoP.innerHTML = day[i].why;
+
+            //show visibility, show location data
+            sorryInfoLoc.style.visibility = "visible";
+            sorryInfoLoc.innerHTML = day[i].where;
+
+            //show, show why data
+            sorryInfoP.style.visibility = "visible";
+
+            //change color of sorry to be blue
+            sorryH2.style.color = "#002B9C";
+
+            //change time
+            sorryInfoIndex.innerHTML = day[i].time;
+
+        }
+
+        function hideInfo() {
+            //change color of sorry to be gray again
+            sorryH2.style.color = "#818181";
+            sorryInfoP.style.visibility = "hidden";
+            sorryInfoLoc.style.visibility = "hidden";
+
+            //put the total amount of sorry in "sorry-info-p" div
+            sorryInfoIndex.innerHTML = "I said sorry " + sorryLength + " times today";
+        }
+
+        // PSUEDO FOR WHEN MOUSEISON A SPECIFIC SORRY 
+        //1. when mouseon sorry of a specific index on x date
+        //2. show time in "sorry-info-index"
+        //3. show why in "sorry-info-p"
+
+
+    }
+}
+
 
 
 
@@ -419,3 +463,40 @@ function backwardDates() {
 //         friAddDiv();
 //     });
 // }
+
+// dateArrow.addEventListener('click', () => {
+//     clearDiv();
+//     addDivDays(sorrySat);
+// });
+
+//when mouse is on the date or arrow, change hover colors
+// dateArrow = document.getElementById("date-arrow");
+// dateArrow.addEventListener("mouseover", hoverColor);
+
+
+/*
+// OG EXAMPLE BEFORE TURNING INTO FUNCTION WITH VAR PASSED THRU
+function friAddDiv() {
+
+    //put sorryFri data into friArray
+    let friArr = sorryFri;
+    let friDate = (friArr[0].date);
+    console.log('friArr:' + friArr);
+    console.log(friArr.length);
+    console.log(friDate);
+
+    //get date html, add friday date to html
+    let sorryDateDiv = document.getElementById("date");
+    sorryDateDiv.innerHTML = friDate;
+
+    let sorryCountIndexDiv = document.getElementById("sorry-count-index");
+    let sorryCountHolder = document.getElementById("sorry-count-holder");
+    //for loop to add a div with sorry for each friday array
+    for (let i = 0; i < friArr.length; i++) {
+        let h2 = document.createElement("h2");
+        h2.innerHTML = 'sorry';
+        // console.log(h2);
+        sorryCountIndexDiv.appendChild(h2);
+    }
+}
+*/
