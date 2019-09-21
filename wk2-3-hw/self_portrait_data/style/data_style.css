@@ -62,7 +62,7 @@ html, body{
 }
 
 #a-daily:hover, #a-index:hover, #a-overview:hover, #a-analysis:hover {
-    color:#002B9C33; /* 50% opacity */
+    color: #818181;
 }
 
 /* NAVBAR HR */
@@ -73,9 +73,10 @@ html, body{
 
 /* SORRY INFO CONTAINER - LEFT */
 
+/* test div */
 /* div{
-    border: 1px solid red;
-} */
+    border: 1px solid red; */
+/* } */
 
 #sorry-info-holder{
     /* border: 1px red solid; */
@@ -108,17 +109,49 @@ html, body{
 }
 
 #date-holder{
-    display: relative;
+    /* display: inline-block; */
     font-family: 'agipo_bold_condensed';
     text-transform: uppercase;
     font-size: 11pt;
     color: #002B9C;
     padding-top: 5vw;
+    text-align: right;
+    /* z-index: 5; */
+    width: 100%;
 }
 
 #date{
-    margin-left: 3vw;
+    /* margin-left: 2vw; */
+    /* display: inline-block; */
 }
+
+/* #date:hover{
+    color: #818181; 
+} */
+
+#date-arrow{
+    /* padding-bottom: 5px;
+    padding-left: 3vw; */
+    background-image: url("../assets/right_date_arrow.svg");
+    border: none;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:15px;
+    /* display: block; */
+    /* margin-left: 15vw; */
+    z-index: 6;
+}
+
+#date-arrow:hover{
+    background-image: url("../assets/hover_right_date_arrow.svg");
+    border: none;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:15px;
+}
+
 
 #sorry-count-index{
     display: inline-block;
@@ -126,6 +159,7 @@ html, body{
     /* margin-bottom: 3vw; */
     display: relative;
     position: inline;
+    margin-top: 5%;
 }
 
 #sorry-count-index > h2{
