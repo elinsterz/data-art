@@ -1,0 +1,180 @@
+@font-face {
+    font-family:'Ogg-Roman';
+    src: url('fonts/Ogg-Roman.eot');
+    src: url('fonts/Ogg-Roman.ttf');
+    format('truetype');
+}
+
+@font-face {
+    font-family:'agipo_bold_condensed';
+    src: url('fonts/agipo_bold_condensed.eot');
+    src: url('fonts/agipo_bold_condensed.ttf');
+    format('truetype');
+}
+
+
+html, body{
+    background-color: #002B9C !important;
+    box-sizing: border-box;
+}
+
+
+.container{
+    padding: 2%;
+}
+
+/* NAVBAR */
+#navbar-holder{
+    padding-top: 2%;
+    align-items: center;
+    font-family: 'agipo_bold_condensed';
+    text-transform: uppercase;
+    font-size: 11pt;
+    z-index: 5;
+}
+
+.col-6{
+    text-align: left;
+}
+
+.col{
+    text-align: right;
+}
+
+#a-daily, #a-overview, #a-analysis{
+    text-align: right;
+    /* padding-top: 5%; */
+    color: #C3D4DD;
+    text-decoration: none;
+}
+
+#a-index{
+    /* padding-top: 5%; */
+    color: #C3D4DD;
+    text-align: left;
+    text-decoration: none;
+}
+
+#a-daily:hover, #a-index:hover, #a-overview:hover, #a-analysis:hover {
+    color:#C3D4DD33; /* 50% opacity */
+}
+
+/* NAVBAR HR */
+.nav-hr{
+    border-top: 0.15vh #C3D4DD solid;
+    /* border-radius: 1px; */
+}
+
+
+/* HOME TITLE */
+#title-div{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 65vh;
+    margin: auto;
+}
+
+#home-title{
+    font-family: 'Ogg-Roman';
+    font-size: 36vw;
+    color: #C3D4DD;
+    text-align: center;
+    letter-spacing: 5pt;
+}
+
+
+/*///////////// HOME PAGE SOUND /////////////////*/
+
+
+#pButton{
+ /* border: 1px red solid; */
+ height:60px; 
+ width: 60px;
+ border: none;
+ background-size: 50% 50%;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-color:#C5CED3;
+ opacity: 1;
+ float:left;
+ outline:none;
+ position:relative;
+ z-index: 4;
+ align-items: center;
+ justify-content: center;
+ display: inline-block;
+ margin-top: 1%;
+}
+
+.play{
+    background-image: url('../assets/playbutton_blue.svg');
+}
+
+.pause{
+    background-image: url('../assets/pausebutton_blue.svg');
+}
+
+.play:hover{
+    background-image: url('../assets/playbutton_blue_transparent.svg');
+}
+
+.pause:hover{
+    background-image: url('../assets/pausebutton_blue_transparent.svg');
+}
+
+
+#timeline{
+    width: 80%;
+    height: 80px;
+    bottom: 0px;
+    /* margin-right: auto; */
+    /* background: #C3D4DD; */
+    z-index: 1;
+    position: fixed;
+    display: inline-block;
+    /* border: 1px solid red; */
+}
+
+#dividerLine{
+	width: 1.5pt;
+    height: 80px;
+    left: 2%;
+    background: #002B9C;
+    z-index: 1;
+}
+
+#audioPlayer{
+    background-color: #C5CED3;
+    width: 100%;
+    height: 80px;
+    bottom: 0px;
+    left: 0px;
+    /* border: 1px red solid; */
+    z-index: 1;
+    position: fixed;
+}
+
+
+
+
+
+/*////////////////// DUMPSTER CODE //////////////////*/
+/* FOR BREAKPOINTS - not working rn tho 
+
+@media only screen and (max-width: 400px) {
+    .col-6 {
+      clear: clear;
+      width: 100%;
+    }
+
+    .col-2 {
+        width: 100%;
+        width:auto;
+      }
+  }*/ 
+
+/* div{
+    outline: 1px red solid;
+} */

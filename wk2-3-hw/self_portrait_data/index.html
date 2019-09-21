@@ -10,8 +10,15 @@
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
         integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!--p5js script-->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script> -->
+
     <!--Stylesheet-->
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/index_style.css">
+
 </head>
 
 <body>
@@ -20,27 +27,30 @@
 
     <div class='container'>
         <!--NAVBAR-->
-        <nav id="navbar-holder" class='row align-items-start'>
+        <nav id="navbar-holder" class='row justify-content-start'>
             <div id='nav-home' class='col-6'>
-                <p><a id='a-index' href ="index.html">A Week of Sorry</a></p>
+                <p><a id='a-index' href="index.html">A Week of Sorry</a></p>
             </div>
 
-            <div class='col'>
+            <div id='col-nav' class='col'>
                 <p><a id='a-daily' href="daily.html">Daily</a></p>
             </div>
 
-            <div class='col'>
+            <div id='col-nav' class='col'>
                 <p><a id='a-overview' href="overview.html">Overview</a></p>
             </div>
 
-            <div class='col'>
+            <div id='col-nav' class='col'>
                 <p><a id='a-analysis' href="analysis.html">Analysis</a></p>
             </div>
         </nav>
 
         <!--HR UNDERNEATH NAVBAR-->
-        <div><hr class = "nav-hr"></div>
+        <div>
+            <hr class="nav-hr">
+        </div>
 
+        <!--SORRY TITLE-->
         <div class='row justify-content center'>
             <div id='title-div' class='col-12 col md-8'>
 
@@ -50,14 +60,22 @@
             </div>
         </div>
     </div>
-    <!--Audio-->
-    <audio controls>
-        <source src="viper.mp3" type="audio/mp3">
-        <source src="viper.ogg" type="audio/ogg">
-        <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a>
-            instead.
-        </p>
+
+    <!--AUDIO-->
+    <audio id="myAudio">
+        <source src="assets/sound/placeholder_guitar.mp3" type="audio/mpeg">
+        <!-- <source src="assets/sound/placeholder_sorry.ogg" type="audio/ogg">
+        <source src="assets/sound/placeholder_sorry.wav"> -->
     </audio>
+
+    <!--AUDIO PLAYER FOOTER-->
+    <div id='audioPlayer'>
+        <button id='pButton' class='play'></button>
+        <div id='timeline'>
+            <div id='dividerLine'></div>
+        </div>
+    </div>
+
 </body>
 
 </html>

@@ -1,0 +1,562 @@
+[
+    {
+        "date": "September 12, 2019",
+        "day": "Thursday",
+        "time": "5:41pm",
+        "where": "Outside of 370 Jay St.",
+        "who": "stranger",
+        "why": "“Sorry” to person I bumped into someone walking out of 370 Jay St. building"
+    },
+    {
+        "date": "September 12, 2019",
+        "day": "Thursday",
+        "time": "5:43pm",
+        "where": "Outside of 370 Jay St.",
+        "who": "T (teammate)",
+        "why": "Documented the previous “sorry” in my phone while walking to a donor kebab place with my teammate. At that moment, I realized it's rude to look at your phone while someone else is talking. I felt the need to explain what and why I was writing."
+    },
+    {
+        "date": "September 12, 2019",
+        "day": "Thursday",
+        "time": "5:52pm",
+        "where": "Doner Kebab NYC",
+        "who": "Doner Kebab staff",
+        "why": "Doner Kebab staff was voicing that he is sad no one listens to him, so I replied “sorry no one listens to you”"
+    },
+    {
+        "date": "September 12, 2019",
+        "day": "Thursday",
+        "time": "5:52pm",
+        "where": "370 Jay St.",
+        "who": "T (teammate)",
+        "why": "I said “sorry I'm thinking”, because I paused before responding"
+    },
+    {
+        "date": "September 12, 2019",
+        "day": "Thursday",
+        "time": "7:11pm",
+        "where": "Email",
+        "who": "S (professor)",
+        "why": "I'm so sorry that I'm not signing up for one of your Tuesday office hours. It's just that I'm in class at exactly those times.”"
+    },
+    {
+        "date": "September 12, 2019",
+        "day": "Thursday",
+        "time": "7:58pm",
+        "where": "Dekalb Station",
+        "who": "stranger",
+        "why": "Getting on the B train. I said “sorry” to person I bumped into on accident."
+    },
+    {
+        "date": "September 12, 2019",
+        "day": "Thursday",
+        "time": "8:02pm",
+        "where": "Atlantic-Barclay Station",
+        "who": "stranger",
+        "why": "“Sorry” as I bumped into someone in subway after having to reshuffle."
+    },
+    {
+        "date": "September 13, 2019",
+        "day": "Friday",
+        "time": "11:26pm",
+        "where": "370 Jay St.",
+        "who": "D (teammate)",
+        "why": "Slack messaged D saying “sorry, i'm not clear...i can't make the meeting with the whole adjacent team. will def still make the one today for design.”"
+    },
+    {
+        "date": "September 13, 2019",
+        "day": "Friday",
+        "time": "1:45pm",
+        "where": "370 Jay St.",
+        "who": "J (professor)",
+        "why": "Whispered “sorry” to the professor after coming back from the bathroom in the middle of class."
+    },
+    {
+        "date": "September 13, 2019",
+        "day": "Friday",
+        "time": "3:35pm",
+        "where": "370 Jay St.",
+        "who": "S (teammate)",
+        "why": "Said “sorry not explaining this well” as I was explaining Adjacent stuff to my teammate."
+    },
+    {
+        "date": "September 13, 2019",
+        "day": "Friday",
+        "time": "4:35pm",
+        "where": "370 Jay St.",
+        "who": "N (classmate)",
+        "why": "“Sorry we kinda kicked you out from the table, didnt we?” as our Adjacent design team invaded a whole table where one person was sitting"
+    },
+    {
+        "date": "September 13, 2019",
+        "day": "Friday",
+        "time": "4:38pm",
+        "where": "370 Jay St.",
+        "who": "stranger",
+        "why": "“Sorry is that in your way?” to someone because my charger was in someone's walking path."
+    },
+    {
+        "date": "September 13, 2019",
+        "day": "Friday",
+        "time": "7:01pm",
+        "where": "Text",
+        "who": "K (partner)",
+        "why": "Texted “sorry, i didn’t see your messages been such a hectic day” to K after not responding to his texts for a couple hours."
+    },
+    {
+        "date": "September 13, 2019",
+        "day": "Friday",
+        "time": "7:20pm",
+        "where": "Dekalb Station",
+        "who": "stranger",
+        "why": "“Sorry” when I accidentally bumped into someone as I was getting out of R train to get to B train."
+    },
+    {
+        "date": "September 13, 2019",
+        "day": "Friday",
+        "time": "10:47pm",
+        "where": "Home",
+        "who": "K (partner)",
+        "why": "Said“sorry about all the messages” to K over phone for not responding to his texts in a timely way"
+    },
+    {
+        "date": "September 14, 2019",
+        "day": "Saturday",
+        "time": "11:32am",
+        "where": "Home",
+        "who": "K (partner)",
+        "why": "Over the phone, I said “sorry” to K for calling him so early to talk to him about a problem I have."
+    },
+    {
+        "date": "September 14, 2019",
+        "day": "Saturday",
+        "time": "1:29pm",
+        "where": "370 Jay St.",
+        "who": "T (teammate)",
+        "why": "“Sorry I'm late” to Live Web teammate who was already working."
+    },
+    {
+        "date": "September 14, 2019",
+        "day": "Saturday",
+        "time": "5:35pm",
+        "where": "370 Jay St.",
+        "who": "T (teammate)",
+        "why": "“Sorry you got paired with the slow coder” to Live Web teammate."
+    },
+    {
+        "date": "September 15, 2019",
+        "day": "Sunday",
+        "time": "2:41pm",
+        "where": "Starbucks in Midwood",
+        "who": "K (partner)",
+        "why": "“Sorry” to K for accidentally stepping on his foot in Starbucks."
+    },
+    {
+        "date": "September 15, 2019",
+        "day": "Sunday",
+        "time": "2:50pm",
+        "where": "Grocery Story in Midwood",
+        "who": "stranger",
+        "why": "“Sorry” to grocery store person. I tried to help her rearrange but ended up making it worse."
+    },
+    {
+        "date": "September 15, 2019",
+        "day": "Sunday",
+        "time": "2:56pm",
+        "where": "Grocery Story in Midwood",
+        "who": "stranger",
+        "why": "“Sorry” to a lady I almost bumped into at the grocery store."
+    },
+    {
+        "date": "September 15, 2019",
+        "day": "Sunday",
+        "time": "6:35pm",
+        "where": "Home",
+        "who": "K (partner)",
+        "why": "“Sorry” to K for not eating a popsicle with him."
+    },
+    {
+        "date": "September 15, 2019",
+        "day": "Sunday",
+        "time": "6:35pm",
+        "where": "Home",
+        "who": "K (partner)",
+        "why": "“Sorry” to K for asking him to check the p5 editor to see if it was down for him too."
+    },
+    {
+        "date": "September 15, 2019",
+        "day": "Sunday",
+        "time": "12:14am",
+        "where": "Home",
+        "who": "K (partner)",
+        "why": "“Sorry” when I accidentally bumped my foot against K's."
+    },
+    {
+        "date": "September 16, 2019",
+        "day": "Monday",
+        "time": "8:52am",
+        "where": "Home",
+        "who": "J (friend)",
+        "why": "“Sorry I didn’t sit with you on friday” to J when I saw him before class."
+    },
+    {
+        "date": "September 16, 2019",
+        "day": "Monday",
+        "time": "10:42am",
+        "where": "Home",
+        "who": "F (classmate)",
+        "why": "“Sorry I thought we had to continue the arms” when playing Exquisite Corps in the Joy and Games class"
+    },
+    {
+        "date": "September 16, 2019",
+        "day": "Monday",
+        "time": "11:05am",
+        "where": "370 Jay St.",
+        "who": "F+R+C (classmates)",
+        "why": "“Sorry is my hand in your way?” to classmates when playing a drawing game in Joy and Games class."
+    },
+    {
+        "date": "September 16, 2019",
+        "day": "Monday",
+        "time": "1:18pm",
+        "where": "370 Jay St.",
+        "who": "T (classmates)",
+        "why": "“Sorry” to T as I tried to get out of the room to throw away trash."
+    },
+    {
+        "date": "September 16, 2019",
+        "day": "Monday",
+        "time": "1:22pm",
+        "where": "370 Jay St.",
+        "who": "W (teammate)",
+        "why": "“Sorry for not telling you about the mtg on friday!...” to W (teammate) on Adjacent Slack."
+    },
+    {
+        "date": "September 16, 2019",
+        "day": "Monday",
+        "time": "5:57pm",
+        "where": "Dibner Library",
+        "who": "stranger",
+        "why": "“Sorry” to random person as I almost bump into them when walking out of library"
+    },
+    {
+        "date": "September 16, 2019",
+        "day": "Monday",
+        "time": "6:03pm",
+        "where": "Dekalb Station",
+        "who": "K (partner)",
+        "why": "“Sorry” to K because we agreed to meet up at F station but he has to walk over from R station"
+    },
+    {
+        "date": "September 16, 2019",
+        "day": "Monday",
+        "time": "6:32pm",
+        "where": "Celestine Restaurant",
+        "who": "waiter",
+        "why": "“Excuse me, sorry” to waiter as I almost bumped into him at Celestine restaurant for our anniversary dinner."
+    },
+    {
+        "date": "September 16, 2019",
+        "day": "Monday",
+        "time": "6:57pm",
+        "where": "Celestine Restaurant",
+        "who": "server",
+        "why": "“Sorry” asked our server to take our photo and I almost dropped the phone as I went to get the phone back"
+    },
+    {
+        "date": "September 16, 2019",
+        "day": "Monday",
+        "time": "6:58pm",
+        "where": "Celestine Restaurant",
+        "who": "K (partner)",
+        "why": "“Sorry” to K for interrupting dinner to write the previous sorry post."
+    },
+    {
+        "date": "September 16, 2019",
+        "day": "Monday",
+        "time": "7:34pm",
+        "where": "Celestine Restaurant",
+        "who": "K (partner)",
+        "why": "“Sorry” to K because we ordered way to expensive $6 sparkling water at the restaurant."
+    },
+    {
+        "date": "September 16, 2019",
+        "day": "Monday",
+        "time": "7:50pm",
+        "where": "Celestine Restaurant",
+        "who": "host",
+        "why": "“Sorry” to the person who got our bags from the coat check because my backpack was very heavy and he had to hand it over to us."
+    },
+    {
+        "date": "September 16, 2019",
+        "day": "Monday",
+        "time": "8:15pm",
+        "where": "R Train",
+        "who": "K (partner)",
+        "why": "“Sorry” to K because I decided to sit in the subway even though it was only 1 stop. My backpack was very heavy."
+    },
+    {
+        "date": "September 16, 2019",
+        "day": "Monday",
+        "time": "8:44pm",
+        "where": "Midwood",
+        "who": "K (partner)",
+        "why": "“Sorry” to K because I bumped into him in CVS."
+    },
+    {
+        "date": "September 16, 2019",
+        "day": "Monday",
+        "time": "10:54pm",
+        "where": "Midwood",
+        "who": "K (partner)",
+        "why": "“Sorry” to K because I kept saying how happy I was for coding faster and more comfortably than usual."
+    },
+    {
+        "date": "September 16, 2019",
+        "day": "Tuesday",
+        "time": "12:05am",
+        "where": "Midwood",
+        "who": "K (partner)",
+        "why": "“Sorry” to K because I bumped into his arm in bed."
+    },
+    {
+        "date": "September 17, 2019",
+        "day": "Tuesday",
+        "time": "12:05am",
+        "where": "Midwood",
+        "who": "K (partner)",
+        "why": "“Sorry” to K because I bumped into his arm in bed."
+    },
+    {
+        "date": "September 17, 2019",
+        "day": "Tuesday",
+        "time": "8:21am",
+        "where": "Jay St Metrotech Station",
+        "who": "stranger",
+        "why": "“Sorry” to stranger because I almost into them in the subway."
+    },
+    {
+        "date": "September 17, 2019",
+        "day": "Tuesday",
+        "time": "8:27am",
+        "where": "Au Bon Pain",
+        "who": "stranger",
+        "why": "“Sorry” to someone with coffee who I almost bumped in Au Bon Pain."
+    },
+    {
+        "date": "September 17, 2019",
+        "day": "Tuesday",
+        "time": "9:50am",
+        "where": "370 Jay St.",
+        "who": "S (classmate)",
+        "why": "“Sorry” to S because I bumped into him on my way out of the classroom to go to the bathroom."
+    },
+    {
+        "date": "September 17, 2019",
+        "day": "Tuesday",
+        "time": "12:50pm",
+        "where": "370 Jay St.",
+        "who": "S (professor)",
+        "why": "“Sorry this is an aesthetic question” to S during office hours."
+    },
+    {
+        "date": "September 17, 2019",
+        "day": "Tuesday",
+        "time": "3:08pm",
+        "where": "Au Bon Pain",
+        "who": "stranger",
+        "why": "“Sorry” as I bumped into someone when stepping outside of Au Bon Pain."
+    },
+    {
+        "date": "September 17, 2019",
+        "day": "Tuesday",
+        "time": "3:08pm",
+        "where": "Au Bon Pain",
+        "who": "stranger",
+        "why": "“Sorry” as I bumped into someone when stepping outside of Au Bon Pain."
+    },
+    {
+        "date": "September 17, 2019",
+        "day": "Tuesday",
+        "time": "5:30pm",
+        "where": "325 Hudson",
+        "who": "classmates",
+        "why": "“Sorry” to people in Understanding Networks tour as I bump into them."
+    },
+    {
+        "date": "September 17, 2019",
+        "day": "Tuesday",
+        "time": "6:23pm",
+        "where": "around Canal St.",
+        "who": "K (partner)",
+        "why": "“Sorry” to K on the phone for coming back from campus for our dinner date later than expected."
+    },
+    {
+        "date": "September 17, 2019",
+        "day": "Tuesday",
+        "time": "6:47pm",
+        "where": "around 370 Jay St.",
+        "who": "K (partner)",
+        "why": "“Sorry” to K for being late when I saw him in person."
+    },
+    {
+        "date": "September 17, 2019",
+        "day": "Tuesday",
+        "time": "8:20pm",
+        "where": "370 Jay St.",
+        "who": "T (teammate)",
+        "why": "“Sorry I'm late” to T for being late for meeting up to do last minute touches to our Live Web project."
+    },
+    {
+        "date": "September 17, 2019",
+        "day": "Tuesday",
+        "time": "8:30pm",
+        "where": "370 Jay St.",
+        "who": "T (teammate)",
+        "why": "“Sorry I wanted to keep things clean” to T because I wanted to rename our code file."
+    },
+    {
+        "date": "September 17, 2019",
+        "day": "Tuesday",
+        "time": "9:40pm",
+        "where": "370 Jay St.",
+        "who": "T (teammate)",
+        "why": "“Sorry for messing it up in office hour earlier today. totally forgot you had replaced the files” to T as we were coding."
+    },
+    {
+        "date": "September 18, 2019",
+        "day": "Wednesday",
+        "time": "7:53am",
+        "where": "Highway Bagel Shop",
+        "who": "cashier",
+        "why": "“Sorry can I get a paper bag instead?” to Highway Bagel cashier when he handed me a plastic bag."
+    },
+    {
+        "date": "September 18, 2019",
+        "day": "Wednesday",
+        "time": "8:55am",
+        "where": "Jay St Metrotech Station",
+        "who": "stranger",
+        "why": "“Sorry” whispered to stranger because I almost bumped into him when stepping out of subway."
+    },
+    {
+        "date": "September 18, 2019",
+        "day": "Wednesday",
+        "time": "10:53am",
+        "where": "Text",
+        "who": "N (friend)",
+        "why": "“Oh dibner is on the 3rd floor of the building, but there are 2 floors in the 3rd floor, sorry” by text to N. We were trying to meet up in the library for homework reasons."
+    },
+    {
+        "date": "September 18, 2019",
+        "day": "Wednesday",
+        "time": "11:15am",
+        "where": "Dibner Library",
+        "who": "N (friend)",
+        "why": "“Sorry” to N for not being able to fix her code. I genuinely felt bad that I couldn’t be more helpful."
+    },
+    {
+        "date": "September 18, 2019",
+        "day": "Wednesday",
+        "time": "11:45am",
+        "where": "Walking to 370 Jay St.",
+        "who": "N (friend)",
+        "why": "“Sorry I couldn't figure out your code” to N after trying to troubleshoot."
+    },
+    {
+        "date": "September 18, 2019",
+        "day": "Wednesday",
+        "time": "3:03pm",
+        "where": "Au Bon Pain",
+        "who": "stranger",
+        "why": "“sorry” to stranger in Au Bon Pain for spilling a straw on the counter top where she was."
+    },
+    {
+        "date": "September 18, 2019",
+        "day": "Wednesday",
+        "time": "3:03pm",
+        "where": "Au Bon Pain",
+        "who": "stranger",
+        "why": "“sorry” to stranger in Au Bon Pain for spilling a straw on the counter top where she was."
+    },
+    {
+        "date": "September 18, 2019",
+        "day": "Wednesday",
+        "time": "6:46pm",
+        "where": "Jay St Metrotech Station",
+        "who": "K (partner)",
+        "why": "“Sorry” to K for being late to showing up at station to commute home together."
+    },
+    {
+        "date": "September 18, 2019",
+        "day": "Wednesday",
+        "time": "9:17pm",
+        "where": "Home",
+        "who": "K (partner)",
+        "why": "“Sorry” accidentally brushed my foot against K's while working at our living room table."
+    },
+    {
+        "date": "September 18, 2019",
+        "day": "Wednesday",
+        "time": "9:24pm",
+        "where": "Home",
+        "who": "Mom",
+        "why": "“Sorry” to my mom in Chinese over the phone for not being able to talk to her Monday."
+    },
+    {
+        "date": "September 18, 2019",
+        "day": "Wednesday",
+        "time": "11:24pm",
+        "where": "Home",
+        "who": "K (partner)",
+        "why": "“I’m sorry you’re waiting for me” to K because i kept coding even though he wanted to go to bed."
+    },
+    {
+        "date": "September 19, 2019",
+        "day": "Thursday",
+        "time": "7:48am",
+        "where": "Dunkin' Donuts",
+        "who": "stranger",
+        "why": "“excuse me, sorry” to stranger in Dunkin' Donuts."
+    },
+    {
+        "date": "September 19, 2019",
+        "day": "Thursday",
+        "time": "7:50am",
+        "where": "Midwood",
+        "who": "driver",
+        "why": "“sorry” to driver who honked at me as I crossed the street because the walking sign was not on."
+    },
+    {
+        "date": "September 19, 2019",
+        "day": "Thursday",
+        "time": "12:39pm",
+        "where": "Pret A Manger",
+        "who": "stranger",
+        "why": "“Sorry” to stranger in Pret A Manger because I was on my phone in front of where the cream and straws were."
+    },
+    {
+        "date": "September 19, 2019",
+        "day": "Thursday",
+        "time": "3:16pm",
+        "where": "email",
+        "who": "Code! student",
+        "why": "“So sorry to hear about your wifi…” in an email to undergraduate student in a course that I am a GA for."
+    },
+    {
+        "date": "September 19, 2019",
+        "day": "Thursday",
+        "time": "4:20pm",
+        "where": "370 Jay St.",
+        "who": "N (friend)",
+        "why": "“sorry I couldn’t figure out what was wrong” to N for not being helpful yesterday."
+    },
+    {
+        "date": "September 19, 2019",
+        "day": "Thursday",
+        "time": "7:29pm",
+        "where": "B Train",
+        "who": "K (partner)",
+        "why": "“sorry i thought you were done” to K because I started reading an article when I thought he was done talking."
+    }
+]
