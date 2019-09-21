@@ -72,10 +72,8 @@ request.onload = function () {
         console.log(sorryWed);
         console.log(sorryThu);
 
-        //gives you day of week
-        console.log(sorryFri[0].day);
-
-        addDivDays(sorryFri);
+        forwardDates();
+        backwardDates();
 
         //when mouse is on the date or arrow, change hover colors
         // dateArrow = document.getElementById("date-arrow");
@@ -87,36 +85,7 @@ request.onload = function () {
         //     addDivDays(sorrySat);
         // });
 
-        let dateArrow = document.getElementById("date-arrow");
 
-
-        //compare json index with inner html, if same do function
-        //if key.date is x day then perform addDivDays(xday)
-
-        //friday switch to sat
-        let sep13JSON = sorryFri[0].date;
-        let sep13HTML = document.getElementById("date").innerHTML;
-        console.log('date: ' + sep13JSON);
-        console.log('sep13: ' + sep13HTML);
-
-        if (sep13JSON === sep13HTML) {
-            dateArrow.addEventListener('click', () => {
-                clearDiv();
-                addDivDays(sorrySat);
-
-                //sat switch to sun
-                let sep14JSON = sorrySat[0].date;
-                let sep14HTML = document.getElementById("date").innerHTML;
-                console.log('date: ' + sep14JSON);
-                console.log('sep14: ' + sep14HTML);
-                if (sep14JSON === sep14HTML) {
-                    dateArrow.addEventListener('click', () => {
-                        clearDiv();
-                        addDivDays(sorrySun);
-                    });
-                }
-            });
-        }
 
 
 
@@ -200,6 +169,161 @@ function friAddDiv() {
     }
 }
 
+
+function forwardDates() {
+
+    //gives you day of week
+    console.log(sorryFri[0].day);
+
+    addDivDays(sorryFri);
+
+    //////////* GOING FORWARD IN DATES *///////
+    let dateRightArrow = document.getElementById("date-right-arrow");
+
+    //compare json index with inner html, if same do function
+    //if key.date is x day then perform addDivDays(xday)
+
+    //friday switch to sat
+    let sep13JSON = sorryFri[0].date;
+    let sep13HTML = document.getElementById("date").innerHTML;
+    console.log('date: ' + sep13JSON);
+    console.log('sep13: ' + sep13HTML);
+
+    if (sep13JSON === sep13HTML) {
+        dateRightArrow.addEventListener('click', () => {
+            clearDiv();
+            addDivDays(sorrySat);
+
+            //sat switch to sun
+            let sep14JSON = sorrySat[0].date;
+            let sep14HTML = document.getElementById("date").innerHTML;
+            if (sep14JSON === sep14HTML) {
+                dateRightArrow.addEventListener('click', () => {
+                    clearDiv();
+                    addDivDays(sorrySun);
+
+                    //sun switch to mon
+                    let sep15JSON = sorrySun[0].date;
+                    let sep15HTML = document.getElementById("date").innerHTML;
+                    if (sep15JSON === sep15HTML) {
+                        dateRightArrow.addEventListener('click', () => {
+                            clearDiv();
+                            addDivDays(sorryMon);
+
+                            //mon switch to tues
+                            let sep16JSON = sorryMon[0].date;
+                            let sep16HTML = document.getElementById("date").innerHTML;
+                            if (sep16JSON === sep16HTML) {
+                                dateRightArrow.addEventListener('click', () => {
+                                    clearDiv();
+                                    addDivDays(sorryTue);
+
+                                    //tue switch to wed
+                                    let sep17JSON = sorryTue[0].date;
+                                    let sep17HTML = document.getElementById("date").innerHTML;
+                                    if (sep17JSON === sep17HTML) {
+                                        dateRightArrow.addEventListener('click', () => {
+                                            clearDiv();
+                                            addDivDays(sorryWed);
+
+                                            //wed switch to thu
+                                            let sep18JSON = sorryWed[0].date;
+                                            let sep18HTML = document.getElementById("date").innerHTML;
+                                            if (sep18JSON === sep18HTML) {
+                                                dateRightArrow.addEventListener('click', () => {
+                                                    clearDiv();
+                                                    addDivDays(sorryThu);
+                                                });
+                                            }
+                                        });
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    }
+}
+
+
+function backwardDates() {
+
+    //gives you day of week
+    console.log(sorryThu[0].day);
+
+    addDivDays(sorryThu);
+
+    //////////* GOING BACKWARD IN DATES *///////
+    let dateLeftArrow = document.getElementById("date-left-arrow");
+
+    //compare json index with inner html, if same do function
+    //if key.date is x day then perform addDivDays(xday)
+
+    //thu switch to wed
+    let sep19JSON = sorryThu[0].date;
+    let sep19HTML = document.getElementById("date").innerHTML;
+    console.log('date: ' + sep19JSON);
+    console.log('sep19: ' + sep19HTML);
+
+    if (sep19JSON === sep19HTML) {
+        dateLeftArrow.addEventListener('click', () => {
+            clearDiv();
+            addDivDays(sorryWed);
+
+            //wed switch to tues
+            let sep18JSON = sorryWed[0].date;
+            let sep18HTML = document.getElementById("date").innerHTML;
+            if (sep18JSON === sep18HTML) {
+                dateLeftArrow.addEventListener('click', () => {
+                    clearDiv();
+                    addDivDays(sorryTue);
+
+                    //tues switch to mon
+                    let sep17JSON = sorryTue[0].date;
+                    let sep17HTML = document.getElementById("date").innerHTML;
+                    if (sep17JSON === sep17HTML) {
+                        dateLeftArrow.addEventListener('click', () => {
+                            clearDiv();
+                            addDivDays(sorryMon);
+
+                            //mon switch to sun
+                            let sep16JSON = sorryMon[0].date;
+                            let sep16HTML = document.getElementById("date").innerHTML;
+                            if (sep16JSON === sep16HTML) {
+                                dateLeftArrow.addEventListener('click', () => {
+                                    clearDiv();
+                                    addDivDays(sorrySun);
+
+                                    //sun switch to sat
+                                    let sep15JSON = sorrySun[0].date;
+                                    let sep15HTML = document.getElementById("date").innerHTML;
+                                    if (sep15JSON === sep15HTML) {
+                                        dateLeftArrow.addEventListener('click', () => {
+                                            clearDiv();
+                                            addDivDays(sorrySat);
+
+                                            //sat switch to fri
+                                            let sep14JSON = sorrySat[0].date;
+                                            let sep14HTML = document.getElementById("date").innerHTML;
+                                            if (sep14JSON === sep14HTML) {
+                                                dateLeftArrow.addEventListener('click', () => {
+                                                    clearDiv();
+                                                    addDivDays(sorryFri);
+                                                });
+                                            }
+                                        });
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    }
+}
 
 
 
