@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A Week of Sorry</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!--p5js-->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script> -->
+
+
+    <!--DAILY STYLESHEET-->
+    <link rel="stylesheet" href="style/analysis_style.css">
+</head>
+
+<body>
+    <!--FOR PAGES WORKING WITH DATA JS-->
+    <!-- <script src="analysis.js"></script> -->
+
+    <div class='container'>
+        <!--NAVBAR-->
+        <nav id="navbar-holder" class='row justify-content-start'>
+            <div id='nav-home' class='col-6'>
+                <p><a id='a-index' href="index.html">A Week of Sorry</a></p>
+            </div>
+
+            <div id='col-nav' class='col'>
+                <p><a id='a-daily' href="daily.html">Daily</a></p>
+            </div>
+
+            <div id='col-nav' class='col'>
+                <p><a id='a-analysis' href="analysis.html">Analysis</a></p>
+            </div>
+
+            <div id='col-nav' class='col'>
+                <p><a id='a-reflection' href="reflection.html">Reflection</a></p>
+            </div>
+        </nav>
+
+        <!--HR UNDERNEATH NAVBAR-->
+        <div>
+            <hr class="nav-hr">
+        </div>
+
+        <!--ANALYSIS SECTION-->
+        <div id='analysis-container' class='row justify-content-md-center'>
+            <div id='time-div' class='col-4 col-md-4'>
+                <!--headline-->
+                <div class='col-10 col-md-10'>
+                    <p>TIME OF DAY SAID MOST</p>
+                </div>
+                <!--data-->
+                <div class='data-container'>
+                    <h3 class='data-value'>P.M.</h3>
+                </div>
+                <img class='hr-div' src="assets/analysis_hr_blue.svg" alt="bottom line">
+            </div>
+
+            <div id='max-div' class='col-4 col-md-4'>
+                <!--headline-->
+                <div class='col-10 col-md-10'>
+                    <p>MAX. SORRY IN A DAY</p>
+                </div>
+                <div class='data-container'>
+                    <h3 class='data-value'>15</h3>
+                </div>
+                <img class='hr-div' src="assets/analysis_hr_blue.svg" alt="bottom line">
+            </div>
+
+            <div id='avg-div' class='col-4 col-md-4'>
+                <!--headline-->
+                <div class='col-10 col-md-10'>
+                    <p>TOTAL TIMES SAID</p>
+                </div>
+                <div class='data-container'>
+                    <h3 class='data-value'>61</h3>
+                </div>
+                <img class='hr-div' src="assets/analysis_hr_blue.svg" alt="bottom line">
+            </div>
+
+            <div id='who-div' class='col-4 col-md-4'>
+                <!--headline-->
+                <div class='col-10 col-md-10'>
+                    <p>WHO MOST SAID TO</p>
+                </div>
+                <div class='data-container'>
+                    <h3 class='data-value'>Strangers</h3>
+                </div>
+                <!-- <img class='hr-div' src="assets/analysis_hr_blue.svg" alt="bottom line"> -->
+            </div>
+
+            <div id='total-div' class='col-4 col-md-4'>
+                <!--headline-->
+                <div class='col-10 col-md-10'>
+                    <p>MIN. SORRY IN A DAY</p>
+                </div>
+                <div class='data-container'>
+                    <h3 class='data-value'>3</h3>
+                </div>
+                <!-- <img class='hr-div' src="assets/analysis_hr_blue.svg" alt="bottom line"> -->
+            </div>
+
+            <div id='where-div' class='col-4 col-md-4'>
+                <!--headline-->
+                <div class='col-10 col-md-10'>
+                    <p>WHERE MOST SAID</p>
+                </div>
+                <div class='data-container'>
+                    <h3 class='data-value'>On Campus</h3>
+                </div>
+                <!-- <img class='hr-div' src="assets/analysis_hr_blue.svg" alt="bottom line"> -->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+@font-face {
+    font-family:'Ogg-Roman';
+    src: url('fonts/Ogg-Roman.eot');
+    src: url('fonts/Ogg-Roman.ttf');
+    format('truetype');
+}
+
+@font-face {
+    font-family:'agipo_bold_condensed';
+    src: url('fonts/agipo_bold_condensed.eot');
+    src: url('fonts/agipo_bold_condensed.ttf');
+    format('truetype');
+}
+
+
+html, body{
+    background-color: #002B9C !important;
+    box-sizing: border-box;
+}
+
+.container{
+    padding-top: 2%;
+    margin-bottom: 5%;
+}
+
+
+html, body{
+    background-color: #C3D4DD !important;
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+#navbar-holder{
+    padding-top: 2%;
+    align-items: center;
+    font-family: 'agipo_bold_condensed';
+    text-transform: uppercase;
+    font-size: 11pt;
+    z-index: 5;
+}
+
+.col-6{
+    text-align: left;
+}
+
+.col{
+    text-align: right;
+}
+
+#a-daily, #a-reflection, #a-analysis{
+    text-align: right;
+    /* padding-top: 5%; */
+    color: #002B9C;
+    text-decoration: none;
+}
+
+#a-index{
+    /* padding-top: 5%; */
+    color: #002B9C;
+    text-align: left;
+    text-decoration: none;
+}
+
+#a-daily:hover, #a-index:hover, #a-reflection:hover, #a-analysis:hover {
+    color: #818181;
+}
+
+/* NAVBAR HR */
+.nav-hr{
+    border-top: 0.15vh #002B9C solid;
+}
+
+
+/* ANALYSIS SECTION */
+/* div{
+    border: 1px solid red;
+} */
+
+
+#analysis-container{
+    padding-top: 2%;
+    font-family: 'agipo_bold_condensed';
+    text-transform: uppercase;
+    font-size: 11pt;
+    z-index: 5;
+    color: #002B9C;
+    text-align: left;
+    vertical-align: top;
+    float: left;
+}
+
+
+#time-div, #avg-div, #who-div, #where-div{
+    border-right: 0.15vh #002B9C solid;
+    padding-top: 5vh;
+    /* background-color: pink; */
+}
+
+#avg-div, #where-div{
+    border: none;
+    padding-top: 5vh;
+    padding-left: 3vh;
+}
+
+#max-div, #total-div{
+   padding-top: 5vh;
+   padding-left: 3vh;
+   border-right: 0.15vh #002B9C solid;
+}
+
+/* #time-div{
+    padding: 2%;
+    vertical-align: middle;
+    /* background-color: red; 
+} */
+
+.data-container{
+    height: 25vh;
+    /* background-color: pink; */
+    vertical-align: bottom;
+}
+
+.data-value{
+    font-family: 'Ogg-Roman';
+    font-size: 6vw;
+    color: #818181;
+    text-align: left;
+    vertical-align: bottom;
+    margin: auto;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-transform: lowercase;
+    line-height: 5vw;
+}
+
+.hr-div{   
+    vertical-align: bottom;
+}

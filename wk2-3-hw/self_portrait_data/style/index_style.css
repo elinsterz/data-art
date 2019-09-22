@@ -41,7 +41,7 @@ html, body{
     text-align: right;
 }
 
-#a-daily, #a-overview, #a-analysis{
+#a-daily, #a-analysis, #a-reflection{
     text-align: right;
     /* padding-top: 5%; */
     color: #C3D4DD;
@@ -55,7 +55,7 @@ html, body{
     text-decoration: none;
 }
 
-#a-daily:hover, #a-index:hover, #a-overview:hover, #a-analysis:hover {
+#a-daily:hover, #a-index:hover, #a-analysis:hover, #a-reflection:hover {
     color:#C3D4DD33; /* 50% opacity */
 }
 

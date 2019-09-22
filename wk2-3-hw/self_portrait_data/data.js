@@ -17,12 +17,14 @@ let dateP;
 let sorryCountIndexDiv;
 let sorryCountHolder;
 let dateArrow;
+let randomAudio;
 
 
 let request = new XMLHttpRequest();
 
 request.open('GET', 'sorry_data.json', true);
 
+//RUN CODE 
 request.onload = function () {
     if (request.status >= 200 && request.status < 400) {
         //Success!
@@ -64,13 +66,13 @@ request.onload = function () {
             }
 
         });
-        console.log(sorryFri);
-        console.log(sorrySat);
-        console.log(sorrySun);
-        console.log(sorryMon);
-        console.log(sorryTue);
-        console.log(sorryWed);
-        console.log(sorryThu);
+        // console.log(sorryFri);
+        // console.log(sorrySat);
+        // console.log(sorrySun);
+        // console.log(sorryMon);
+        // console.log(sorryTue);
+        // console.log(sorryWed);
+        // console.log(sorryThu);
 
         //gets me the why of index 0 of Friday
         console.log("why: " + sorryFri[0].why);
@@ -89,13 +91,9 @@ request.onerror = function () {
 
 request.send();
 
-
-
-
-
 ////////////////////////*  FUNCTIONS *////////////////////////
 
-//////////* GOING FORWARD IN DATES *///////
+//GOING FORWARD IN DATES 
 function forwardDates() {
 
     //gives you day of week
@@ -173,7 +171,7 @@ function forwardDates() {
     }
 }
 
-//////////* GOING BACKWARD IN DATES *///////
+// GOING BACKWARD IN DATES 
 function backwardDates() {
 
     //gives you day of week
@@ -181,7 +179,6 @@ function backwardDates() {
 
     addDivDays(sorryThu);
 
-    //////////* GOING BACKWARD IN DATES *///////
     let dateLeftArrow = document.getElementById("date-left-arrow");
 
     //compare json index with inner html, if same do function
@@ -252,7 +249,7 @@ function backwardDates() {
 }
 
 
-//CLEAR SORRY'S OF THAT DIV
+//CLEAR SORRY'S OF THE PREVIOUS DIV
 function clearDiv() {
     let sorryDateDiv = document.getElementById("date");
     document.getElementById(sorryDateDiv.innerHTML = "");
@@ -279,7 +276,7 @@ function addDivDays(day) {
 
     //get length of array for that day
     let sorryLength = (dayArr.length);
-    console.log('sorry length: ' + sorryLength);
+    //console.log('sorry length: ' + sorryLength);
 
     //var for all the getElements
     let sorryCountIndexDiv = document.getElementById("sorry-count-index");
@@ -307,28 +304,30 @@ function addDivDays(day) {
 
         h2.setAttribute("id", "head" + i)
         sorryCountIndexDiv.appendChild(h2);
-        console.log(h2);
+        //console.log(h2);
 
         //get why
-        console.log("why:" + day[i].why);
+        //console.log("why:" + day[i].why);
         //get time 
-        console.log("time:" + day[i].time);
+        //console.log("time:" + day[i].time);
 
         //assign sorryH2 as attribute for each h2 
         let sorryH2 = document.getElementById('head' + i);
-        console.log('head' + i);
-        console.log(sorryH2);
+        //console.log('head' + i);
+        //console.log(sorryH2);
 
+        //event listeners for mouse over + out
         sorryH2.addEventListener('mouseover', hoverShowInfo);
         sorryH2.addEventListener('mouseout', hideInfo)
 
+        //events when mouse over a sorry
         function hoverShowInfo() {
             let sorryInfoP = document.getElementById('sorry-info-p');
             let sorryInfoIndex = document.getElementById('sorry-info-index');
             let sorryInfoLoc = document.getElementById('sorry-info-location');
 
             // console.log(h2Index);
-            console.log('mouseon working!');
+            //console.log('mouseon working!');
 
             //show visibility, show why data
             sorryInfoP.style.visibility = "visible";
@@ -347,8 +346,25 @@ function addDivDays(day) {
             //change time
             sorryInfoIndex.innerHTML = day[i].time;
 
+            //play audio
+            var audio_files = [
+                "/assets/sound/Sorry1.mp3",
+                "/assets/sound/Sorry2.mp3",
+                "/assets/sound/Sorry3.mp3",
+                "/assets/sound/Sorry4.mp3",
+                "/assets/sound/Sorry5.mp3",
+                "/assets/sound/Sorry6.mp3",
+                "/assets/sound/Sorry7.mp3"
+            ]
+
+            var random_file = audio_files[Math.floor(Math.random() * audio_files.length)];
+
+            var audio = new Audio(random_file);
+
+            audio.play();
         }
 
+        //event when mouse off a sorry
         function hideInfo() {
             //change color of sorry to be gray again
             sorryH2.style.color = "#818181";
@@ -358,145 +374,27 @@ function addDivDays(day) {
             //put the total amount of sorry in "sorry-info-p" div
             sorryInfoIndex.innerHTML = "I said sorry " + sorryLength + " times today";
         }
-
-        // PSUEDO FOR WHEN MOUSEISON A SPECIFIC SORRY 
-        //1. when mouseon sorry of a specific index on x date
-        //2. show time in "sorry-info-index"
-        //3. show why in "sorry-info-p"
-
-
     }
 }
 
 
+///////* DUMPSTER CODE *////////
+// //play audio 
+            // let audio1 = document.getElementById("audio1");
+            // let audio2 = document.getElementById("audio2");
+            // let audio3 = document.getElementById("audio3");
+            // let audio4 = document.getElementById("audio4");
+            // let audio5 = document.getElementById("audio5");
+            // let audio6 = document.getElementById("audio6");
+            // let audio7 = document.getElementById("audio7");
+            // let audio8 = document.getElementById("audio8");
 
+            // let audioArray = [ 
+            //      audio1, audio2,audio3, audio4, audio5, audio6, audio7, audio8
+            // ];
 
+            // //console.log(audio0);
 
-
-/* /////////////////// DUMPSTER CODE *///////////////////////
-
-        // ////////// FUNCTION: ADD # OF SORRY H2 BASED ON LENGTH OF ARRAY///////
-
-        // //put sorryFri data into friArray
-        // let friArr = sorryFri;
-        // console.log('friArr:' + friArr);
-        // console.log(friArr.length);
-
-        // let sorryCountIndexDiv = document.getElementById("sorry-count-index");
-        // let sorryCountHolder = document.getElementById("sorry-count-holder");
-        // //for loop to add a div with sorry for each friday array
-        // for(let i = 0; i < friArr.length; i++){
-        //     let h2 = document.createElement("h2");
-        //     h2.innerHTML = 'sorry. ';
-        //     console.log(h2);
-        //     sorryCountIndexDiv.appendChild(h2);
-        // }
-
-
-// ON MOUSE OVER CHANGES COLOR TO HOVER COLOR
-// function hoverColor(){
-//     dateArrow = document.getElementById("date-arrow");
-
-//     dateArrow.style.backgroundImage = "url('assets/hover_right_date_arrow.svg')";
-// }
-
-//ADD SAT DIV BASED OF ARR LENGTH
-// function satAddDiv() {
-
-//     //put sorrySat data into satArray
-//     let satArr = sorrySat;
-//     let satDate = (satArr[0].date);
-//     console.log('satArr:' + satArr);
-//     console.log(satArr.length);
-
-//     //get date html, add friday date to html
-//     let sorryDateDiv = document.getElementById("date");
-//     sorryDateDiv.innerHTML = satDate;
-
-
-//     let sorryCountIndexDiv = document.getElementById("sorry-count-index");
-//     let sorryCountHolder = document.getElementById("sorry-count-holder");
-//     //for loop to add a div with sorry for each sat array
-//     for (let i = 0; i < satArr.length; i++) {
-//         let h2 = document.createElement("h2");
-//         h2.innerHTML = 'sorry';
-//         // console.log(h2);
-//         sorryCountIndexDiv.appendChild(h2);
-//     }
-
-//     //when click on arrow in sat, clear div and go to sunday
-//     let dateArrow = document.getElementById("date-arrow");
-//     dateArrow.addEventListener('click', () => {
-//         clearDiv();
-//         sunAddDiv();
-//     });
-// }
-
-// //ADD SAT DIV BASED OF ARR LENGTH
-// function sunAddDiv() {
-
-//     //put sorrySat data into satArray
-//     let sunArr = sorrySun;
-//     let sunDate = (sunArr[0].date);
-//     console.log('sunArr:' + sunArr);
-//     console.log(sunArr.length);
-
-//     //get date html, add friday date to html
-//     let sorryDateDiv = document.getElementById("date");
-//     sorryDateDiv.innerHTML = sunDate;
-
-
-//     let sorryCountIndexDiv = document.getElementById("sorry-count-index");
-//     let sorryCountHolder = document.getElementById("sorry-count-holder");
-//     //for loop to add a div with sorry for each sat array
-//     for (let i = 0; i < sunArr.length; i++) {
-//         let h2 = document.createElement("h2");
-//         h2.innerHTML = 'sorry';
-//         // console.log(h2);
-//         sorryCountIndexDiv.appendChild(h2);
-//     }
-
-//     //when click on arrow in sat, clear div and go to sunday
-//     let dateArrow = document.getElementById("date-arrow");
-//     dateArrow.addEventListener('click', () => {
-//         clearDiv();
-//         friAddDiv();
-//     });
-// }
-
-// dateArrow.addEventListener('click', () => {
-//     clearDiv();
-//     addDivDays(sorrySat);
-// });
-
-//when mouse is on the date or arrow, change hover colors
-// dateArrow = document.getElementById("date-arrow");
-// dateArrow.addEventListener("mouseover", hoverColor);
-
-
-/*
-// OG EXAMPLE BEFORE TURNING INTO FUNCTION WITH VAR PASSED THRU
-function friAddDiv() {
-
-    //put sorryFri data into friArray
-    let friArr = sorryFri;
-    let friDate = (friArr[0].date);
-    console.log('friArr:' + friArr);
-    console.log(friArr.length);
-    console.log(friDate);
-
-    //get date html, add friday date to html
-    let sorryDateDiv = document.getElementById("date");
-    sorryDateDiv.innerHTML = friDate;
-
-    let sorryCountIndexDiv = document.getElementById("sorry-count-index");
-    let sorryCountHolder = document.getElementById("sorry-count-holder");
-    //for loop to add a div with sorry for each friday array
-    for (let i = 0; i < friArr.length; i++) {
-        let h2 = document.createElement("h2");
-        h2.innerHTML = 'sorry';
-        // console.log(h2);
-        sorryCountIndexDiv.appendChild(h2);
-    }
-}
-*/
+            // let randomAudio = audioArray[Math.floor(Math.random()*audioArray.length)];
+            // console.log(randomAudio);
+            // randomAudio.play();

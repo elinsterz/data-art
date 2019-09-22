@@ -1,7 +1,7 @@
 window.addEventListener('load', init);
 
 //audio file
-let myAudio = new Audio('assets/sound/placeholder_guitar.mp3');
+let myAudio = new Audio('assets/sound/Sorry_All_61.mp3');
 
 function init() {
     //id for play button
