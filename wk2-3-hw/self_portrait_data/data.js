@@ -348,13 +348,13 @@ function addDivDays(day) {
 
             //play audio
             var audio_files = [
-                document.getElementById("audio1"),
-                document.getElementById("audio2"),
-                document.getElementById("audio3"),
-                document.getElementById("audio4"),
-                document.getElementById("audio5"),
-                document.getElementById("audio6"),
-                document.getElementById("audio7")
+                    "assets/sound/Sorry1.mp3",
+                    "assets/sound/Sorry2.mp3",
+                    "assets/sound/Sorry3.mp3",
+                    "assets/sound/Sorry4.mp3",
+                    "assets/sound/Sorry5.mp3",
+                    "assets/sound/Sorry6.mp3",
+                    "assets/sound/Sorry7.mp3"
             ]
 
             var random_file = audio_files[Math.floor(Math.random() * audio_files.length)];
