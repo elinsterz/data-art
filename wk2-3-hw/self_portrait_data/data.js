@@ -348,13 +348,13 @@ function addDivDays(day) {
 
             //play audio
             var audio_files = [
-                "/assets/sound/Sorry1.mp3",
-                "/assets/sound/Sorry2.mp3",
-                "/assets/sound/Sorry3.mp3",
-                "/assets/sound/Sorry4.mp3",
-                "/assets/sound/Sorry5.mp3",
-                "/assets/sound/Sorry6.mp3",
-                "/assets/sound/Sorry7.mp3"
+                document.getElementById("audio1"),
+                document.getElementById("audio2"),
+                document.getElementById("audio3"),
+                document.getElementById("audio4"),
+                document.getElementById("audio5"),
+                document.getElementById("audio6"),
+                document.getElementById("audio7")
             ]
 
             var random_file = audio_files[Math.floor(Math.random() * audio_files.length)];
@@ -380,21 +380,43 @@ function addDivDays(day) {
 
 ///////* DUMPSTER CODE *////////
 // //play audio 
-            // let audio1 = document.getElementById("audio1");
-            // let audio2 = document.getElementById("audio2");
-            // let audio3 = document.getElementById("audio3");
-            // let audio4 = document.getElementById("audio4");
-            // let audio5 = document.getElementById("audio5");
-            // let audio6 = document.getElementById("audio6");
-            // let audio7 = document.getElementById("audio7");
-            // let audio8 = document.getElementById("audio8");
+// let audio1 = document.getElementById("audio1");
+// let audio2 = document.getElementById("audio2");
+// let audio3 = document.getElementById("audio3");
+// let audio4 = document.getElementById("audio4");
+// let audio5 = document.getElementById("audio5");
+// let audio6 = document.getElementById("audio6");
+// let audio7 = document.getElementById("audio7");
+// let audio8 = document.getElementById("audio8");
 
-            // let audioArray = [ 
-            //      audio1, audio2,audio3, audio4, audio5, audio6, audio7, audio8
-            // ];
+// let audioArray = [ 
+//      audio1, audio2,audio3, audio4, audio5, audio6, audio7, audio8
+// ];
 
-            // //console.log(audio0);
+// //console.log(audio0);
 
-            // let randomAudio = audioArray[Math.floor(Math.random()*audioArray.length)];
-            // console.log(randomAudio);
-            // randomAudio.play();
+// let randomAudio = audioArray[Math.floor(Math.random()*audioArray.length)];
+// console.log(randomAudio);
+// randomAudio.play();
+
+//play audio
+// var audio_files = [
+//     document.getElementById("audio1"),
+//     document.getElementById("audio2"),
+//     document.getElementById("audio3"),
+//     document.getElementById("audio4"),
+//     document.getElementById("audio5"),
+//     document.getElementById("audio6"),
+//     document.getElementById("audio7")
+// ]
+
+//play audio
+// var audio_files = [
+//     "assets/sound/Sorry1.mp3",
+//     "assets/sound/Sorry2.mp3",
+//     "assets/sound/Sorry3.mp3",
+//     "assets/sound/Sorry4.mp3",
+//     "assets/sound/Sorry5.mp3",
+//     "assets/sound/Sorry6.mp3",
+//     "assets/sound/Sorry7.mp3"
+// ]
