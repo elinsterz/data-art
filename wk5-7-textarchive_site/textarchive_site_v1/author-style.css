@@ -34,7 +34,7 @@ body,html {
 body{
     background-color: #B6B6B6 !important;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 #header-nav{
@@ -69,10 +69,11 @@ body{
     letter-spacing: 0.75pt;
 }
 
+/* /////////////////////////// */
 /* NAV HEADER DIV */
 #title-container{
     margin-top: 1vh;
-    height: 16vh;
+    height: 14vh;
     margin-bottom: 1vh;
 }
 
@@ -106,7 +107,8 @@ body{
     text-decoration: none !important;
 }
 
-/* NAV HEADER DIV - AUTHOR LINKS SECTION - NEED TO RETHINK */
+/* /////////////////////////// */
+/* NAV HEADER DIV - AUTHOR LINKS SECTION*/
 #author-name-div{
     position: relative;
     float: left;
@@ -154,18 +156,20 @@ a:visited{
 } 
 
 #nav-hr{
-    border-bottom: 1.45px solid white;
+    border-bottom: 1px solid white;
     position: relative;  
     margin-left: 6vw;
-    top: 9vh;
+    top: 10vh;
 }
 
+/* /////////////////////////// */
 /* CONTENT SECTION */
 #content-container{
     width: 100vw;
     position: relative;
 }
 
+/* /////////////////////////// */
 /* P FOR ALL CONTENT PG*/
 .content-p{
     font-family:'GT-America-Mono-Light';
@@ -174,13 +178,14 @@ a:visited{
     color: #5B5B5B;
 }
 
+/* /////////////////////////// */
 /* BIO LEFT SECTION */
 #bio-div{
     position: absolute;
     left: 5.2vw;
     width: 23vw;
-    height: 200vh;
-    border-right: solid 1.45px black;
+    height: 250vh;
+    border-right: solid 1px black;
     box-sizing: border-box;
     min-height: 200px;
 }
@@ -192,23 +197,23 @@ a:visited{
 
 #filter-selection{
     padding-bottom: 3vh;
-    border-bottom: solid 1.45px white;
+    border-bottom: solid 1px white;
     left: 1.25vw;
     position: relative;
     width: 70vw;
 }
 
-
 .h3-text{
     font-family: 'Gt-Sectra-Medium';
     font-size: 1.5vw;
     color: black;
+    text-align: left;
 }
 
 #birth-death-div{
     margin-top: 3vh;
     padding-bottom: 1.5vh;
-    border-bottom: solid 1.45px white;
+    border-bottom: solid 1px white;
 }
 
 #life-work-div{
@@ -225,20 +230,63 @@ a:visited{
     margin-bottom: 2vh;
 }
 
-
+/* /////////////////////////// */
 /* FILTER RIGHT SECTION */
 #filter-selection{
-    margin-top: 4vh;
+    margin-top: 2vh;
 }
 
 #filter-p{
     font-family:'GT-America-Mono-Light';
     font-size: 0.9vw;
-    line-height: 0.5vh;
+    line-height: 1vw;
     color: #5B5B5B;
     text-align: left;
     left: -1vw;
 }
+
+/* /////////////////////////// */
+/* FILTER WORDS DATA SECTION */
+.filter-head{
+    height: 3vh;
+    width: 1vw;
+    border-bottom: 0.9px solid white;
+}
+
+.filter-words:hover{
+    color: white;
+    cursor: pointer;
+}
+
+
+/* /////////////////////////// */
+/* SEARCH RESULTS DATA SECTION */
+#search-results-h3{
+    padding-top: 3vh;
+}
+
+#search-results-div{
+    margin-top: 3vh;
+}
+
+.found-kwic{
+    font-family: 'Gt-Sectra-Medium-Italic';
+    font-size: 4.75vh;
+    line-height: 5.5vh!important;
+    color: #7e7e7e;
+    text-align: left;
+    text-transform: none;
+    margin: 4vh 0;
+    /* border-top: 0.9px solid white; */
+}
+
+.divnode{
+    width: 3vw;
+    border-bottom: 0.9px solid white;
+    height: 3vh;
+}
+
+
 
 
 
