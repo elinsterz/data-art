@@ -24,7 +24,7 @@
 
 <body>
     <!--JS-->
-    <script type='text/javascript' src="sexton_filter.js"></script>
+    <script type='text/javascript' src="berryman_filter.js"></script>
 
     <!--MAIN CONTAINER-->
     <div id='author-main-container' class='row justify-content-center'>
@@ -60,11 +60,12 @@
         <div id='content-container' class='row justify-content-center'>
             <!--LEFT SECTION - BIO DIV-->
             <div id='bio-div' class='col-4'>
-                <h3 id='author-name' class='h3-text'>Anne Sexton</h3>
-                <img id='sexton-img' class='bio-img' src="/assets/photos/sexton_photo_320x430.png" alt="anne sexton">
+                <h3 id='author-name' class='h3-text'>John Berryman</h3>
+                <img id='berryman-img' class='bio-img' src="/assets/photos/berryman_320x430.png"
+                    alt="john berryman">
 
                 <div id='birth-death-div' class='content-paragraph'>
-                    <p id='sexton-birth' class='content-p'>November 9, 1928 - October 4, 1974</p>
+                    <p id='sexton-birth' class='content-p'>October 25, 1914 - January 7, 1972</p>
                 </div>
 
                 <!--LEFT SECTION - BIO DIV - LIFE -->
@@ -111,7 +112,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div id='vertical-line' class='col-1'></div> -->
+            <div id='vertical-line' class='col-1'></div>
 
             <!--RIGHT SECTION - FILTER DIV-->
             <div id='filter-div' class='col-8'>
@@ -122,7 +123,7 @@
                         <div id='filter-p' class='col-2'>
                             <p id='filter-nouns-head' class='filter-head'>Nouns</p>
                             <p id='death' class='filter-words' onclick="findkwic('death')">death</p>
-                            <p id='suicides' class='filter-words' onclick="findkwic('suicides')">suicides</p>
+                            <p id='suicides' class='filter-words' onclick="findkwic('suicide')">suicide</p>
                             <p id='life' class='filter-words' onclick="findkwic('life')">life</p>
                             <p id='people' class='filter-words' onclick="findkwic('people')">people</p>
                             <p id='heart' class='filter-words' onclick="findkwic('heart')">heart</p>
@@ -183,8 +184,8 @@
                 <!--SEARCH RESULTS BOTTOM HALF RIGHT SECTION-->
                 <div id='search-results-container'>
                     <h3 id='search-results-h3' class='h3-text'>Search Results</h3>
-                    <p id = "toggle-view-count" class = 'toggle-view'>Count</p>
-                    <p id = "toggle-view-sentence" class = 'toggle-view'>Sentence</p>
+                    <p id="toggle-view-count" class='toggle-view'>Count</p>
+                    <p id="toggle-view-sentence" class='toggle-view'>Sentence</p>
                     <!-- <p class='results-subhead'></p> -->
                     <div id='search-results-div'>
                         <!-- <p class='found-kwic'>This is an example of a word found in a sentence.</p>

@@ -112,14 +112,15 @@ body{
 #author-name-div{
     position: relative;
     float: left;
-    top: 2vh;
+    /* top: 1vh; */
     left: 8vw;
     color: rgb(53, 53, 53);
     text-decoration: none;
+    padding-bottom: 3vh;
 }
 
 #author-name-div div{
-    height: 12px;
+    /* height: 12px; */
     margin: auto;
     /* position:absolute; */
     display: block;
@@ -184,24 +185,13 @@ a:visited{
     position: absolute;
     left: 5.2vw;
     width: 23vw;
-    min-height:200vh;
-    height: 500vh;
+    min-height:150vh;
+    height: 200vh;
     border-right: solid 1px black;
     box-sizing: border-box;
+    padding-right: 1.5vw;
 }
 
-#filter-div{
-    position: absolute;
-    left: 29vw;
-}
-
-#filter-selection{
-    padding-bottom: 3vh;
-    border-bottom: solid 1px white;
-    left: 1.25vw;
-    position: relative;
-    width: 70vw;
-}
 
 .h3-text{
     font-family: 'Gt-Sectra-Medium';
@@ -210,31 +200,9 @@ a:visited{
     display: inline-block;
 }
 
-.toggle-view{
-    font-family:'GT-America-Mono-Light';
-    font-size: 0.9vw;
-    line-height: 1vw;
-    color: black;
-    display: inline-block;
-    margin-top: 3vh;
-    height: 1.5vh;
-}
-
-#toggle-view-sentence{
-    text-align: right;
-    float: right;
-    padding: 0 3vw 0 0;
-}
-
-#toggle-view-count{
-    border-left: 0.9px white solid;
-    text-align: right;
-    float: right;
-    padding: 0 0 0 3vw;
-}
 
 #birth-death-div{
-    margin-top: 2vh;
+    /* margin-top: 2vh; */
     padding-bottom: 0.5vh;
     /* border-bottom: solid 1px white; */
 }
@@ -249,6 +217,7 @@ a:visited{
 
 .bio-img{
     width: 100%;
+    margin-bottom: 2vh;
 }
 
 .white-line{
@@ -256,14 +225,14 @@ a:visited{
     margin-bottom: 2vh;
 }
 
-#vertical-line{
+/* #vertical-line{
     border-right: 0.85px solid black;
     width: 15vw;
     z-index: 5;
-    min-height: 500vh;
+    height: 250vh;
     left: -25.75vw;
     position: relative;
-}
+} */
 
 .footnote-p{
     font-family:'GT-America-Mono-Light';
@@ -277,6 +246,19 @@ a:visited{
 
 /* /////////////////////////// */
 /* FILTER RIGHT SECTION */
+#filter-div{
+    position: absolute;
+    left: 29vw;
+}
+
+#filter-selection{
+    padding-bottom: 3vh;
+    border-bottom: solid 1px white;
+    left: 1.25vw;
+    position: relative;
+    width: 70vw;
+}
+
 #filter-selection{
     margin-top: 2vh;
 }
@@ -308,6 +290,31 @@ a:visited{
 .filter-words:active{
     color: white;
     cursor: pointer;
+}
+
+
+/* TOGGLE VIEW SENTENCE & COUNT IN FILTER*/
+.toggle-view{
+    font-family:'GT-America-Mono-Light';
+    font-size: 0.9vw;
+    line-height: 1vw;
+    color: black;
+    display: inline-block;
+    margin-top: 3vh;
+    height: 1.5vh;
+}
+
+#toggle-view-sentence{
+    text-align: right;
+    float: right;
+    padding: 0 3vw 0 0;
+}
+
+#toggle-view-count{
+    border-left: 0.9px black solid;
+    text-align: right;
+    float: right;
+    padding: 0 0 0 3vw;
 }
 
 

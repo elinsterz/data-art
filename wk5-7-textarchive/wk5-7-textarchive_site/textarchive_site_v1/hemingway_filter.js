@@ -5,22 +5,14 @@ let beforeWordArr = []; //new array that the before words get pushed into in for
 let afterWordArr = []; //new array that the after words get pushed into in for loop
 
 function setup() {
-    data = loadStrings('data/sexton_poems_all.txt', init);
-    // loadJSON('data/sylviasdeath.json', init);
+    data = loadStrings('data/hemingway_all.txt', init);
 }
-
 
 function init() {
     console.log('loaded data: ' + data);
-
-    // let bttnWord = document.getElementById('bttn-word');
-    // bttnWord.addEventListener('click', function () {
-    //     findkwic(data, word);
-    //     console.log('clicked!');
-    // });
 }
 
-/////////* FIND KWIC RITA FUNCTION *//////////
+/////////////////* FIND KWIC RITA FUNCTION *//////////////////
 function findkwic(word) {
     kwic = RiTa.kwic(data.join('\n'), word, {
         ignoreStopWords: false,
@@ -84,11 +76,13 @@ function findkwic(word) {
 }
 
 
-///////////* LOAD *////////////
+///////////////////* LOAD *////////////////////
 window.addEventListener('load', init);
 
 
-/////////////* DUMPSTER /////////
+
+
+/////////////////////* DUMPSTER /////////////////
 //supposed to change color of the search word
 // let foundWord = word;
 // for (let k = 0; k < kwic.length; k++) {
@@ -98,3 +92,9 @@ window.addEventListener('load', init);
 // }
 // */
 
+//    // buttons for test code
+    // let bttnWord = document.getElementById('bttn-word'); 
+    // bttnWord.addEventListener('click', function () {
+    //     findkwic(data, word);
+    //     console.log('clicked!');
+    // });

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Language of Depression</title>
+
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="author-style.css">
+
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!--P5JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.js"></script>
+
+    <!--RITA-->
+    <script src='libraries/rita-full.js'></script>
+</head>
+
+<body>
+    <!--JS-->
+    <script type='text/javascript' src="filter.js"></script>
+
+    <!--MAIN CONTAINER-->
+    <div id='author-main-container' class='row justify-content-center'>
+
+        <!--ABOUT CONTAINER-->
+        <div id='about-container' class='col-12'>
+            <div id='about-div'>
+                <!-- <p id='about-nav-text'>About</p> -->
+            </div>
+        </div>
+
+        <!--TITLE CONTAINER-->
+        <div id='title-container' class='col-12'>
+            <!-- <div id='nav-container'class='col-12'> -->
+            <!--TITLE-->
+            <div id='nav-div' div class='col-6'>
+                <h2 id='title-h2'> <a href="index.html">The Language<br>of Depression</a></h2>
+            </div>
+
+            <!--AUTHORS-->
+            <!-- <div id='author-name-div' div class='col-2'>
+                <div><a href="sexton.html" class='author-link'>Anne Sexton</a></div>
+                <div><a href="hemingway.html" class='author-link'>Ernest Hemingway</a></div>
+                <div><a href="chang.html" class='author-link'>Iris Chang</a></div>
+                <div><a href="plath.html" class='author-link'>Sylvia Plath</a></div>
+            </div> -->
+
+            <!--HORIZONTAL RULE-->
+            <hr id='nav-hr'>
+        </div>
+
+        <!--AUTHOR INFORMATION-->
+        <div id='content-container' class='row justify-content-center'>
+            <!--LEFT SECTION - BIO DIV-->
+            <div id='bio-div' class='col-4'>
+                <h3 id='author-name' class='h3-text'>Sylvia Plath</h3>
+                <img id='sexton-img' class='bio-img' src="/assets/photos/plath_photo_320x430.png" alt="sylvia plath">
+
+                <div id='birth-death-div' class='content-paragraph'>
+                    <p id='sexton-birth' class='content-p'>October 27, 1932 - February 11, 1963</p>
+                </div>
+
+                <!--LEFT SECTION - BIO DIV - LIFE -->
+                <div id='life-work-div' class='content-paragraph'>
+                    <h3 id='author-name' class='h3-text'>Life</h3>
+
+                    <!--LEFT SECTION - BIO DIV - LIFE WORK TEXT-->
+                    <div id='bio-text'>
+                        <img src="assets/svg/short_white_line.svg" class='white-line' alt="white line">
+                        <p class='content-p'>1928 | Anne Sexton was born in Newton, MA.</p>
+                        <img src="assets/svg/short_white_line.svg" class='white-line' alt="white line">
+                        <p class='content-p'>1953 | She gave birth to her first child. Sexton suffered from post-partum
+                            depression. She had her first breakdown and was admitted to a neuropsychiatric hospital.
+                        </p>
+                        <img src="assets/svg/short_white_line.svg" class='white-line' alt="white line">
+                        <p class='content-p'>1954 | She had her first manic episode.</p>
+                        <img src="assets/svg/short_white_line.svg" class='white-line' alt="white line">
+                        <p class='content-p'>1955 | She had her second child.</p>
+                        <img src="assets/svg/short_white_line.svg" class='white-line' alt="white line">
+                        <p class='content-p'>1956 | She attempted suicide. In treatment, her therapist told her to
+                            write.
+                            By the end of the year she had created 37 poems.</p>
+                        <img src="assets/svg/short_white_line.svg" class='white-line' alt="white line">
+                        <p class='content-p'>1957 | She continued to struggle with depression. Sexton joined writing
+                            groups in Boston that eventually led her to friendships and relationships with the poets
+                            Maxine Kumin, Robert Lowell, George Starbuck, and Sylvia Plath.</p>
+                    </div>
+                </div>
+
+
+                <!--LEFT SECTION - BIO DIV - WORKS-->
+                <div id='life-work-div' class='content-paragraph'>
+                    <h3 id='author-name' class='h3-text'>Work</h3>
+                    <p class='footnote-p'>Selection of texts used for this website.</p>
+                    <!--LEFT SECTION - BIO DIV - LIFE WORK TEXT-->
+                    <div id='bio-text'>
+                        <img src="assets/svg/short_white_line.svg" class='white-line' alt="white line">
+                        <p class='content-p'>1959 | "Winter Colony"</p>
+                        <p class='content-p'>1959 | "Wanting to Die"</p>
+                        <p class='content-p'>1962 | "The Truth the Dead Know"</p>
+                        <p class='content-p'>1962 | "All My Pretty Ones"</p>
+                        <p class='content-p'>1966 | "Her Kind"</p>
+                        <p class='content-p'>1971 | "Snow White and the Seven Dwarfs"</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div id='vertical-line' class='col-1'></div> -->
+
+            <!--RIGHT SECTION - FILTER DIV-->
+            <div id='filter-div' class='col-8'>
+                <div id='top-filter-container'>
+                    <h3 id='filter-results' class='h3-text'>Select Words to Search</h3>
+                    <div id='filter-selection' class='row justify-content-start'>
+                        <!--NOUNS-->
+                        <div id='filter-p' class='col-2'>
+                            <p id='filter-nouns-head' class='filter-head'>Nouns</p>
+                            <p id='death' class='filter-words' onclick="findkwic('death')">death</p>
+                            <p id='suicides' class='filter-words' onclick="findkwic('suicides')">suicides</p>
+                            <p id='life' class='filter-words' onclick="findkwic('life')">life</p>
+                            <p id='people' class='filter-words' onclick="findkwic('people')">people</p>
+                            <p id='heart' class='filter-words' onclick="findkwic('heart')">heart</p>
+                        </div>
+
+                        <!--VERBS-->
+                        <div id='filter-p' class='col-2'>
+                            <p id='filter-verbs-head' class='filter-head'>Verbs</p>
+                            <p id='die' class='filter-words' onclick="findkwic('die')">die</p>
+                            <p id='know' class='filter-words' onclick="findkwic('know')">know</p>
+                            <p id='cry' class='filter-words' onclick="findkwic('kill')">kill</p>
+                            <p id='need' class='filter-words' onclick="findkwic('touch')">touch</p>
+                            <p id='love' class='filter-words' onclick="findkwic('love')">love</p>
+                        </div>
+
+                        <!--ADJECTIVE-->
+                        <div id='filter-p' class='col-2'>
+                            <p id='filter-adj-head' class='filter-head'>Adjectives</p>
+                            <p id='bad' class='filter-words' onclick="findkwic('bad')">bad</p>
+                            <p id='better' class='filter-words' onclick="findkwic('good')">good</p>
+                            <p id='sad' class='filter-words' onclick="findkwic('sad')">sad</p>
+                            <p id='hard' class='filter-words' onclick="findkwic('down')">down</p>
+                            <p id='lonely' class='filter-words' onclick="findkwic('lonely')">lonely</p>
+                        </div>
+
+                        <!--PRONOUNS-->
+                        <div id='filter-p' class='col-2'>
+                            <p id='filter-pronouns-head' class='filter-head'>Pronouns</p>
+                            <p id='I' class='filter-words' onclick="findkwic('I')">I</p>
+                            <p id='we' class='filter-words' onclick="findkwic('me')">me</p>
+                            <p id='you' class='filter-words' onclick="findkwic('you')">you</p>
+                            <p id='we' class='filter-words' onclick="findkwic('we')">we</p>
+                            <p id='they' class='filter-words' onclick="findkwic('they')">they</p>
+                        </div>
+
+                        <!--ABSOLUTIST-->
+                        <div id='filter-p' class='col-2'>
+                            <p id='filter-absolutes-head' class='filter-head'>Absolutes</p>
+                            <p id='nothing' class='filter-words' onclick="findkwic('nothing')">nothing</p>
+                            <p id='anything' class='filter-words' onclick="findkwic('always')">always</p>
+                            <p id='everything' class='filter-words' onclick="findkwic('only')">only</p>
+                            <p id='anymore' class='filter-words' onclick="findkwic('all')">all</p>
+                            <p id='never' class='filter-words' onclick="findkwic('never')">never</p>
+                        </div>
+
+                        <!--AUXILIARY VERBS-->
+                        <div id='filter-p' class='col-2'>
+                            <p id='filter-auxilary-head' class='filter-head'>Auxiliary</p>
+                            <p id='could' class='filter-words' onclick="findkwic('could')">could</p>
+                            <p id='would' class='filter-words' onclick="findkwic('would')">would</p>
+                            <p id='should' class='filter-words' onclick="findkwic('ought')">ought</p>
+                            <p id='will' class='filter-words' onclick="findkwic('will')">will</p>
+                            <p id='must' class='filter-words' onclick="findkwic('must')">must</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--SEARCH RESULTS BOTTOM HALF RIGHT SECTION-->
+                <div id='search-results-container'>
+                    <h3 id='search-results-h3' class='h3-text'>Search Results</h3>
+                    <p id = "toggle-view-count" class = 'toggle-view'>Count</p>
+                    <p id = "toggle-view-sentence" class = 'toggle-view'>Sentence</p>
+                    <!-- <p class='results-subhead'></p> -->
+                    <div id='search-results-div'>
+                        <!-- <p class='found-kwic'>This is an example of a word found in a sentence.</p>
+                    <p class='found-kwic'>Another example of a key word in context.</p> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</body>
+
+</html>
