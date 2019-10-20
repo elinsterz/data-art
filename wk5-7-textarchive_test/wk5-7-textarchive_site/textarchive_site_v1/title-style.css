@@ -82,7 +82,7 @@ body{
     position: relative;
     left: 0;
     width: 100vw;
-    border-bottom: 1.45px solid white;
+    border-bottom: 1px solid white;
     margin-bottom: 2vh;
     padding-bottom: 2vh;
 }
