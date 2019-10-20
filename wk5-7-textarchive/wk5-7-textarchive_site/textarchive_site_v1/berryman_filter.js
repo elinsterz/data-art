@@ -5,7 +5,7 @@ let beforeWordArr = []; //new array that the before words get pushed into in for
 let afterWordArr = []; //new array that the after words get pushed into in for loop
 
 function setup() {
-    data = loadStrings('data/berryman_all.txt', init);
+    data = loadStrings('data/berryman_all_no_title.txt', init);
     // loadJSON('data/sylviasdeath.json', init);
 }
 

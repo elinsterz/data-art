@@ -42,17 +42,25 @@ body{
     position:relative;
 }
 
-/* ABOUT */
+/* ABOUT CONTAINER WITH TRANSFORM*/
 #about-container{
     background-color: black;
     position: fixed;
     top: 0;
     left: 0;
-    width: 4vw;
+    width: 3vw;
     height: 100vh;
-    border: 3px;
-    box-sizing: border-box;
+    transition: transform 1s; /* animation*/
 }
+
+#about-container:hover{
+   transform: translate(30% 2%);
+   -webkit-transform: scale(5);
+   -ms-transform: scale(5);
+   transform: scale(1.5);
+   transition: 1s ease;
+}
+
 
 #about-div{
     transform:translateY(50vh);
@@ -177,6 +185,26 @@ a:visited{
     font-size: 0.9vw;
     line-height: 1.75vw;
     color: #5B5B5B;
+}
+
+.content-p > a{
+    color: #5B5B5B;
+    text-decoration: none;
+}
+
+.content-p > a:active{
+    color: white;
+    text-decoration: none;
+}
+
+.content-p > a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.content-p > a:link{
+    color: white;
+    text-decoration: none;
 }
 
 /* /////////////////////////// */
