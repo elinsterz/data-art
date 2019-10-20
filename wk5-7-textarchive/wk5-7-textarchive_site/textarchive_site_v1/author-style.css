@@ -34,7 +34,7 @@ body,html {
 body{
     background-color: #B6B6B6 !important;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 #header-nav{
@@ -184,10 +184,10 @@ a:visited{
     position: absolute;
     left: 5.2vw;
     width: 23vw;
-    height: 250vh;
+    min-height:200vh;
+    height: 500vh;
     border-right: solid 1px black;
     box-sizing: border-box;
-    min-height: 200px;
 }
 
 #filter-div{
@@ -207,18 +207,44 @@ a:visited{
     font-family: 'Gt-Sectra-Medium';
     font-size: 1.5vw;
     color: black;
-    text-align: left;
+    display: inline-block;
+}
+
+.toggle-view{
+    font-family:'GT-America-Mono-Light';
+    font-size: 0.9vw;
+    line-height: 1vw;
+    color: black;
+    display: inline-block;
+    margin-top: 3vh;
+    height: 1.5vh;
+}
+
+#toggle-view-sentence{
+    text-align: right;
+    float: right;
+    padding: 0 3vw 0 0;
+}
+
+#toggle-view-count{
+    border-left: 0.9px white solid;
+    text-align: right;
+    float: right;
+    padding: 0 0 0 3vw;
 }
 
 #birth-death-div{
-    margin-top: 3vh;
-    padding-bottom: 1.5vh;
-    border-bottom: solid 1px white;
+    margin-top: 2vh;
+    padding-bottom: 0.5vh;
+    /* border-bottom: solid 1px white; */
 }
 
 #life-work-div{
-    margin-top: 3vh;
-    margin-bottom: 5vh;
+    /* margin-top: 3vh; */
+    margin-bottom: 1vh;
+    /* margin-top: 3vh; */
+    padding-top: 3vh;
+    border-top: solid 1px white;
 }
 
 .bio-img{
@@ -228,6 +254,25 @@ a:visited{
 .white-line{
     margin-top: 2vh;
     margin-bottom: 2vh;
+}
+
+#vertical-line{
+    border-right: 0.85px solid black;
+    width: 15vw;
+    z-index: 5;
+    min-height: 500vh;
+    left: -25.75vw;
+    position: relative;
+}
+
+.footnote-p{
+    font-family:'GT-America-Mono-Light';
+    font-size: 0.725vw;
+    letter-spacing: 0.35pt;
+    line-height: 1.5vw;
+    color:#5B5B5B; 
+    padding-top: 1.5vh;
+    text-transform: uppercase;
 }
 
 /* /////////////////////////// */
@@ -248,12 +293,19 @@ a:visited{
 /* /////////////////////////// */
 /* FILTER WORDS DATA SECTION */
 .filter-head{
+    color: black;
     height: 3vh;
     width: 1vw;
     border-bottom: 0.9px solid white;
 }
 
 .filter-words:hover{
+    color: white;
+    cursor: pointer;
+}
+
+
+.filter-words:active{
     color: white;
     cursor: pointer;
 }
@@ -271,13 +323,20 @@ a:visited{
 
 .found-kwic{
     font-family: 'Gt-Sectra-Medium-Italic';
-    font-size: 4.75vh;
-    line-height: 5.5vh!important;
+    font-size: 5vh;
+    line-height: 5.75vh!important;
     color: #7e7e7e;
     text-align: left;
     text-transform: none;
     margin: 4vh 0;
     /* border-top: 0.9px solid white; */
+}
+
+.found-word{
+    font-family: 'Gt-Sectra-Medium-Italic';
+    font-size: 5.25vh;
+    line-height: 6vh!important;
+    color: black;
 }
 
 .divnode{
@@ -289,9 +348,7 @@ a:visited{
 
 
 
-
 /* SCROLL BAR */
-
 /* width */
 ::-webkit-scrollbar {
     width: 0.8vw;
@@ -313,3 +370,5 @@ a:visited{
   ::-webkit-scrollbar-thumb:hover {
     background: #6F6F6F; 
   }
+
+

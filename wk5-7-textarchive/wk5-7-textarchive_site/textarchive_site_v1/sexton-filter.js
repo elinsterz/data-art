@@ -25,8 +25,8 @@ function findkwic(word) {
     kwic = RiTa.kwic(data.join('\n'), word, {
         ignoreStopWords: false,
         ignoreCase: false,
-        ignorePunctuation: true,
-        wordCount: 5
+        ignorePunctuation: false,
+        wordCount: 4
     });
 
     console.log('data in function: ' + data);
@@ -49,7 +49,7 @@ function findkwic(word) {
         console.log('parts[0]: ' + parts[0]);
         beforeWordArr.push(parts[0]);
 
-        console.log('word: '+ word);
+        console.log('word: ' + word);
 
         //push after words into array after words
         console.log('parts[1]: ' + parts[1]);
@@ -60,10 +60,11 @@ function findkwic(word) {
     console.log('afterWordArr[]: ' + afterWordArr);
 
     //HACK ALERT! THE BELOW CODE IS TO COMBAT WEIRD RITA GLITCH OF DUPLICATING THE PARTS[0] WHEN APPENDING CHILD
-    document.getElementById('search-results-div').innerHTML = "";  
+    document.getElementById('search-results-div').innerHTML = "";
 
     //append child and make a div for each element in the before word array 
     for (let j = 0; j < kwic.length; j++) {
+
         let node = document.createElement("p");
         var textnode = document.createTextNode(beforeWordArr[j] + " " + word + afterWordArr[j]);
         node.appendChild(textnode);
@@ -73,73 +74,27 @@ function findkwic(word) {
         let divnode = document.createElement("div");
         let appendDiv = appendText.appendChild(divnode);
         appendDiv.className = 'divnode';
-
         // document.getElementById("search-results-div").innerHTML = beforeWordArr;
+
+        console.log("kwic.length: " + kwic.length);
+        let searchResults = document.getElementById("search-results-h3");
+        searchResults.innerHTML = word + "  |  " + kwic.length;
     }
     //beforeWordArr = []
 }
+
 
 ///////////* LOAD *////////////
 window.addEventListener('load', init);
 
 
-
-
-
-
-
-////////////* DUMPSTER BUT HESITANT TO DELETE *//////////
-
-    // let paragraph = document.createElement('p');
-    // paragraph.innerHTML = parts[0];
-    // let resultsDiv = document.getElementById('search-results-div');
-
-    // resultsDiv.innerHTML = beforeWord;
-
-
-
-    // for (let i = 0; i < kwic.length; i++) {
-    //     let newP = document.createElement('p'); //create p tag
-    //     let resultsDiv = document.getElementById('search-results-div')
-    //     resultsDiv.appendChild(newP);
-
-    //     resultsDiv.innerHTML = beforeWordArr;
-
-    //     console.log('newP: '+ newP);
-    //     console.log("beforeWordArr[i]: " + beforeWordArr[i]);
-    //     //document.getElementById('search-results-div').innerHTML = beforeWordArr[i];
-    // }
-
-        // console.log("beforeWordArr[0]: "+ beforeWordArr[0]);
-    // console.log("beforeWordArr[1]: "+ beforeWordArr[1]);
-    // console.log("beforeWordArr[2]: "+ beforeWordArr[2]);
-
-    // for(let i = 0; i < kwic.length; i++){
-    //     let node = document.createElement("div");
-    //     let textnode = document.createTextNode(beforeWordArr[i]);
-    //     node.appendChild(textnode);
-    //     document.getElementById("search-results-div").appendChild(node);
-    // }
-/////** ADD RESULTS TO RESULTS DIV */
-// function appendDiv(arr) {
-
-//     // console.log("beforeWordArr[0]: "+ beforeWordArr[0]);
-//     // console.log("beforeWordArr[1]: "+ beforeWordArr[1]);
-//     // console.log("beforeWordArr[2]: "+ beforeWordArr[2]);
-//     console.log('kwic.length in appenddiv: ' + kwic.length);
-
-//     for (let j = 0; j < kwic.length; j++) {
-//         console.log("arr[i]: " + arr[j]);
-//         document.getElementById('search-results-div').innerHTML = arr[j];
-//     }
-
-
-//     // for(let i = 0; i < kwic.length; i++){
-//     //     let node = document.createElement("p"); //create new node/element
-//     //     let textnode = document.createTextNode(arr[i]); //create text node
-//     //     console.log("arr[i]: "+ arr[i]);
-//     //     let newElement = node.appendChild(textnode); //append text node to node
-//     //     document.getElementById("search-results-div").innerHTML = newElement;
-//     //     //document.getElementById("search-results-div").appendChild(node); //append new div to div
-//     // }
+/////////////* DUMPSTER /////////
+//supposed to change color of the search word
+// let foundWord = word;
+// for (let k = 0; k < kwic.length; k++) {
+//     console.log("foundword: " + foundWord);
+//     foundWord.classList.remove('divnode');
+//     foundWord.className = "found-word";
 // }
+// */
+
