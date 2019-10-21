@@ -56,16 +56,18 @@ body{
 #about-nav-text{
     font-family:'GT-America-Mono-Light';
     font-size: 1.15vw;
+    line-height: 2.5vw;
     color: white;
     text-align: center;
     transform: rotate(-90deg);
     letter-spacing: 0.75pt;
 }
 
+/*  TITLE CONTAINER  */
 #title-container{
     bottom: 4vh;
     float: left;
-    left: 8vw;
+    left: 6vw;
     width: 100vw;
     position:absolute;
     z-index: 1;
@@ -81,15 +83,15 @@ body{
 #title-h2{
     font-family: 'GT-Sectra-Medium-Italic';
     font-size: 12.65vw;
-    letter-spacing: 0.5pt;
+    letter-spacing: 0.35pt;
     line-height: 12.125vw;
     color: black;
 }
 
 #author-div{
     font-family:'GT-America-Mono-Light';
-    font-size: 1vw;
-    line-height: 1.35vw;
+    font-size: 1.15vw;
+    line-height: 2.5vw;
     color: rgb(53, 53, 53);
     position: relative;
     left: 0;
@@ -115,6 +117,7 @@ a:active{
 }
 
 
+/* //////////////////////////////////////////////////////*/
 /* /////////////////////////// */
 /* SIDEBAR MENU DIV */
 @-webkit-keyframes slide {
@@ -161,28 +164,32 @@ a:active{
 }
 
 #side-menu-title-h2 a:hover{
-    color: #2e2e2e;
-    opacity: 0.4;
+    color: rgb(100, 100, 100);
+    /* opacity: 0.4; */
+    text-decoration: none !important;
+}
+
+#side-menu-title-h2 a:active{
     text-decoration: none !important;
 }
 
 #side-about-div{
     font-family:'GT-America-Mono-Light';
-    font-size: 1vw;
-    line-height: 1.75vw;
+    font-size: 1.15vw;
+    line-height: 2.1vw;
     color: rgb(80, 80, 80);
     padding-top: 5vh;
 }
 
 #side-about-p{
-    margin-top: 8vh;
-    margin-bottom: 12vh;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
 }
 
 #side-author-div{
     font-family:'GT-America-Mono-Light';
-    font-size: 1vw;
-    line-height: 1.35vw;
+    font-size: 1.15vw;
+    line-height: 1.5vw;
     color: rgb(53, 53, 53);
     position: relative;
     left: 0;
@@ -191,6 +198,37 @@ a:active{
     padding-bottom: 2vh;
 }
 
+#side-choose-author{
+    font-family:'GT-America-Mono-Light';
+    font-size: 1.15vw;
+    line-height: 1.5vw;
+    color: rgb(80, 80, 80);
+    margin-top: 3vh;
+}
+
+#side-author-selections{
+    font-family: 'Gt-Sectra-Medium-Italic';
+    font-size: 7vw;
+    letter-spacing: 0.35pt;
+    line-height: 9vw;
+    text-decoration: none !important;
+}
+
+.side-author-link{
+    color: rgb(53, 53, 53); !important;
+    text-decoration: none !important;
+}
+
+
+#side-sexton-link:hover, #side-berryman-link:hover, #side-plath-link:hover{
+    color: rgb(100, 100, 100)!important;
+    text-decoration: none !important;
+}
+
+#side-sexton-link:active,#side-berryman-link:active, #side-splath-link:active{
+    color: rgb(220, 220, 220)!important;
+    text-decoration: none !important;
+}
 
 /* SCROLL BAR */
 

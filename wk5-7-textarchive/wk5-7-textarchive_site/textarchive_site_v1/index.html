@@ -16,7 +16,8 @@
 </head>
 
 <body>
-    <script type='text/javascript' src="index.js"></script>
+    <!--SCRIPT TO TOGGLE MENU-->
+    <script type='text/javascript' src="toggle_menu.js"></script>
 
     <!--MAIN CONTAINER-->
     <div id='main-container' class='row justify-content-start'>
@@ -53,7 +54,7 @@
     </div>
 
 
-    <!--SIDE MENU-->
+    <!--TOGGLE-ABLE SIDE MENU-->
     <div id='side-menu-container'>
         <div id="side-menu-div" class="side-menu">
             <!--TITLE CONTAINER-->
@@ -76,16 +77,37 @@
                 <!--SIDE LINE / LOWER HALF CONTAINER-->
                 <div id='side-line-container' class='col-12'>
 
-                    <!--AUTHORS-->
-                    <div id='side-author-div'>
+                    <!--LINE-->
+                    <div id='side-author-div'></div>
 
+                    <!--BELOW LINE - CHOOSE AUTHOR LINKS-->
+                    <p id='side-choose-author'>Choose Author:</p>
+
+                    <!--AUTHOR LINKS-->
+                    <div id='side-author-selections' class='side-selection-div'>
+                        <div id='side-author-sexton'>
+                            <a href="sexton.html" class='side-author-link'>
+                                <p id='side-sexton-link' class='side-author-link'>Anne Sexton</p>
+                            </a>
+                        </div>
+
+                        <div id='side-author-sexton' class='side-selection-div'>
+                            <a href="berryman.html" class='side-author-link'>
+                                <p id='side-berryman-link' class='side-author-link'>John Berryman</p>
+                            </a>
+                        </div>
+
+                        <div id='side-author-plath' class='side-selection-div'>
+                            <a href="plath.html" class='side-author-link'>
+                                <p id='side-plath-link' class='side-author-link'>Sylvia Plath</p>
+                            </a>
+                        </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
+
 </body>
 
 </html>

@@ -33,8 +33,5 @@ function toggleMenu() {
 }
 
 
-
-
-
 ////LOAD////
 window.addEventListener('load', init);

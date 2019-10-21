@@ -25,6 +25,9 @@
 <body>
     <!--JS-->
     <script type='text/javascript' src="sexton_filter.js"></script>
+    <!--SCRIPT TO TOGGLE MENU-->
+    <script type='text/javascript' src="toggle_menu_author.js"></script>
+
 
     <!--MAIN CONTAINER-->
     <div id='author-main-container' class='row justify-content-center'>
@@ -37,7 +40,7 @@
         </div>
 
         <!--TITLE CONTAINER-->
-        <div id='title-container' class='col-12'>
+        <div id='author-title-container' class='col-12'>
             <!-- <div id='nav-container'class='col-12'> -->
             <!--TITLE-->
             <div id='nav-div' div class='col-6'>
@@ -202,7 +205,63 @@
                     <p class='found-kwic'>Another example of a key word in context.</p> -->
                     </div>
                 </div>
+            </div>
+        </div>
 
+        <!--TOGGLE-ABLE SIDE MENU-->
+        <div id='side-menu-container'>
+            <div id="side-menu-div" class="side-menu">
+                <!--TITLE CONTAINER-->
+                <div id='side-menu-title' class='col-12'>
+
+                    <!--TITLE-->
+                    <h2 id='side-menu-title-h2' class='col-12'> <a href="index.html">The Language<br>of Depression</a>
+                    </h2>
+
+                    <!--ABOUT-->
+                    <div id='side-about-div' class='col-5'>
+                        <p id='side-about-p'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in
+                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                            laborum.
+                        </p>
+                    </div>
+
+                    <!--SIDE LINE / LOWER HALF CONTAINER-->
+                    <div id='side-line-container' class='col-12'>
+
+                        <!--LINE-->
+                        <div id='side-author-div'></div>
+
+                        <!--BELOW LINE - CHOOSE AUTHOR LINKS-->
+                        <p id='side-choose-author'>Choose Poet:</p>
+
+                        <!--AUTHOR LINKS-->
+                        <div id='side-author-selections' class='side-selection-div'>
+                            <div id='side-author-sexton'>
+                                <a href="sexton.html" class='side-author-link'>
+                                    <p id='side-sexton-link' class='side-author-link'>Anne Sexton</p>
+                                </a>
+                            </div>
+
+                            <div id='side-author-sexton' class='side-selection-div'>
+                                <a href="berryman.html" class='side-author-link'>
+                                    <p id='side-berryman-link' class='side-author-link'>John Berryman</p>
+                                </a>
+                            </div>
+
+                            <div id='side-author-plath' class='side-selection-div'>
+                                <a href="plath.html class='side-author-link'" class='side-author-link'>
+                                    <p id='side-plath-link' class='side-author-link'>Sylvia Plath</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 </body>
