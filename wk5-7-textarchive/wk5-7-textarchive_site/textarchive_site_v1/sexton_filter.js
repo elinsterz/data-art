@@ -1,8 +1,8 @@
 let data;
 let word;
 let kwic;
-let beforeWordArr = []; //new array that the before words get pushed into in for loop
-let afterWordArr = []; //new array that the after words get pushed into in for loop
+let beforeWordArr = []; 
+let afterWordArr = []; 
 
 function setup() {
     data = loadStrings('data/sexton_poems_all_no_title.txt', init);
@@ -86,7 +86,7 @@ function findkwic(word) {
             var textnode = document.createTextNode(beforeWordArr[j] + " " + word + afterWordArr[j]);
             node.appendChild(textnode);
             let appendText = document.getElementById("search-results-div").appendChild(node);
-            appendText.className = "found-kwic"; //add class style to this newly appended text
+            appendText.className = "found-kwic"; 
 
             let divnode = document.createElement("div");
             let appendDiv = appendText.appendChild(divnode);

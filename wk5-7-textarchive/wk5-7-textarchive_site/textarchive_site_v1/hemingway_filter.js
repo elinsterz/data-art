@@ -78,23 +78,3 @@ function findkwic(word) {
 
 ///////////////////* LOAD *////////////////////
 window.addEventListener('load', init);
-
-
-
-
-/////////////////////* DUMPSTER /////////////////
-//supposed to change color of the search word
-// let foundWord = word;
-// for (let k = 0; k < kwic.length; k++) {
-//     console.log("foundword: " + foundWord);
-//     foundWord.classList.remove('divnode');
-//     foundWord.className = "found-word";
-// }
-// */
-
-//    // buttons for test code
-    // let bttnWord = document.getElementById('bttn-word'); 
-    // bttnWord.addEventListener('click', function () {
-    //     findkwic(data, word);
-    //     console.log('clicked!');
-    // });

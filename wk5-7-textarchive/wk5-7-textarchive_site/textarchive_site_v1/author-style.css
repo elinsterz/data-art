@@ -266,15 +266,6 @@ a:visited{
     margin-bottom: 2vh;
 }
 
-/* #vertical-line{
-    border-right: 0.85px solid black;
-    width: 15vw;
-    z-index: 5;
-    height: 250vh;
-    left: -25.75vw;
-    position: relative;
-} */
-
 .footnote-p{
     font-family:'GT-America-Mono-Light';
     font-size: 0.75vw;
@@ -518,7 +509,7 @@ a:visited{
     text-decoration: none !important;
 }
 
-#side-sexton-link:active,#side-berryman-link:active, #side-splath-link:active{
+#side-sexton-link:active,#side-berryman-link:active, #side-plath-link:active{
     color: rgb(220, 220, 220)!important;
     text-decoration: none !important;
 }
