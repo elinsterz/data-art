@@ -183,8 +183,8 @@ a:active{
 }
 
 #side-about-p{
-    margin-top: 6vh;
-    margin-bottom: 6vh;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
 }
 
 #side-author-div{
@@ -210,9 +210,9 @@ a:active{
 
 #side-author-selections{
     font-family: 'Gt-Sectra-Medium-Italic';
-    font-size: 6.25vw;
+    font-size: 5.25vw;
     letter-spacing: 0.35pt;
-    line-height: 7.5vw;
+    line-height: 6.5vw;
     text-decoration: none !important;
 }
 
