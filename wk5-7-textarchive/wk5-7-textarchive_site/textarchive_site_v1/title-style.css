@@ -170,6 +170,7 @@ a:active{
 }
 
 #side-menu-title-h2 a:active{
+    color: rgb(200, 200, 200);
     text-decoration: none !important;
 }
 
@@ -206,11 +207,12 @@ a:active{
     margin-top: 3vh;
 }
 
+
 #side-author-selections{
     font-family: 'Gt-Sectra-Medium-Italic';
-    font-size: 7vw;
+    font-size: 6.25vw;
     letter-spacing: 0.35pt;
-    line-height: 9vw;
+    line-height: 7.5vw;
     text-decoration: none !important;
 }
 
