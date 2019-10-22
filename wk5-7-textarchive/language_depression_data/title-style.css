@@ -176,22 +176,22 @@ a:active{
 
 #side-about-div{
     font-family:'GT-America-Mono-Light';
-    font-size: 1.15vw;
-    line-height: 2.1vw;
+    font-size: 1vw;
+    line-height: 1.75vw;
     color: rgb(80, 80, 80);
     padding-top: 5vh;
 }
 
 #side-about-p{
-    margin-top: 5vh;
+    margin-top: 6vh;
     margin-bottom: 2vh;
 }
 
 #side-author-div{
     font-family:'GT-America-Mono-Light';
-    font-size: 1.15vw;
-    line-height: 1.5vw;
-    color: rgb(53, 53, 53);
+    font-size: 1vw;
+    line-height: 1.75vw;
+    color: rgb(80, 80, 80);
     position: relative;
     left: 0;
     width: 100vw;
