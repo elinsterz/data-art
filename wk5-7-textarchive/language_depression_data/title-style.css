@@ -180,12 +180,35 @@ a:active{
     line-height: 1.75vw;
     color: rgb(80, 80, 80);
     padding-top: 5vh;
+    position: relative;
+}
+
+#side-source-p{
+    color: rgb(80, 80, 80);
 }
 
 #side-about-p{
     margin-top: 6vh;
     margin-bottom: 2vh;
+    color: rgb(80, 80, 80);
 }
+
+#side-about-p a{
+    margin-top: 6vh;
+    margin-bottom: 2vh;
+    color: rgb(80, 80, 80);
+}
+
+#side-about-p a:hover{
+    color: rgb(150, 150, 150)!important;
+    text-decoration: none;
+}
+
+#side-about-p a:active{
+    color: white!important;
+    text-decoration: none;
+}
+
 
 #side-author-div{
     font-family:'GT-America-Mono-Light';
@@ -201,8 +224,8 @@ a:active{
 
 #side-choose-author{
     font-family:'GT-America-Mono-Light';
-    font-size: 1.15vw;
-    line-height: 1.5vw;
+    font-size: 1vw;
+    line-height: 1.75vw;
     color: rgb(80, 80, 80);
     margin-top: 3vh;
 }
