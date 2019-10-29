@@ -465,12 +465,35 @@ a:visited{
     line-height: 1.75vw;
     color: rgb(80, 80, 80);
     padding-top: 5vh;
+    position: relative;
+}
+
+#side-source-p{
+    color: rgb(50, 50, 50);
 }
 
 #side-about-p{
     margin-top: 6vh;
     margin-bottom: 2vh;
+    color: rgb(80, 80, 80);
 }
+
+#side-about-p a{
+    margin-top: 6vh;
+    margin-bottom: 2vh;
+    color: rgb(40, 40, 40);
+}
+
+#side-about-p a:hover{
+    color: rgb(150, 150, 150)!important;
+    text-decoration: none;
+}
+
+#side-about-p a:active{
+    color: white!important;
+    text-decoration: none;
+}
+
 
 
 #side-author-div{
