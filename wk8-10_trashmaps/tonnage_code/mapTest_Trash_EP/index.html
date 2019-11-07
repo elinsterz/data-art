@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <title>DSNY Map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <script>
+        // include access token
+        mapboxgl.accessToken = "pk.eyJ1IjoiZXAxNTIxIiwiYSI6ImNqb2s1MGllaTBjYjczeHBhMmE1MHdvM2sifQ.5GUCojWfGyQ1jujHZH1Pkw"
+
+        // declare the map object
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/ep1521/ck2mf9fr10d8e1cqkbylincfi',
+            center: [-74, 40.7],
+            minZoom: 2,
+            zoom: 10
+        });
+
+        // load geojson data once base map has loaded
+        map.on('load', () => {
+            // load data
+            Promise.all([
+                d3.json('../data/DSNYDistricts.geojson'),
+                d3.json('https://data.cityofnewyork.us/resource/ebb7-mvp5.geojson?month=2019%20/%2010&$$app_token=ihNbl3Zc7lMRFp5AFIWiMxrgQ')
+            ]).then(data => {
+                // place data into objectsAAA
+                const districts = data[0];
+                const tonnage = data[1];
+
+                //console.log(tonnage);
+
+                //we need to get the tonnage per district from the tonnage data into the disctric data
+                districts.features.forEach(district => {
+                    tonnage.features.forEach(ton => {
+                        if (district.properties.districtcode === ton.properties.borough_id + ton.properties.communitydistrict) {
+                            district.properties.tonsMGP = ton.properties.mgptonscollected;
+                            district.properties.tonsPaper = ton.properties.papertonscollected;
+                            district.properties.tonsRefuse = ton.properties.refusetonscollected;
+                            district.properties.tonsOrganic = ton.properties.resorganicstons;
+                        }
+                    })
+                })
+                //console.log(districts);
+
+                // find the max refuse collected in a district
+                const maxRefuse = d3.max(districts.features, d => d.properties.tonsRefuse)
+                console.log(maxRefuse);
+
+                ///////// ** this isnt working yet ** //////////
+                // // map needs source data before it can show anything. source needs an id, type and data
+                // map.addSource('district-refuse', { type: 'geojson', data: districts });
+
+                // // map layer styles the source. see the mapbox style specification for syntax. 
+                // // layer needs an id, type, source and a style
+                // map.addLayer({
+                //     'id': 'district-refuse-layer',
+                //     'type': 'fill',
+                //     'source': 'district-refuse',
+                //     'paint': {
+                //         'fill-color': '#088',
+                //         'fill-opacity': [
+                //             'interpolate',
+                //             ['linear'],
+                //             ['get', 'tonsRefuse'],
+                //             0, 0.0,
+                //             maxRefuse, 1
+                //         ],
+                //     }
+                // })
+                ///////// ** this isnt working yet ** //////////
+
+            })
+        })
+    </script>
+</body>
+
+</html>
