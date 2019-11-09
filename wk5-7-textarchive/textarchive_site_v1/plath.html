@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Language of Depression</title>
+
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="author-style.css">
+
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!--P5JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.js"></script>
+
+    <!--RITA-->
+    <script src='libraries/rita-full.js'></script>
+</head>
+
+<body>
+    <!--JS-->
+    <script type='text/javascript' src="plath_filter.js"></script>
+    <!--SCRIPT TO TOGGLE MENU-->
+    <script type='text/javascript' src="toggle_menu_author.js"></script>
+
+    <!--MAIN CONTAINER-->
+    <div id='author-main-container' class='row justify-content-center'>
+
+        <!--ABOUT CONTAINER-->
+        <div id='about-container' class='col-12'>
+            <div id='about-div'>
+                <!-- <p id='about-nav-text'>About</p> -->
+            </div>
+        </div>
+
+        <!--TITLE CONTAINER-->
+        <div id='author-title-container' class='col-12'>
+            <!-- <div id='nav-container'class='col-12'> -->
+            <!--TITLE-->
+            <div id='nav-div' div class='col-6'>
+                <h2 id='title-h2'> <a href="index.html">The Language<br>of Depression</a></h2>
+            </div>
+
+            <!--HORIZONTAL RULE-->
+            <hr id='nav-hr'>
+        </div>
+
+        <!--AUTHOR INFORMATION-->
+        <div id='content-container' class='row justify-content-center'>
+            <!--LEFT SECTION - BIO DIV-->
+            <div id='bio-div' class='col-4'>
+                <h3 id='author-name' class='h3-text'>Sylvia Plath</h3>
+                <img id='sexton-img' class='bio-img' src="/assets/photos/plath_photo_320x430.png" alt="sylvia plath">
+
+                <div id='birth-death-div' class='content-paragraph'>
+                    <p id='sexton-birth' class='content-p'>October 27, 1932<br>February 11, 1963</p>
+                </div>
+
+                <!--LEFT SECTION - BIO DIV - LIFE -->
+                <div id='life-work-div' class='content-paragraph'>
+                    <h3 id='author-name' class='h3-text'>Life</h3>
+
+                    <!--LEFT SECTION - BIO DIV - LIFE WORK TEXT-->
+                    <div id='bio-text'>
+                        <img src="assets/svg/short_white_line.svg" class='white-line' alt="white line">
+                        <p class='content-p'>1932 | Sylvia Plath was born in Boston, MA.</p>
+                        <img src="assets/svg/short_white_line.svg" class='white-line' alt="white line">
+                        <p class='content-p'>1940 | Began writing stories and poems at age 8. She recalls "...My work wasn't
+                            something a normal child would write about. I wrote mostly about death and suicide.</p>
+                        <img src="assets/svg/short_white_line.svg" class='white-line' alt="white line">
+                        <p class='content-p'>1940 | Her father died from an extreme case of diabetes.</p>
+                        <img src="assets/svg/short_white_line.svg" class='white-line' alt="white line">
+                        <p class='content-p'>1956 | Married Ted Hughes. Started bee keeping as a hobby.</p>
+                        <img src="assets/svg/short_white_line.svg" class='white-line' alt="white line">
+                        <p class='content-p'>1960 | Sylvia gave birth to a girl, Frida Hughes.</p>
+                        <img src="assets/svg/short_white_line.svg" class='white-line' alt="white line">
+                        <p class='content-p'>1961 | She separated from Ted when she found about his affair.</p>
+                        <img src="assets/svg/short_white_line.svg" class='white-line' alt="white line">
+                        <p class='content-p'>1962 | She gave birth to a boy.</p>
+                        <img src="assets/svg/short_white_line.svg" class='white-line' alt="white line">
+                        <p class='content-p'>1963 | She committed suicide.</p>
+                    </div>
+                </div>
+
+
+                <!--LEFT SECTION - BIO DIV - WORKS-->
+                <div id='life-work-div' class='content-paragraph'>
+                    <h3 id='author-name' class='h3-text'>Work</h3>
+                    <p class='footnote-p'>Selection of texts used for this website.</p>
+                    <!--LEFT SECTION - BIO DIV - LIFE WORK TEXT-->
+                    <div id='bio-text'>
+                        <img src="assets/svg/short_white_line.svg" class='white-line' alt="white line">
+                        <p class='content-p'><a href="https://www.poetryfoundation.org/poems/49000/lady-lazarus"
+                                target="_blank"><em>Lady Lazarus</em></a></p>
+                        <p class='content-p'><a href="https://www.poetryfoundation.org/poems/48999/daddy-56d22aafa45b2"
+                                target="_blank"><em>Daddy</em></a></p>
+                        <p class='content-p'><a href="https://www.poetryfoundation.org/poems/49010/youre"
+                                target="_blank"><em>You’re</em></a></p>
+                        <p class='content-p'><a
+                                href="https://www.poetryfoundation.org/poems/49008/morning-song-56d22ab4a0cee"
+                                target="_blank"><em>Morning Song</em></a></p>
+                        <p class='content-p'><a href="https://www.poetryfoundation.org/poems/49001/ariel"
+                                target="_blank"><em>Ariel</em></a></p>
+                        <p class='content-p'><a href="https://www.poetryfoundation.org/poems/49009/edge-56d22ab50bbc1"
+                                target="_blank"><em>Edge</em></a></p>
+                        <p class='content-p'><a href="https://www.internal.org/Sylvia_Plath/Crossing_the_Water"
+                                target="_blank"><em>Crossing the Waters</em></a></p>
+                        <p class='content-p'><a
+                                href="https://www.poetryfoundation.org/poems/49006/nick-and-the-candlestick"
+                                target="_blank"><em>Nick and the Candlestick</em></a></p>
+                        <p class='content-p'><a href="https://www.poetryfoundation.org/poems/49013/tulips-56d22ab68fdd0"
+                                target="_blank"><em>Tulip</em></a></p>
+                        <p class='content-p'><a
+                                href="https://www.poetryfoundation.org/poetrymagazine/browse?contentId=28956"
+                                target="_blank"><em>Face Lift</em></a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div id='vertical-line' class='col-1'></div> -->
+
+            <!--RIGHT SECTION - FILTER DIV-->
+            <div id='filter-div' class='col-8'>
+                <div id='top-filter-container'>
+                    <h3 id='filter-results' class='h3-text'>Select Words to Search</h3>
+                    <div id='filter-selection' class='row justify-content-start'>
+                        <!--NOUNS-->
+                        <div id='filter-p' class='col-2'>
+                            <p id='filter-nouns-head' class='filter-head'>Nouns</p>
+                            <p id='death' class='filter-words' onclick="findkwic('dead')">dead</p>
+                            <p id='suicides' class='filter-words' onclick="findkwic('suicide')">suicide</p>
+                            <p id='life' class='filter-words' onclick="findkwic('life')">life</p>
+                            <p id='people' class='filter-words' onclick="findkwic('people')">people</p>
+                            <p id='heart' class='filter-words' onclick="findkwic('heart')">heart</p>
+                        </div>
+
+                        <!--VERBS-->
+                        <div id='filter-p' class='col-2'>
+                            <p id='filter-verbs-head' class='filter-head'>Verbs</p>
+                            <p id='die' class='filter-words' onclick="findkwic('die')">die</p>
+                            <p id='know' class='filter-words' onclick="findkwic('lie')">lie</p>
+                            <p id='cry' class='filter-words' onclick="findkwic('kill')">kill</p>
+                            <p id='need' class='filter-words' onclick="findkwic('touch')">touch</p>
+                            <p id='love' class='filter-words' onclick="findkwic('love')">love</p>
+                        </div>
+
+                        <!--ADJECTIVE-->
+                        <div id='filter-p' class='col-2'>
+                            <p id='filter-adj-head' class='filter-head'>Adjectives</p>
+                            <p id='bad' class='filter-words' onclick="findkwic('bad')">bad</p>
+                            <p id='better' class='filter-words' onclick="findkwic('good')">good</p>
+                            <p id='alone' class='filter-words' onclick="findkwic('alone')">alone</p>
+                            <p id='hard' class='filter-words' onclick="findkwic('down')">down</p>
+                            <p id='lonely' class='filter-words' onclick="findkwic('black')">black</p>
+                        </div>
+
+                        <!--PRONOUNS-->
+                        <div id='filter-p' class='col-2'>
+                            <p id='filter-pronouns-head' class='filter-head'>Pronouns</p>
+                            <p id='I' class='filter-words' onclick="findkwic('I')">I</p>
+                            <p id='we' class='filter-words' onclick="findkwic('me')">me</p>
+                            <p id='you' class='filter-words' onclick="findkwic('you')">you</p>
+                            <p id='we' class='filter-words' onclick="findkwic('we')">we</p>
+                            <p id='they' class='filter-words' onclick="findkwic('they')">they</p>
+                        </div>
+
+                        <!--ABSOLUTIST-->
+                        <div id='filter-p' class='col-2'>
+                            <p id='filter-absolutes-head' class='filter-head'>Absolutes</p>
+                            <p id='nothing' class='filter-words' onclick="findkwic('nothing')">nothing</p>
+                            <p id='anything' class='filter-words' onclick="findkwic('always')">always</p>
+                            <p id='everything' class='filter-words' onclick="findkwic('only')">only</p>
+                            <p id='anymore' class='filter-words' onclick="findkwic('all')">all</p>
+                            <p id='never' class='filter-words' onclick="findkwic('never')">never</p>
+                        </div>
+
+                        <!--AUXILIARY VERBS-->
+                        <div id='filter-p' class='col-2'>
+                            <p id='filter-auxilary-head' class='filter-head'>Auxiliary</p>
+                            <p id='could' class='filter-words' onclick="findkwic('could')">could</p>
+                            <p id='would' class='filter-words' onclick="findkwic('would')">would</p>
+                            <p id='should' class='filter-words' onclick="findkwic('should')">should</p>
+                            <p id='will' class='filter-words' onclick="findkwic('will')">will</p>
+                            <p id='must' class='filter-words' onclick="findkwic('must')">must</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--SEARCH RESULTS BOTTOM HALF RIGHT SECTION-->
+                <div id='search-results-container'>
+                    <h3 id='search-results-h3' class='h3-text'>Search Results</h3>
+                    <p id="toggle-view-count" class='toggle-view'>Count</p>
+                    <p id="toggle-view-sentence" class='toggle-view'>Sentence</p>
+                    <!-- <p class='results-subhead'></p> -->
+                    <div id='search-results-div'>
+                        <!-- <p class='found-kwic'>This is an example of a word found in a sentence.</p>
+                    <p class='found-kwic'>Another example of a key word in context.</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--TOGGLE-ABLE SIDE MENU-->
+        <div id='side-menu-container'>
+            <div id="side-menu-div" class="side-menu">
+                <!--TITLE CONTAINER-->
+                <div id='side-menu-title' class='col-12'>
+
+                    <!--TITLE-->
+                    <h2 id='side-menu-title-h2' class='col-12'> <a href="index.html">The Language<br>of Depression</a>
+                    </h2>
+
+                    <!--ABOUT-->
+                    <div id='side-about-div' class='col-5'>
+                        <p id='side-about-p'>
+                            Is there a language to depression? By examining the writings of three poets who have killed
+                            themselves, we can start to see a connection between someone’s mental state and their
+                            language.
+                            <br><br>
+                            Psychologists and linguists have done studies that show the importance of pronouns, absolutist
+                            words and auxiliary words in helping to indicate depression. For example, absolutist words such
+                            as “all”, “nothing”, “none” were used more frequently amongst those who are depressed than those
+                            who weren’t. They also found that the use of “I”, “me” or “my” is more commonly used in those
+                            who are depressed. Frequent use of auxiliary verbs such as
+                            “should” or “would” is also an indication of negative thought patterns.
+                            <br><br>
+                            This website is a way to test these scientific findings on those who have proven to be depressed
+                            and suicidal. With these analysis and with the use of computation, perhaps there will be better
+                            ways for us to read between the lines for depression.
+                        </p>
+                    </div>
+
+                    <!--SIDE LINE / LOWER HALF CONTAINER-->
+                    <div id='side-line-container' class='col-12'>
+
+                        <!--LINE-->
+                        <div id='side-author-div'></div>
+
+                        <!--BELOW LINE - CHOOSE AUTHOR LINKS-->
+                        <p id='side-choose-author'>Choose Poet:</p>
+
+                        <!--AUTHOR LINKS-->
+                        <div id='side-author-selections' class='side-selection-div'>
+                            <div id='side-author-sexton'>
+                                <a href="sexton.html" class='side-author-link'>
+                                    <p id='side-sexton-link' class='side-author-link'>Anne Sexton</p>
+                                </a>
+                            </div>
+
+                            <div id='side-author-sexton' class='side-selection-div'>
+                                <a href="berryman.html" class='side-author-link'>
+                                    <p id='side-berryman-link' class='side-author-link'>John Berryman</p>
+                                </a>
+                            </div>
+
+                            <div id='side-author-plath' class='side-selection-div'>
+                                <a href="plath.html" class='side-author-link'>
+                                    <p id='side-plath-link' class='side-author-link'>Sylvia Plath</p>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
