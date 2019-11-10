@@ -19,6 +19,13 @@
     format('truetype');
 }
 
+@font-face {
+    font-family:'Monotype-PlantinHeadlineMTStd-MdCN';
+    src: url('assets/fonts/Monotype-PlantinHeadlineMTStd-MdCn.eot');
+    src: url('assets/fonts/Monotype-PlantinHeadlineMTStd-MdCn.ttf');
+    format('truetype');
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
