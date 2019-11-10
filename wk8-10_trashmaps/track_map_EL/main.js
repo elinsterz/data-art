@@ -26,7 +26,9 @@ function openMenu(x) {
         navbarHR.style.borderColor = 'white';
         logoMap.src = 'assets/logo/trash_map_logo_white_2x.png';
     }
-
 }
 
+function showDropdown(){
+    
+}
 
