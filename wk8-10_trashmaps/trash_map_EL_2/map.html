@@ -73,28 +73,9 @@
         <div id='filter-trash-container' class='filter-div'>
             <p id='filter-subtitle'>Trash Type</p>
 
-            <!-- EMILY VS
-            <button id='dropdown-type-button' class="dropdown-button"></button>
-            <div id='dropdown-menu' class='dropdown-content'>
-                <p id='type-compost'>Compost</p>
-                <p id='type-paper'>Paper</p>
-                <p id='type-mgp'>Metal/Glass/Plastic</p>
-                <p id='type-refuse'>Refuse</p>
-            </div> -->
-
-            <!-- EVA VS
-             <div class="trash-select">
-                <select class="select-selected" id="trashTypeOption">
-                    <option value="0">Default type: Refuse</option>
-                    <option value="1">Refuse</option>
-                    <option value="2">Metal/Glass/Plastic</option>
-                    <option value="3">Paper</option>
-                    <option value="4">Compost</option>
-                </select>
-            </div> -->
-            <!-- <button id='dropdown-type-button' class="dropdown-button"></button> -->
-            <div class="trash-select" id='dropdown-trash-type'>
-                <select class='dropdown-content' id="trashTypeOption">
+            <!--COMBINED DROPDOWN VS-->
+            <div class="custom-select" id='dropdown-trash-type'>
+                <select class='dropdown-content' class="select-selected" id="trashTypeOption">
                     <option value="0">Default type: Refuse</option>
                     <option value="1">Refuse</option>
                     <option value="2">Metal/Glass/Plastic</option>
@@ -103,25 +84,36 @@
                 </select>
             </div>
         </div>
-
 
         <!--YEAR MENU-->
         <div id='filter-year' class='col-2' class='filter-div'>
             <p id='filter-subtitle'>YEAR</p>
 
-            <button id='dropdown-year-button' class="dropdown-button"></button>
-            <div id='dropdown-menu' class='dropdown-content'>
-                <p id='type-compost'>Compost</p>
-                <p id='type-paper'>Paper</p>
-                <p id='type-mgp'>Metal/Glass/Plastic</p>
-                <p id='type-refuse'>Refuse</p>
+            <!--COMBINED DROPDOWN VS-->
+            <div class="custom-select" id='dropdown-trash-year'>
+                <select class="select-selected" id="trashYearOption">
+                    <option value="0">Default year: 2019</option>
+                    <option value="1">2019</option>
+                    <option value="2">2018</option>
+                    <option value="3">2017</option>
+                    <option value="4">2016</option>
+                    <option value="5">2015</option>
+                    <option value="6">2014</option>
+                    <option value="7">2013</option>
+                    <option value="8">2012</option>
+                    <option value="9">2011</option>
+                    <option value="10">2010</option>
+                </select>
             </div>
+
         </div>
 
         <!--MONTH SLIDER-->
-        <div id='filter-month' class='col-2' class='filter-div'>
-            <p id='filter-subtitle'>Month</p>
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange" style="margin: 0px">
+        <div id='filter-month' class='col-2' class='slider-container'>
+            <label id='monthLabel'>January</label>
+            <!-- <p id='filter-subtitle'>Month</p> -->
+            <input id='slider' class="slider" type='range' min='0' max='11' step='1' value='0' style="margin: 0px" />
+            <!-- <label id='monthLabel'>January</label> -->
         </div>
 
         <!--TOGGLE INCOME-->
@@ -142,7 +134,7 @@
         <!--HR LEGEND-->
         <div id='legend-hr'></div>
 
-        <!--LEGEND SECTIOn-->
+        <!--LEGEND SECTION-->
         <div id='legend-container' class='col-1'>
 
             <!--LEGEND TITLE-->
@@ -155,14 +147,14 @@
                 <div class='col-12'><img src="/assets/legend/legend_waste_orange.png" alt="legend waste orange"
                         class='legend-color'></div>
                 <div class='col-6' class='legend-div-text'>
-                    <p class='legend-text'>Waste</p>
+                    <p class='legend-text'>Refuse</p>
                 </div>
 
                 <!--PAPER-->
                 <div class='col-12'><img src="/assets/legend/legend_paper_green.png" alt="legend waste orange"
                         class='legend-color'></div>
                 <div class='col-6' class='legend-div-text'>
-                    <p class='legend-text'>Trash</p>
+                    <p class='legend-text'>Paper</p>
                 </div>
 
                 <!--MPG-->
@@ -176,7 +168,7 @@
                 <div class='col-12'><img src="/assets/legend/legend_refuse_pink.png" alt="legend waste orange"
                         class='legend-color'></div>
                 <div class='col-6' class='legend-div-text'>
-                    <p class='legend-text'>Refuse</p>
+                    <p class='legend-text'>Compost</p>
                 </div>
             </div>
 
@@ -239,7 +231,8 @@
             style: mapboxStyleUrl,
             center: [-74, 40.7],
             minZoom: 1,
-            zoom: 9.75
+            zoom: 9.75,
+            attributionControl: false
         })
 
         // when the page first loads, load the DSNY District shape geojson
@@ -271,6 +264,23 @@
                         // store data into objects
                         const tonnage = d;
 
+                        // // declare colors
+                        // var layer = document.getElementById('trashTypeOption');
+                        // var colors = [
+                        //     '#FF6E00',
+                        //     '#50D279',
+                        //     '#276FE1',
+                        //     '#FF84BA'
+                        // ];
+
+                        // colors.forEach(function (color) {
+
+                        //     swatch.addEventListener('click', function () {
+                        //         map.setPaintProperty(layer.value, 'fill-color', color);
+                        //     });
+
+                        // });
+
                         // get tonnage per distict, into the disctrict object
                         districts.features.forEach(district => {
                             tonnage.features.forEach(ton => {
@@ -279,11 +289,16 @@
                                     if (type === "Refuse") {
                                         district.properties.tonsTrash = parseInt(ton.properties.refusetonscollected);
                                     } else if (type === "Metal/Glass/Plastic") {
-                                        district.properties.tonsTrash = parseInt(ton.properties.mgptonscollected); //** CHANGE BASED ON POPULATION
+                                        district.properties.tonsTrash = parseInt(ton.properties.mgptonscollected);
+                                        (ton.properties.mgptonscollected);
+                                        // map.setPaintProperty(type, 'fill-color', '#50D279');
                                     } else if (type === "Paper") {
                                         district.properties.tonsTrash = parseInt(ton.properties.papertonscollected);
+                                        // map.setPaintProperty(layer, 'fill-color', '#50D279');
                                     } else if (type === "Compost") {
                                         district.properties.tonsTrash = parseInt(ton.properties.resorganicstons);
+                                        // map.setPaintProperty(layer.value, 'fill-color', '#FF84BA');
+                                        console.log('type: ' + type);
                                     }
                                 }
                             })
@@ -301,7 +316,7 @@
                             'type': 'fill',
                             'source': 'district-trash',
                             'paint': {
-                                'fill-color': '#FF84C6',
+                                'fill-color': '#50D279',
                                 'fill-opacity': [
                                     'interpolate',
                                     ['linear'],
@@ -311,6 +326,25 @@
                                 ],
                             }
                         })
+
+                        // // add the trash map layer
+                        // map.addLayer({
+                        //     'id': 'district-trash-layer',
+                        //     'type': 'fill',
+                        //     'source': 'district-trash',
+                        //     'paint': {
+                        //         'fill-color': ['get', 'type'],
+                        //             'Refuse', '#fbb03b',
+                        //             'Paper', '#fbb03b'
+                        //         'fill-opacity': [
+                        //             'interpolate',
+                        //             ['linear'],
+                        //             ['get', 'tonsTrash'],
+                        //             0, 0,
+                        //             maxVal, 1
+                        //         ],
+                        //     }
+                        // })
 
                         // initiate popups
                         const popup = new mapboxgl.Popup();
@@ -350,6 +384,48 @@
                     makeNewTrashLayer();
                 }
 
+                // add event listener for the year
+                var trashYearOption = document.getElementById("trashYearOption");
+                trashYearOption.addEventListener('change', updateTrashYear);
+                function updateTrashYear() {
+                    // access dropdown value selected
+                    let index = trashYearOption.value
+                    console.log(trashYearOption[index].innerHTML);
+                    // assign a new year according to selected value
+                    year = trashYearOption[index].innerHTML;
+                    // remove current trash layer
+                    map.removeLayer('district-trash-layer');
+                    map.removeSource('district-trash')
+                    // create new trash layer
+                    makeNewTrashLayer();
+                }
+
+                // add event listener for the month
+                var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                var monthSlider = document.getElementById("slider");
+                var monthLabel = document.getElementById('monthLabel')
+                monthSlider.addEventListener('change', updateTrashMonth);
+                function updateTrashMonth() {
+                    // access slider value selected
+                    let index = monthSlider.value;
+                    // change month label
+                    monthLabel.innerHTML = months[index];
+                    // assign a new month according to selected value
+                    let val = parseInt(monthSlider.value) + 1;
+                    if (monthSlider.value < 9) {
+                        month = "0" + val;
+                        console.log(month)
+                    } else {
+                        month = val.toString();
+                        console.log(month)
+                    }
+                    // remove current trash layer
+                    map.removeLayer('district-trash-layer');
+                    map.removeSource('district-trash')
+                    // create new trash layer
+                    makeNewTrashLayer();
+                }
+
             });
         }).catch(e => {
             console.log(e);
@@ -359,3 +435,46 @@
 
 
 </html>
+
+<!--
+/* NOT WORKING :-( */
+
+// "paint": {
+// "fill-color": [
+// "match",
+// ["get", "name", [{ name: "Refuse" }, { name: "Metal/Glass/Plastic" },{ name: "Paper" },{ name: "Compost" }, ]],
+// [
+// "Refuse",
+// "Metal/Glass/Plastic",
+// "Paper",
+// "Compost"
+// ],
+// "#FF84C6",
+// "#50D279",
+// "#FF84C6",
+// "#50D279"
+// ]
+// },
+
+// 'paint': {
+// 'fill-color': ['match', ['get', 'district-trash-layer'], // get the property
+// '0', '#FF84C6', // if 'GP' then yellow
+// '1', '#50D279', // if 'XX' then black
+// ] // white otherwise
+// },
+// 'paint': {
+// 'fill-color': '#FF84C6',
+// "fill-color": [
+// "match", ["string", ["get", "marker-number"]],
+// "Refuse",
+// "#FF84C6",
+// "1",
+// "#FF84C6",
+// "2",
+// "#50D279",
+// "3",
+// "#276FE1",
+// "4",
+// "#FF84BA"
+// ],
+-->
