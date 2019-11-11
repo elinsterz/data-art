@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NYC TRASH | MAP</title>
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mapstyle.css">
+</head>
+
+<body>
+    <!--JS SCRIPT-->
+    <script src="main.js"></script>
+
+    <!--PAGE-->
+    <div class='container'>
+
+        <!--NAVBAR-->
+        <div id='navbar'>
+            <div class='nav-title' class='col-1'>
+                <img src="assets/logo/trash_map_logo_black_2x.png" alt="TRASH | MAP" class='nav-logo-img'
+                    id='nav-logo-map'>
+
+                <div id='nav-hamburger' onclick='openMenu(this)'>
+                    <div class='bar1'></div>
+                    <div class='bar2'></div>
+                </div>
+            </div>
+            <hr class="nav-hr" id='navbar-hr'>
+        </div>
+    </div>
+
+    <!--MENU THAT OPENS UP-->
+    <div id='nav-menu' class='col-1'>
+        <div id='menu-item-1'>
+            <h2 class='menu-header'><a href="track.html">Track Our Trash</a></h2>
+            <hr class='menu-hr'>
+        </div>
+        <div id='menu-item-2'>
+            <h2 class='menu-header'><a href="map.html">Map of Trash</a></h2>
+            <hr class='menu-hr'>
+        </div>
+        <div id='menu-item-3'>
+            <h2 class='menu-header'><a href="better.html">Be Better With Trash</a></h2>
+            <hr class='menu-hr'>
+        </div>
+        <div id='menu-item-4'>
+            <h2 class='menu-header'><a href="source.html">References + Sources</a></h2>
+        </div>
+    </div>
+
+    <!--MAP ON LEFT-->
+    <div id='map-container' class='col-3_4'>
+        <div id="map"></div>
+    </div>
+
+    <!--FILTER ON RIGHT-->
+    <div id='filter-container' class='col-2_5'>
+        <!--TITLE-->
+        <div id='filter-title'>
+            <p class='header'>Filter</p>
+        </div>
+
+        <!--TYPE MENU-->
+        <div id='filter-trash-container' class='filter-div'>
+            <p id='filter-subtitle'>Trash Type</p>
+
+            <!-- EMILY VS
+            <button id='dropdown-type-button' class="dropdown-button"></button>
+            <div id='dropdown-menu' class='dropdown-content'>
+                <p id='type-compost'>Compost</p>
+                <p id='type-paper'>Paper</p>
+                <p id='type-mgp'>Metal/Glass/Plastic</p>
+                <p id='type-refuse'>Refuse</p>
+            </div> -->
+
+            <!-- EVA VS
+             <div class="trash-select">
+                <select class="select-selected" id="trashTypeOption">
+                    <option value="0">Default type: Refuse</option>
+                    <option value="1">Refuse</option>
+                    <option value="2">Metal/Glass/Plastic</option>
+                    <option value="3">Paper</option>
+                    <option value="4">Compost</option>
+                </select>
+            </div> -->
+            <!-- <button id='dropdown-type-button' class="dropdown-button"></button> -->
+            <div class="trash-select" id='dropdown-trash-type'>
+                <select class='dropdown-content' id="trashTypeOption">
+                    <option value="0">Default type: Refuse</option>
+                    <option value="1">Refuse</option>
+                    <option value="2">Metal/Glass/Plastic</option>
+                    <option value="3">Paper</option>
+                    <option value="4">Compost</option>
+                </select>
+            </div>
+        </div>
+
+
+        <!--YEAR MENU-->
+        <div id='filter-year' class='col-2' class='filter-div'>
+            <p id='filter-subtitle'>YEAR</p>
+
+            <button id='dropdown-year-button' class="dropdown-button"></button>
+            <div id='dropdown-menu' class='dropdown-content'>
+                <p id='type-compost'>Compost</p>
+                <p id='type-paper'>Paper</p>
+                <p id='type-mgp'>Metal/Glass/Plastic</p>
+                <p id='type-refuse'>Refuse</p>
+            </div>
+        </div>
+
+        <!--MONTH SLIDER-->
+        <div id='filter-month' class='col-2' class='filter-div'>
+            <p id='filter-subtitle'>Month</p>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange" style="margin: 0px">
+        </div>
+
+        <!--TOGGLE INCOME-->
+        <div id='filter-income' class='filter-div' class='col-2'>
+            <p id='filter-subtitle'>Income</p>
+            <label class="switch">
+
+                <input type="checkbox">
+                <span class="income-slider"></span>
+            </label>
+
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="landfill-slider"></span>
+            </label>
+        </div>
+
+        <!--HR LEGEND-->
+        <div id='legend-hr'></div>
+
+        <!--LEGEND SECTIOn-->
+        <div id='legend-container' class='col-1'>
+
+            <!--LEGEND TITLE-->
+            <div id='legend-title'>
+                <p class='header'>Legend</p>
+            </div>
+
+            <div id='legend-type-div'>
+                <!--WASTE-->
+                <div class='col-12'><img src="/assets/legend/legend_waste_orange.png" alt="legend waste orange"
+                        class='legend-color'></div>
+                <div class='col-6' class='legend-div-text'>
+                    <p class='legend-text'>Waste</p>
+                </div>
+
+                <!--PAPER-->
+                <div class='col-12'><img src="/assets/legend/legend_paper_green.png" alt="legend waste orange"
+                        class='legend-color'></div>
+                <div class='col-6' class='legend-div-text'>
+                    <p class='legend-text'>Trash</p>
+                </div>
+
+                <!--MPG-->
+                <div class='col-12'><img src="/assets/legend/legend_mpg_blue.png" alt="legend waste orange"
+                        class='legend-color'></div>
+                <div class='col-6' class='legend-div-text'>
+                    <p class='legend-text'>Metals<br>Plastic<br>Glass</p>
+                </div>
+
+                <!--REFUSE-->
+                <div class='col-12'><img src="/assets/legend/legend_refuse_pink.png" alt="legend waste orange"
+                        class='legend-color'></div>
+                <div class='col-6' class='legend-div-text'>
+                    <p class='legend-text'>Refuse</p>
+                </div>
+            </div>
+
+            <!--HR LEGEND-->
+            <div id='legend-hr-2'></div>
+
+
+            <!--MORE LEGEND-->
+            <div id='legend-detail-div'>
+                <!--WASTE-->
+                <div class='col-12'><img src="/assets/legend/legend_lesstrash.png" alt="legend waste orange"
+                        class='legend-color'></div>
+                <div class='col-6' class='legend-div-text'>
+                    <p class='legend-text'>Less<br>Trash</p>
+                </div>
+
+                <!--PAPER-->
+                <div class='col-12'><img src="/assets/legend/legend_moretrash.png" alt="legend waste orange"
+                        class='legend-color'></div>
+                <div class='col-6' class='legend-div-text'>
+                    <p class='legend-text'>More<br>Trash</p>
+                </div>
+
+                <!--MPG-->
+                <div class='col-12'><img src="/assets/legend/legend_less_income.png" alt="legend waste orange"
+                        class='legend-stripe'></div>
+                <div class='col-6' class='legend-div-text'>
+                    <p class='legend-text'>Less<br>Income</p>
+                </div>
+
+                <!--REFUSE-->
+                <div class='col-12'><img src="/assets/legend/legend_more_income.png" alt="legend waste orange"
+                        class='legend-stripe'></div>
+                <div class='col-6' class='legend-div-text'>
+                    <p class='legend-text'>More<br>Income</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script>
+    // access tokens and styles
+    mapboxgl.accessToken = "pk.eyJ1IjoiZWxpbnN0ZXJ6IiwiYSI6ImNrMnBjM204MDAycXUzY3Vpajhlb3k2NmwifQ.XhzUlm44GssIwYjEmKaB1A" // * INSERT API TOKEN * // EL 
+    var mapboxStyleUrl = 'mapbox://styles/elinsterz/ck2tudfhn5pkn1bpybx0nrhai' // * INSERT STYLE URL * //
+    var openDataToken = "ihNbl3Zc7lMRFp5AFIWiMxrgQ" // * INSERT API TOKEN * //
+
+    // when the page first loads, run the init function
+    window.addEventListener('load', init);
+
+    // define the init function
+    function init() {
+        // variables
+        var districts;
+
+        // declare the map object
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: mapboxStyleUrl,
+            center: [-74, 40.7],
+            minZoom: 1,
+            zoom: 9.75
+        })
+
+        // when the page first loads, load the DSNY District shape geojson
+        d3.json('../data/DSNYDistricts.geojson').then(data => {
+            // save the district shape data in disctricts variable
+            districts = data;
+            console.log(districts);
+
+            // when the map loads
+            map.on('load', () => {
+                // when the map first loads, initiate the type, year and month to default settings
+                var type = "Refuse";
+                var year = "2019";
+                var month = "01";
+
+                // when the map first loads, make a new trash layer with the default settings
+                makeNewTrashLayer();
+
+                // when a trash dropdown/slider is changed, change as appropriate 
+                // add event listeners here
+
+                // if year or month are changed, make a new trash layer
+                function makeNewTrashLayer() {
+                    // make tonnage url with the appropriate type, year, and month values
+                    var tonnageURL = "https://data.cityofnewyork.us/resource/ebb7-mvp5.geojson?month=" + year + "%20/%20" + month + "&$$app_token=" + openDataToken;
+
+                    // load tonnage data
+                    d3.json(tonnageURL).then(d => {
+                        // store data into objects
+                        const tonnage = d;
+
+                        // get tonnage per distict, into the disctrict object
+                        districts.features.forEach(district => {
+                            tonnage.features.forEach(ton => {
+                                if (district.properties.districtcode === ton.properties.borough_id + ton.properties.communitydistrict) {
+                                    // only load the appropriate trash type data
+                                    if (type === "Refuse") {
+                                        district.properties.tonsTrash = parseInt(ton.properties.refusetonscollected);
+                                    } else if (type === "Metal/Glass/Plastic") {
+                                        district.properties.tonsTrash = parseInt(ton.properties.mgptonscollected); //** CHANGE BASED ON POPULATION
+                                    } else if (type === "Paper") {
+                                        district.properties.tonsTrash = parseInt(ton.properties.papertonscollected);
+                                    } else if (type === "Compost") {
+                                        district.properties.tonsTrash = parseInt(ton.properties.resorganicstons);
+                                    }
+                                }
+                            })
+                        })
+
+                        // find the max value collected in a disctrict
+                        let maxVal = d3.max(districts.features, m => m.properties.tonsTrash);
+
+                        // create a map source for this layer
+                        map.addSource('district-trash', { type: 'geojson', data: districts });
+
+                        // add the trash map layer
+                        map.addLayer({
+                            'id': 'district-trash-layer',
+                            'type': 'fill',
+                            'source': 'district-trash',
+                            'paint': {
+                                'fill-color': '#FF84C6',
+                                'fill-opacity': [
+                                    'interpolate',
+                                    ['linear'],
+                                    ['get', 'tonsTrash'],
+                                    0, 0,
+                                    maxVal, 1
+                                ],
+                            }
+                        })
+
+                        // initiate popups
+                        const popup = new mapboxgl.Popup();
+
+                        // add interactivity to see a popup with info about a district
+                        map.on('mousemove', 'district-trash-layer', (e) => {
+                            popup.setLngLat(e.lngLat)
+                                .setHTML(e.features[0].properties.district + ": " + e.features[0].properties.tonsTrash + ' Tons')
+                                .addTo(map);
+                        })
+
+                        // change the cursor style to a UI indicator
+                        map.on('mouseenter', 'district-trash-layer', () => {
+                            map.getCanvas().style.cursor = 'pointer'
+                        })
+
+                        // change the cursor style back
+                        map.on('mouseleave', 'district-trash-layer', () => {
+                            map.getCanvas().style.cursor = ''
+                            popup.remove();
+                        })
+                    });
+                }
+                // add event listener for the trash type
+                var trashTypeOption = document.getElementById("trashTypeOption");
+                trashTypeOption.addEventListener('change', updateTrashType);
+                function updateTrashType() {
+                    // access dropdown value selected
+                    let index = trashTypeOption.value
+                    console.log(trashTypeOption[index].innerHTML);
+                    // assign a new trash type according to selected value
+                    type = trashTypeOption[index].innerHTML;
+                    // remove current trash layer
+                    map.removeLayer('district-trash-layer');
+                    map.removeSource('district-trash')
+                    // create new trash layer
+                    makeNewTrashLayer();
+                }
+
+            });
+        }).catch(e => {
+            console.log(e);
+        })
+    }
+</script>
+
+
+</html>
