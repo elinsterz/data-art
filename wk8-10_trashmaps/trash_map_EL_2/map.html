@@ -144,32 +144,27 @@
 
             <div id='legend-type-div'>
                 <!--WASTE-->
-                <div class='col-12'><img src="/assets/legend/legend_waste_orange.png" alt="legend waste orange"
-                        class='legend-color'></div>
-                <div class='col-6' class='legend-div-text'>
+                <div class='col-4'><img src="/assets/legend/legend_waste_orange_hr.png" alt="legend refuse"
+                        class='legend-color'>
                     <p class='legend-text'>Refuse</p>
                 </div>
 
+
                 <!--PAPER-->
-                <div class='col-12'><img src="/assets/legend/legend_paper_green.png" alt="legend waste orange"
-                        class='legend-color'></div>
-                <div class='col-6' class='legend-div-text'>
+                <div class='col-4'><img src="/assets/legend/legend_paper_green_hr.png" alt="legend paper"
+                        class='legend-color'>
                     <p class='legend-text'>Paper</p>
                 </div>
 
                 <!--MPG-->
-                <div class='col-12'><img src="/assets/legend/legend_mpg_blue.png" alt="legend waste orange"
-                        class='legend-color'></div>
-                <div class='col-6' class='legend-div-text'>
+                <div class='col-4'><img src="/assets/legend/legend_mpg_blue_hr.png" alt="legend mpg"
+                        class='legend-color'>
                     <p class='legend-text'>Metals<br>Plastic<br>Glass</p>
                 </div>
 
                 <!--REFUSE-->
-                <div class='col-12'><img src="/assets/legend/legend_refuse_pink.png" alt="legend waste orange"
-                        class='legend-color'></div>
-                <div class='col-6' class='legend-div-text'>
-                    <p class='legend-text'>Compost</p>
-                </div>
+                <div class='col-4'><img src="/assets/legend/legend_refuse_pink_hr.png" alt="legend waste orange"
+                        class='legend-color'><p class='legend-text'>Compost</p></div>
             </div>
 
             <!--HR LEGEND-->
@@ -179,32 +174,20 @@
             <!--MORE LEGEND-->
             <div id='legend-detail-div'>
                 <!--WASTE-->
-                <div class='col-12'><img src="/assets/legend/legend_lesstrash.png" alt="legend waste orange"
-                        class='legend-color'></div>
-                <div class='col-6' class='legend-div-text'>
-                    <p class='legend-text'>Less<br>Trash</p>
-                </div>
+                <div class='col-4'><img src="/assets/legend/legend_lesstrash_hr.png" alt="legend waste orange"
+                        class='legend-color'><p class='legend-text'>Less<br>Trash</p></div>
 
                 <!--PAPER-->
-                <div class='col-12'><img src="/assets/legend/legend_moretrash.png" alt="legend waste orange"
-                        class='legend-color'></div>
-                <div class='col-6' class='legend-div-text'>
-                    <p class='legend-text'>More<br>Trash</p>
-                </div>
+                <div class='col-4'><img src="/assets/legend/legend_moretrash_hr.png" alt="legend waste orange"
+                        class='legend-color'><p class='legend-text'>More<br>Trash</p></div>
 
                 <!--MPG-->
-                <div class='col-12'><img src="/assets/legend/legend_less_income.png" alt="legend waste orange"
-                        class='legend-stripe'></div>
-                <div class='col-6' class='legend-div-text'>
-                    <p class='legend-text'>Less<br>Income</p>
-                </div>
+                <div class='col-4'><img src="/assets/legend/legend_less_income_hr.png" alt="legend less income"
+                        class='legend-color'><p class='legend-text'>Less<br>Income</p></div>
 
                 <!--REFUSE-->
-                <div class='col-12'><img src="/assets/legend/legend_more_income.png" alt="legend waste orange"
-                        class='legend-stripe'></div>
-                <div class='col-6' class='legend-div-text'>
-                    <p class='legend-text'>More<br>Income</p>
-                </div>
+                <div class='col-4'><img src="/assets/legend/legend_more_income_hr.png" alt="legend more income"
+                        class='legend-color'><p class='legend-text'>More<br>Income</p></div>
             </div>
 
         </div>
@@ -240,7 +223,7 @@
             d3.json('../data/DSNYDistricts.geojson'),
             d3.json('../data/population.geojson')
         ]).then(data => {
-        //d3.json('../data/DSNYDistricts.geojson').then(data => {
+            //d3.json('../data/DSNYDistricts.geojson').then(data => {
             // save the district shape data in disctricts variable
             districts = data[0];
             population = data[1];
@@ -254,7 +237,7 @@
                 var year = "2019";
                 var month = "01";
                 var color = '#FF6E00';
-                var colors = ['#FF6E00','#276FE1','#50D279', '#FF84BA'];
+                var colors = ['#FF6E00', '#276FE1', '#50D279', '#FF84BA'];
 
                 // when the map first loads, make a new trash layer with the default settings
                 makeNewTrashLayer();
@@ -279,27 +262,27 @@
                                     if (district.properties.districtcode === ton.properties.borough_id + ton.properties.communitydistrict && district.properties.districtcode === pop.properties.districtCode) {
                                         // only load the appropriate trash type data
                                         if (type === "Refuse") {
-                                            if(ton.properties.refusetonscollected != null){
+                                            if (ton.properties.refusetonscollected != null) {
                                                 district.properties.tonsTrash = parseInt(ton.properties.refusetonscollected);
-                                            }else{
+                                            } else {
                                                 district.properties.tonsTrash = 0;
-                                            } 
+                                            }
                                         } else if (type === "Metal/Glass/Plastic") {
-                                            if(ton.properties.mgptonscollected != null){
+                                            if (ton.properties.mgptonscollected != null) {
                                                 district.properties.tonsTrash = parseInt(ton.properties.mgptonscollected);
-                                            }else{
+                                            } else {
                                                 district.properties.tonsTrash = 0;
-                                            }      
+                                            }
                                         } else if (type === "Paper") {
-                                            if(ton.properties.papertonscollected != null){
+                                            if (ton.properties.papertonscollected != null) {
                                                 district.properties.tonsTrash = parseInt(ton.properties.papertonscollected);
-                                            }else{
+                                            } else {
                                                 district.properties.tonsTrash = 0;
                                             }
                                         } else if (type === "Compost") {
-                                            if(ton.properties.resorganicstons != null){
+                                            if (ton.properties.resorganicstons != null) {
                                                 district.properties.tonsTrash = parseInt(ton.properties.resorganicstons);
-                                            }else{
+                                            } else {
                                                 district.properties.tonsTrash = 0;
                                             }
                                             //console.log('type: ' + type);
@@ -342,9 +325,9 @@
                         // add interactivity to see a popup with info about a district
                         map.on('mousemove', 'district-trash-layer', (e) => {
                             popup.setLngLat(e.lngLat)
-                                .setHTML("District: " + e.features[0].properties.district + "<br />" 
-                                + type + ": " + e.features[0].properties.tonsTrash + ' tons' + "<br />" 
-                                + "Population: " + e.features[0].properties.population) 
+                                .setHTML("District: " + e.features[0].properties.district + "<br />"
+                                    + type + ": " + e.features[0].properties.tonsTrash + ' tons' + "<br />"
+                                    + "Population: " + e.features[0].properties.population)
                                 .addTo(map);
                         })
 
@@ -369,14 +352,14 @@
                     //console.log(trashTypeOption[index].innerHTML);
                     // assign a new trash type according to selected value
                     type = trashTypeOption[index].innerHTML;
-                    if(type === 'Refuse'){
-                       color = colors[0];
-                    } else if (type === 'Metal/Glass/Plastic'){
-                        color= colors[1];
-                    } else if (type === 'Paper'){
-                        color= colors[2];
-                    } else if (type === 'Compost'){
-                        color= colors[3];
+                    if (type === 'Refuse') {
+                        color = colors[0];
+                    } else if (type === 'Metal/Glass/Plastic') {
+                        color = colors[1];
+                    } else if (type === 'Paper') {
+                        color = colors[2];
+                    } else if (type === 'Compost') {
+                        color = colors[3];
                     }
 
                     // remove current trash layer
@@ -436,4 +419,3 @@
 </script>
 
 </html>
-

@@ -207,18 +207,20 @@ select{
     height: 10%;
     border-bottom: 6px solid black;
     z-index: -1;
-    margin: 5% 0% 3% 0;
+    margin: 4% 0% 2% 0;
   }   
 
   .legend-color{
-      width: 30%;
+      width: 70%;
+      height: 26px;
   }
 
   .legend-text{
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 1em;
     font-family: 'Monotype-PlantinHeadlineMTStd-MdCN';
-    padding-top: 2%;
+    padding-top: 4%;
+    
   }
 
   #legend-type-div{
@@ -234,13 +236,8 @@ select{
 }
 
 #legend-hr-2{
-    padding: 5% 0 5% 0;
+    padding: 2% 0 5% 0;
     height: 10%;
     border-bottom: 6px solid black;
     z-index: -1;
-}
-
-.legend-stripe{
-    width: 80%;
-    padding: 0 5% 0 0;
 }
