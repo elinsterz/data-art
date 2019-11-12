@@ -236,10 +236,16 @@
         })
 
         // when the page first loads, load the DSNY District shape geojson
-        d3.json('../data/DSNYDistricts.geojson').then(data => {
+        Promise.all([
+            d3.json('../data/DSNYDistricts.geojson'),
+            d3.json('../data/population.geojson')
+        ]).then(data => {
+        //d3.json('../data/DSNYDistricts.geojson').then(data => {
             // save the district shape data in disctricts variable
-            districts = data;
-            console.log(districts);
+            districts = data[0];
+            population = data[1];
+            //console.log(districts);
+            //console.log(population);
 
             // when the map loads
             map.on('load', () => {
@@ -247,6 +253,8 @@
                 var type = "Refuse";
                 var year = "2019";
                 var month = "01";
+                var color = '#FF6E00';
+                var colors = ['#FF6E00','#276FE1','#50D279', '#FF84BA'];
 
                 // when the map first loads, make a new trash layer with the default settings
                 makeNewTrashLayer();
@@ -264,45 +272,45 @@
                         // store data into objects
                         const tonnage = d;
 
-                        // // declare colors
-                        // var layer = document.getElementById('trashTypeOption');
-                        // var colors = [
-                        //     '#FF6E00',
-                        //     '#50D279',
-                        //     '#276FE1',
-                        //     '#FF84BA'
-                        // ];
-
-                        // colors.forEach(function (color) {
-
-                        //     swatch.addEventListener('click', function () {
-                        //         map.setPaintProperty(layer.value, 'fill-color', color);
-                        //     });
-
-                        // });
-
                         // get tonnage per distict, into the disctrict object
                         districts.features.forEach(district => {
                             tonnage.features.forEach(ton => {
-                                if (district.properties.districtcode === ton.properties.borough_id + ton.properties.communitydistrict) {
-                                    // only load the appropriate trash type data
-                                    if (type === "Refuse") {
-                                        district.properties.tonsTrash = parseInt(ton.properties.refusetonscollected);
-                                    } else if (type === "Metal/Glass/Plastic") {
-                                        district.properties.tonsTrash = parseInt(ton.properties.mgptonscollected);
-                                        (ton.properties.mgptonscollected);
-                                        // map.setPaintProperty(type, 'fill-color', '#50D279');
-                                    } else if (type === "Paper") {
-                                        district.properties.tonsTrash = parseInt(ton.properties.papertonscollected);
-                                        // map.setPaintProperty(layer, 'fill-color', '#50D279');
-                                    } else if (type === "Compost") {
-                                        district.properties.tonsTrash = parseInt(ton.properties.resorganicstons);
-                                        // map.setPaintProperty(layer.value, 'fill-color', '#FF84BA');
-                                        console.log('type: ' + type);
+                                population.features.forEach(pop => {
+                                    if (district.properties.districtcode === ton.properties.borough_id + ton.properties.communitydistrict && district.properties.districtcode === pop.properties.districtCode) {
+                                        // only load the appropriate trash type data
+                                        if (type === "Refuse") {
+                                            if(ton.properties.refusetonscollected != null){
+                                                district.properties.tonsTrash = parseInt(ton.properties.refusetonscollected);
+                                            }else{
+                                                district.properties.tonsTrash = 0;
+                                            } 
+                                        } else if (type === "Metal/Glass/Plastic") {
+                                            if(ton.properties.mgptonscollected != null){
+                                                district.properties.tonsTrash = parseInt(ton.properties.mgptonscollected);
+                                            }else{
+                                                district.properties.tonsTrash = 0;
+                                            }      
+                                        } else if (type === "Paper") {
+                                            if(ton.properties.papertonscollected != null){
+                                                district.properties.tonsTrash = parseInt(ton.properties.papertonscollected);
+                                            }else{
+                                                district.properties.tonsTrash = 0;
+                                            }
+                                        } else if (type === "Compost") {
+                                            if(ton.properties.resorganicstons != null){
+                                                district.properties.tonsTrash = parseInt(ton.properties.resorganicstons);
+                                            }else{
+                                                district.properties.tonsTrash = 0;
+                                            }
+                                            //console.log('type: ' + type);
+                                        }
+                                        // add population 
+                                        district.properties.population = parseInt(pop.properties._2010_population); // 2010 since all the years are 2010 or later
                                     }
-                                }
+                                })
                             })
                         })
+                        //console.log(districts)
 
                         // find the max value collected in a disctrict
                         let maxVal = d3.max(districts.features, m => m.properties.tonsTrash);
@@ -316,7 +324,7 @@
                             'type': 'fill',
                             'source': 'district-trash',
                             'paint': {
-                                'fill-color': '#50D279',
+                                'fill-color': color,
                                 'fill-opacity': [
                                     'interpolate',
                                     ['linear'],
@@ -327,24 +335,6 @@
                             }
                         })
 
-                        // // add the trash map layer
-                        // map.addLayer({
-                        //     'id': 'district-trash-layer',
-                        //     'type': 'fill',
-                        //     'source': 'district-trash',
-                        //     'paint': {
-                        //         'fill-color': ['get', 'type'],
-                        //             'Refuse', '#fbb03b',
-                        //             'Paper', '#fbb03b'
-                        //         'fill-opacity': [
-                        //             'interpolate',
-                        //             ['linear'],
-                        //             ['get', 'tonsTrash'],
-                        //             0, 0,
-                        //             maxVal, 1
-                        //         ],
-                        //     }
-                        // })
 
                         // initiate popups
                         const popup = new mapboxgl.Popup();
@@ -352,7 +342,9 @@
                         // add interactivity to see a popup with info about a district
                         map.on('mousemove', 'district-trash-layer', (e) => {
                             popup.setLngLat(e.lngLat)
-                                .setHTML(e.features[0].properties.district + ": " + e.features[0].properties.tonsTrash + ' Tons')
+                                .setHTML("District: " + e.features[0].properties.district + "<br />" 
+                                + type + ": " + e.features[0].properties.tonsTrash + ' tons' + "<br />" 
+                                + "Population: " + e.features[0].properties.population) 
                                 .addTo(map);
                         })
 
@@ -374,9 +366,19 @@
                 function updateTrashType() {
                     // access dropdown value selected
                     let index = trashTypeOption.value
-                    console.log(trashTypeOption[index].innerHTML);
+                    //console.log(trashTypeOption[index].innerHTML);
                     // assign a new trash type according to selected value
                     type = trashTypeOption[index].innerHTML;
+                    if(type === 'Refuse'){
+                       color = colors[0];
+                    } else if (type === 'Metal/Glass/Plastic'){
+                        color= colors[1];
+                    } else if (type === 'Paper'){
+                        color= colors[2];
+                    } else if (type === 'Compost'){
+                        color= colors[3];
+                    }
+
                     // remove current trash layer
                     map.removeLayer('district-trash-layer');
                     map.removeSource('district-trash')
@@ -390,7 +392,7 @@
                 function updateTrashYear() {
                     // access dropdown value selected
                     let index = trashYearOption.value
-                    console.log(trashYearOption[index].innerHTML);
+                    //console.log(trashYearOption[index].innerHTML);
                     // assign a new year according to selected value
                     year = trashYearOption[index].innerHTML;
                     // remove current trash layer
@@ -433,48 +435,5 @@
     }
 </script>
 
-
 </html>
 
-<!--
-/* NOT WORKING :-( */
-
-// "paint": {
-// "fill-color": [
-// "match",
-// ["get", "name", [{ name: "Refuse" }, { name: "Metal/Glass/Plastic" },{ name: "Paper" },{ name: "Compost" }, ]],
-// [
-// "Refuse",
-// "Metal/Glass/Plastic",
-// "Paper",
-// "Compost"
-// ],
-// "#FF84C6",
-// "#50D279",
-// "#FF84C6",
-// "#50D279"
-// ]
-// },
-
-// 'paint': {
-// 'fill-color': ['match', ['get', 'district-trash-layer'], // get the property
-// '0', '#FF84C6', // if 'GP' then yellow
-// '1', '#50D279', // if 'XX' then black
-// ] // white otherwise
-// },
-// 'paint': {
-// 'fill-color': '#FF84C6',
-// "fill-color": [
-// "match", ["string", ["get", "marker-number"]],
-// "Refuse",
-// "#FF84C6",
-// "1",
-// "#FF84C6",
-// "2",
-// "#50D279",
-// "3",
-// "#276FE1",
-// "4",
-// "#FF84BA"
-// ],
--->
