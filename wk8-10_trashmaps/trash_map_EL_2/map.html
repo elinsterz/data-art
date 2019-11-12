@@ -11,6 +11,9 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <!--STYLESHEET-->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mapstyle.css">
@@ -144,27 +147,29 @@
 
             <div id='legend-type-div'>
                 <!--WASTE-->
-                <div class='col-4'><img src="/assets/legend/legend_waste_orange_hr.png" alt="legend refuse"
+                <div class='col-4'><img src="assets/legend/legend_waste_orange_hr.png" alt="legend refuse"
                         class='legend-color'>
                     <p class='legend-text'>Refuse</p>
                 </div>
 
 
                 <!--PAPER-->
-                <div class='col-4'><img src="/assets/legend/legend_paper_green_hr.png" alt="legend paper"
+                <div class='col-4'><img src="assets/legend/legend_paper_green_hr.png" alt="legend paper"
                         class='legend-color'>
                     <p class='legend-text'>Paper</p>
                 </div>
 
                 <!--MPG-->
-                <div class='col-4'><img src="/assets/legend/legend_mpg_blue_hr.png" alt="legend mpg"
+                <div class='col-4'><img src="assets/legend/legend_mpg_blue_hr.png" alt="legend mpg"
                         class='legend-color'>
                     <p class='legend-text'>Metals<br>Plastic<br>Glass</p>
                 </div>
 
                 <!--REFUSE-->
-                <div class='col-4'><img src="/assets/legend/legend_refuse_pink_hr.png" alt="legend waste orange"
-                        class='legend-color'><p class='legend-text'>Compost</p></div>
+                <div class='col-4'><img src="assets/legend/legend_refuse_pink_hr.png" alt="legend waste orange"
+                        class='legend-color'>
+                    <p class='legend-text'>Compost</p>
+                </div>
             </div>
 
             <!--HR LEGEND-->
@@ -174,20 +179,28 @@
             <!--MORE LEGEND-->
             <div id='legend-detail-div'>
                 <!--WASTE-->
-                <div class='col-4'><img src="/assets/legend/legend_lesstrash_hr.png" alt="legend waste orange"
-                        class='legend-color'><p class='legend-text'>Less<br>Trash</p></div>
+                <div class='col-4'><img src="assets/legend/legend_lesstrash_hr.png" alt="legend waste orange"
+                        class='legend-color'>
+                    <p class='legend-text'>Less<br>Trash</p>
+                </div>
 
                 <!--PAPER-->
-                <div class='col-4'><img src="/assets/legend/legend_moretrash_hr.png" alt="legend waste orange"
-                        class='legend-color'><p class='legend-text'>More<br>Trash</p></div>
+                <div class='col-4'><img src="assets/legend/legend_moretrash_hr.png" alt="legend waste orange"
+                        class='legend-color'>
+                    <p class='legend-text'>More<br>Trash</p>
+                </div>
 
                 <!--MPG-->
-                <div class='col-4'><img src="/assets/legend/legend_less_income_hr.png" alt="legend less income"
-                        class='legend-color'><p class='legend-text'>Less<br>Income</p></div>
+                <div class='col-4'><img src="assets/legend/legend_less_income_hr.png" alt="legend less income"
+                        class='legend-color'>
+                    <p class='legend-text'>Less<br>Income</p>
+                </div>
 
                 <!--REFUSE-->
                 <div class='col-4'><img src="/assets/legend/legend_more_income_hr.png" alt="legend more income"
-                        class='legend-color'><p class='legend-text'>More<br>Income</p></div>
+                        class='legend-color'>
+                    <p class='legend-text'>More<br>Income</p>
+                </div>
             </div>
 
         </div>
