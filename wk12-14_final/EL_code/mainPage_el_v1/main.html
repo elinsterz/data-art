@@ -40,15 +40,19 @@
         <div class="right right-main-container">
             <img src="assets/maps/191204_Bronx_Injuries_v1.png" id="map-img" alt="borough" width="90%">
             <div id='' class='map-injury'></div>
-
-            <!--MAPS + HOVER DIVS-->
-            <div id='bronx-hover-map'>
-                <div id='sprain-bronx' class='hover-div'><span>sprain</span></div>
-            </div>
-
-            <!--STATS-->
-            <div id='bronx-map-stats' class='map-stats' onmouseover="sprainBronxStat(x)"> </div>
         </div>
+    </div>
+
+    <!--MAPS + HOVER DIVS-->
+    <div id='bronx-hover-map'>
+        <!-- <div id='sprain-bronx' class='hover-div' onmouseover="showStat('62 Sprains')"></div> -->
+        <div id='sprain-bronx' class='hover-div'></div>
+        <div id='bruise-bronx' class='hover-div'></div>
+    </div>
+
+    <!--STATS-->
+    <div id='bronx-map-stats'>
+        <p id = 'bronx-map-stats' class='map-stats'></p>
     </div>
 </body>
 

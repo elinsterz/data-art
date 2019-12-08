@@ -1,14 +1,14 @@
 // when the page first loads
 window.addEventListener("load", init);
-function init(){
-    
+function init() {
+
     // initiate voice 
     // var myVoice = new p5.Speech(); // new P5.Speech object
-    
+
     // store API info
     var complaintURL = "https://data.cityofnewyork.us/resource/erm2-nwe9.json?borough="
     var openDataToken = "" // * INSERT API TOKEN * //
-    
+
     // variables
     var borough = "BROOKLYN" // set defailt borough to brooklyn
     var boroughChoices = ["MANHATTAN", "BROOKLYN", "QUEENS", "BRONX", "STATEN%20ISLAND"]
@@ -24,12 +24,12 @@ function init(){
     var boroughDropdown = document.getElementById("boroughOption");
     boroughDropdown.addEventListener("change", changeBorough);
     //when you select a new borough, update the complaints
-    function changeBorough(){
+    function changeBorough() {
         // stop reading
         //myVoice.stop();
 
         //remove existing complaints
-        for(let i=0; i<1000; i++){
+        for (let i = 0; i < 1000; i++) {
             //console.log("removing")
             var oldComplaint = document.getElementById("theComplaints")
             // document.body.removeChild(oldComplaint);
@@ -43,18 +43,18 @@ function init(){
 
         //add new complaints
         updateComplaints();
-        
+
 
     }
-    
+
 
     // load complaint data 
-    function updateComplaints(){
+    function updateComplaints() {
         dataURL = complaintURL + borough + "&$$app_token=" + openDataToken;
         (d3.json(dataURL)).then(data => {
             // place raw data into object (we only want to use, date, agency, type, descriptor)
             const complaints = data;
-    
+
             // for each complain, create string to print and add it to a concatinated string
             var totalComplaints = ""
             complaints.forEach(complaint => {
@@ -67,21 +67,21 @@ function init(){
                 //var sent = agency + ": " + type + " - " + descriptor + ".  ";
                 //complaint.toPrint = sent;
                 totalComplaints += sent + ".  ";
-    
+
                 // create a new paragraph for each complaint
                 var complaintDiv = document.getElementById("complaintDiv")
                 var newComplaint = document.createElement('p');
                 newComplaint.innerHTML = sent;
                 newComplaint.id = "theComplaints";
-                if(agency === "DSNY"){
+                if (agency === "DSNY") {
                     newComplaint.style.color = "black";
                 }
                 complaintDiv.appendChild(newComplaint)
             })
 
             //start reading
-	        //myVoice.speak(totalComplaints);
-    
+            //myVoice.speak(totalComplaints);
+
             // access paragraph element
             // var para = document.getElementById("paragraphComplaints");
             // para.innerHTML = paraComplaints;   
@@ -91,15 +91,26 @@ function init(){
 
     //map stats
     let mapStats = document.getElementsByClassName('map-stats');
+    let bronxMapStats = document.getElementById('bronx-map-stats')
 
-    //bronx hover
-    //let sprainBronx = document.getElementById('sprain-bronx');
-    // sprainBronx.addEventListener('mouseover', ()=>{
-    //     sprainBronx.innerHTML = '62 Sprains';
-    //     console.log('on bronx sprain!')
-    // })
+    let sprainBronx = document.getElementById('sprain-bronx');
+    sprainBronx.addEventListener('mouseover', () => {
+        bronxMapStats.innerHTML = '62 Sprains';
+        console.log('on bronx sprain!')
+    })
 
-    function sprainBronxStat(x){
-        mapStats.innerHTML = '62 Sprains';
-    }
+    sprainBronx.addEventListener('mouseout', () => {
+        bronxMapStats.innerHTML = ' ';
+        console.log('out of bronx sprain!')
+    })
+
+
 }
+
+// function showStat(x) {
+//     let mapStats = document.getElementsByClassName('map-stats');
+//     mapStats.innerHTML = '62 Sprains';
+//     console.log('show stat');
+// }
+
+

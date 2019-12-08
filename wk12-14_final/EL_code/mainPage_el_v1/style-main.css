@@ -91,6 +91,7 @@ ANOTHER - DARK: #C1A9DE, LIGHT: #E0D6F7
     top: 0;
     width: 100%;
     height: 16rem;
+    z-index: 2;
 }
 
 .main {
@@ -111,7 +112,6 @@ ANOTHER - DARK: #C1A9DE, LIGHT: #E0D6F7
     color: rgba(0,0,0,0.25);
     line-height: 1.2em;
     top: -25vh;
-    z-index: 0;
     font-size: 3.25rem;
     line-height: 3.5rem;
 }
@@ -153,6 +153,7 @@ ANOTHER - DARK: #C1A9DE, LIGHT: #E0D6F7
     font-family: 'Champion-HTF-Lightweight';
     margin-top: 3vh;
     text-align: center;
+    z-index: 50;
 }
 
 /* triangle*/
@@ -174,6 +175,7 @@ ANOTHER - DARK: #C1A9DE, LIGHT: #E0D6F7
     width: 11.5vw;
     border-bottom: 0.25em solid black;
     text-align: center;
+    z-index: 50;
 }
 
 .borough-label-container:hover {
@@ -243,32 +245,41 @@ select{
 
 
 /* MAP */
-.map-stats{
-    border: 1px red solid;
-    height: 22vh;
+#bronx-map-stats{
+    border: 1px solid rgba(255,255,255,0);
+    height: 12vh;
     width: 20vw;
     position: fixed;
-    bottom: 2vh;
+    bottom: 1vh;
     right: 2vw;
     font-family: 'Monotype-PlantinHeadlineMTStd-MdCN';
-    font-size: 1.5em;
+    color: black;
+    font-size: 2em;
     letter-spacing: 0.1pt;
 }
 
-/* 
+.map-stats{
+    font-family: 'Monotype-PlantinHeadlineMTStd-MdCN';
+    color: black;
+    font-size: 1.25em;
+    letter-spacing: 0.1pt;
+}
+
+
 #bronx-hover-map{
-    border: 1px red solid;
+    /* border: 1px red solid; */
     z-index: 10;
-    position: relative;
+    position: fixed;
     width: 46vw;
     height: 60vh;
     top: 20vh;
-} */
+    right: 0;
+}
 
 .hover-div{
     z-index: 12;
     border: 1px red solid;
-    position: relative;
+    position: fixed;
     color: rgba(255,255,255,0);
 }
 
@@ -279,6 +290,18 @@ select{
     width: 20%;
     top: 12vh;
     right: 13vw; 
-    width: 10rem;
-    height: 10rem;
+    width: 13rem;
+    height: 13rem;
+}
+
+
+#bruise-bronx{
+    z-index:999;
+    position : absolute;
+    float: right;
+    width: 20%;
+    top: 38vh;
+    right: 24vw; 
+    width: 13rem;
+    height: 13rem;
 }
