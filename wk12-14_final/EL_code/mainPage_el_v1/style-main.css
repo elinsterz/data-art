@@ -250,18 +250,19 @@ select{
     height: 12vh;
     width: 20vw;
     position: fixed;
-    bottom: 1vh;
+    bottom: 2vh;
     right: 2vw;
     font-family: 'Monotype-PlantinHeadlineMTStd-MdCN';
     color: black;
-    font-size: 2em;
+    font-size: 1.5em;
     letter-spacing: 0.1pt;
+    line-height: 0.85em;
 }
 
 .map-stats{
     font-family: 'Monotype-PlantinHeadlineMTStd-MdCN';
     color: black;
-    font-size: 1.25em;
+    font-size: 1.5em;
     letter-spacing: 0.1pt;
 }
 
@@ -278,7 +279,7 @@ select{
 
 .hover-div{
     z-index: 12;
-    border: 1px red solid;
+    /* border: 1px red solid; */
     position: fixed;
     color: rgba(255,255,255,0);
 }
@@ -287,21 +288,70 @@ select{
     z-index:999;
     position : absolute;
     float: right;
-    width: 20%;
-    top: 12vh;
-    right: 13vw; 
-    width: 13rem;
-    height: 13rem;
+    top: 5vw;
+    right: 12vw; 
+    width: 15vw;
+    height: 15vw;
 }
 
 
 #bruise-bronx{
     z-index:999;
-    position : absolute;
+    position: absolute;
     float: right;
-    width: 20%;
-    top: 38vh;
+    top:28vw;
     right: 24vw; 
-    width: 13rem;
-    height: 13rem;
+    width: 13vw;
+    height: 13vw;   
+}
+
+
+#cut-bronx{
+    z-index:999;
+    position: absolute;
+    float: right;
+    top: 12vw;
+    left: 4vw; 
+    width: 14vw;
+    height: 14vw;  
+}
+
+#scratch-bronx{
+    z-index:999;
+    position: absolute;
+    float: right;
+    top: 4vw;
+    left: 7vw; 
+    width: 7vw;
+    height: 7vw;  
+}
+
+#foreign-bronx{
+    z-index:999;
+    position: absolute;
+    float: right;
+    top: 28vw;
+    right: 14vw; 
+    width: 5vw;
+    height: 5vw;  
+}
+
+#fracture-bronx{
+    z-index:999;
+    position: absolute;
+    float: right;
+    top: 22vw;
+    right: 16vw; 
+    width: 8vw;
+    height: 6vw;  
+}
+
+#multiple-bronx{
+    z-index:999;
+    position: absolute;
+    float: right;
+    top: 4vw;
+    left: 14vw; 
+    width: 5vw;
+    height: 5vw;  
 }

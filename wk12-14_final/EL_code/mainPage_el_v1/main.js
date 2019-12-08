@@ -93,18 +93,40 @@ function init() {
     let mapStats = document.getElementsByClassName('map-stats');
     let bronxMapStats = document.getElementById('bronx-map-stats')
 
+    //map sprain bronx
     let sprainBronx = document.getElementById('sprain-bronx');
-    sprainBronx.addEventListener('mouseover', () => {
-        bronxMapStats.innerHTML = '62 Sprains';
-        console.log('on bronx sprain!')
-    })
+    sprainBronx.addEventListener('mouseover', () => { bronxMapStats.innerHTML = '62 Sprains'; })
+    sprainBronx.addEventListener('mouseout', () => { bronxMapStats.innerHTML = ' '; })
 
-    sprainBronx.addEventListener('mouseout', () => {
-        bronxMapStats.innerHTML = ' ';
-        console.log('out of bronx sprain!')
-    })
+    //map cuts bronx
+    let cutBronx = document.getElementById('cut-bronx');
+    cutBronx.addEventListener('mouseover', () => { bronxMapStats.innerHTML = '37 Cut, Laceration, Puncture'; })
+    cutBronx.addEventListener('mouseout', () => { bronxMapStats.innerHTML = ' '; })
 
+    //map bruise bronx
+    let bruiseBronx = document.getElementById('bruise-bronx');
+    bruiseBronx.addEventListener('mouseover', () => { bronxMapStats.innerHTML = '13 Contusion, Crushing, Bruising'; })
+    bruiseBronx.addEventListener('mouseout', () => { bronxMapStats.innerHTML = ' '; })
 
+    //map scratch bronx
+    let scratchBronx = document.getElementById('scratch-bronx');
+    scratchBronx.addEventListener('mouseover', () => { bronxMapStats.innerHTML = '1 Scratches, Superficial Wounds'; })
+    scratchBronx.addEventListener('mouseout', () => { bronxMapStats.innerHTML = ' '; })
+
+    //map scratch bronx
+    let foreignBronx = document.getElementById('foreign-bronx');
+    foreignBronx.addEventListener('mouseover', () => { bronxMapStats.innerHTML = '4 Foreign Body Injuries'; })
+    foreignBronx.addEventListener('mouseout', () => { bronxMapStats.innerHTML = ' '; })
+
+    //map scratch bronx
+    let fractureBronx = document.getElementById('fracture-bronx');
+    fractureBronx.addEventListener('mouseover', () => { bronxMapStats.innerHTML = '2 Fractures'; })
+    fractureBronx.addEventListener('mouseout', () => { bronxMapStats.innerHTML = ' '; })
+
+    //map scratch bronx
+    let multipleBronx = document.getElementById('multiple-bronx');
+    multipleBronx.addEventListener('mouseover', () => { bronxMapStats.innerHTML = '3 Multiple Injuries'; })
+    multipleBronx.addEventListener('mouseout', () => { bronxMapStats.innerHTML = ' '; })
 }
 
 // function showStat(x) {

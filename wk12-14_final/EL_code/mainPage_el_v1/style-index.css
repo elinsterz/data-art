@@ -81,11 +81,10 @@ html,body{
 }
 
 #title-div{
-    width: 70vw;
+    width: 100vw;
     margin: 0 auto;
     position: fixed;
     top: 30vh;
-    left:15%;
 }
 
 #title-text{
@@ -123,10 +122,10 @@ a:hover{
 
 /* TEXTURES */
 #sprain{
-    width: 35rem;
+    width: 45rem;
     position: fixed;
-    top: -10vh;
-    left: -18vw;
+    top: -8vh;
+    left: -12vw;
     z-index: -1;
 }
 
@@ -149,7 +148,7 @@ a:hover{
     width: 25rem;
     position: fixed;
     bottom: -13vh;
-    right: 14rem;
+    right: 18rem;
     z-index: -1;
 }
 
@@ -157,7 +156,8 @@ a:hover{
     width: 5rem;
     position: fixed;
     bottom: 12vh;
-    left: 8rem;
+    left: 8vw;
+    z-index: -1;
 }
 
 #scratch{
