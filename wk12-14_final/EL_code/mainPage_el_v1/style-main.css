@@ -22,6 +22,13 @@
 }
 
 @font-face {
+    font-family:'Champion-HTF-Heavyweight';
+    src: url('assets/fonts/Champion-HTF-Heavyweight.eot');
+    src: url('assets/fonts/Champion-HTF-Welterweight.ttf');
+    format('truetype');
+}
+
+@font-face {
     font-family:'Monotype-PlantinHeadlineMTStd-MdCN';
     src: url('assets/fonts/Monotype-PlantinHeadlineMTStd-MdCn.eot');
     src: url('assets/fonts/Monotype-PlantinHeadlineMTStd-MdCn.ttf');
@@ -40,6 +47,7 @@
 
 html {
     font-size: 62.5%; 
+    background-color: #9FCFC6;
 }
 
 body {
@@ -66,7 +74,7 @@ ANOTHER - DARK: #C1A9DE, LIGHT: #E0D6F7
 
  /* MAIN CONTAINER */
 .left{
-    background-color: #69CBC2;
+    background-color: #9FCFC6;
     width: 50vw;
     z-index: -15;
 }
@@ -89,6 +97,7 @@ ANOTHER - DARK: #C1A9DE, LIGHT: #E0D6F7
     /* padding: .5rem; */
     margin-top:15vh;
     padding-top: 2vh;
+    position:relative;
 }
 
 
@@ -97,12 +106,14 @@ ANOTHER - DARK: #C1A9DE, LIGHT: #E0D6F7
     padding: .5rem;
     width: 50vw; 
     /* height: 100%;   */
-    background-color: #69CBC2;
+    background-color: #9FCFC6;
     font-family: "Monotype-PlantinHeadlineMTStd-MdCN";
     color: rgba(0,0,0,0.25);
     line-height: 1.2em;
     top: -25vh;
-    z-index: 1;
+    z-index: 0;
+    font-size: 3.25rem;
+    line-height: 3.5rem;
 }
 
 .right-main-container {
@@ -159,8 +170,8 @@ ANOTHER - DARK: #C1A9DE, LIGHT: #E0D6F7
     font-family: 'Champion-HTF-Lightweight';
     position: absolute;
     top: 1rem;
-    left: 44vw;
-    width: 12vw;
+    left: 45vw;
+    width: 11.5vw;
     border-bottom: 0.25em solid black;
     text-align: center;
 }
@@ -231,5 +242,43 @@ select{
 }
 
 
+/* MAP */
+.map-stats{
+    border: 1px red solid;
+    height: 22vh;
+    width: 20vw;
+    position: fixed;
+    bottom: 2vh;
+    right: 2vw;
+    font-family: 'Monotype-PlantinHeadlineMTStd-MdCN';
+    font-size: 1.5em;
+    letter-spacing: 0.1pt;
+}
 
+/* 
+#bronx-hover-map{
+    border: 1px red solid;
+    z-index: 10;
+    position: relative;
+    width: 46vw;
+    height: 60vh;
+    top: 20vh;
+} */
 
+.hover-div{
+    z-index: 12;
+    border: 1px red solid;
+    position: relative;
+    color: rgba(255,255,255,0);
+}
+
+#sprain-bronx{
+    z-index:999;
+    position : absolute;
+    float: right;
+    width: 20%;
+    top: 12vh;
+    right: 13vw; 
+    width: 10rem;
+    height: 10rem;
+}

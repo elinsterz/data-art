@@ -88,4 +88,18 @@ function init(){
         })
 
     }
+
+    //map stats
+    let mapStats = document.getElementsByClassName('map-stats');
+
+    //bronx hover
+    //let sprainBronx = document.getElementById('sprain-bronx');
+    // sprainBronx.addEventListener('mouseover', ()=>{
+    //     sprainBronx.innerHTML = '62 Sprains';
+    //     console.log('on bronx sprain!')
+    // })
+
+    function sprainBronxStat(x){
+        mapStats.innerHTML = '62 Sprains';
+    }
 }

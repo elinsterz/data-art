@@ -10,35 +10,44 @@
 </head>
 
 <body>
-    <div id = 'page-container'>
-        <div class="navbar">
-            <div class="left left-heading-container">
-                <h1 class="section-title">311 complaints</h1>
-            </div>
-            <div class="right right-heading-container">
-                <h1 class="section-title">Sanitation worker injuries</h1>
-            </div>
-
-            <div class="borough-label-container">
-                <select id="boroughOption">
-                    <option value="0">Manhattan</option>
-                    <option value="1">Brooklyn</option>
-                    <option value="2">Queens</option>
-                    <option value="3">The Bronx</option>
-                    <option value="4">Staten Island</option>
-                </select>
-                <div class="borough-label"><img src="/assets/ui/triangle.svg" alt="dropdown triangle"></div>
-                <!-- <p class="borough-label"><img src="/assets/ui/triangle.svg" alt="dropdown triangle"></p> -->
-            </div>
+    <div class="navbar">
+        <div class="left left-heading-container">
+            <h1 class="section-title">311 complaints</h1>
+        </div>
+        <div class="right right-heading-container">
+            <h1 class="section-title">Sanitation worker injuries</h1>
         </div>
 
+        <div class="borough-label-container">
+            <select id="boroughOption">
+                <option value="0">Manhattan</option>
+                <option value="1">Brooklyn</option>
+                <option value="2">Queens</option>
+                <option value="3">The Bronx</option>
+                <option value="4">Staten Island</option>
+            </select>
+            <div class="borough-label"><img src="/assets/ui/triangle.svg" alt="dropdown triangle"></div>
+            <!-- <p class="borough-label"><img src="/assets/ui/triangle.svg" alt="dropdown triangle"></p> -->
+        </div>
+    </div>
 
-        <div class="main">
-            <div class="left left-main-container" id="complaintDiv"></div>
-            <div class="right right-main-container">
-                <img src="assets/maps/191204_Bronx_Injuries_v1.png" alt="borough" width="90%">
-                <div id='' class='map-injury'></div>
+
+    <div class="main">
+        <!--LEFT CONTAINER-->
+        <div class="left left-main-container" id="complaintDiv"></div>
+
+        <!--RIGHT CONTAINER-->
+        <div class="right right-main-container">
+            <img src="assets/maps/191204_Bronx_Injuries_v1.png" id="map-img" alt="borough" width="90%">
+            <div id='' class='map-injury'></div>
+
+            <!--MAPS + HOVER DIVS-->
+            <div id='bronx-hover-map'>
+                <div id='sprain-bronx' class='hover-div'><span>sprain</span></div>
             </div>
+
+            <!--STATS-->
+            <div id='bronx-map-stats' class='map-stats' onmouseover="sprainBronxStat(x)"> </div>
         </div>
     </div>
 </body>
