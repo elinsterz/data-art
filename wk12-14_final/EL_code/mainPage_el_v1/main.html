@@ -11,19 +11,19 @@
 
 <body>
     <div class="navbar">
-        <div class="left left-heading-container">
+        <div class="left left-heading-container" id='complaintNav'>
             <h1 class="section-title">311 complaints</h1>
         </div>
-        <div class="right right-heading-container">
+        <div class="right right-heading-container" id='injuryNav'>
             <h1 class="section-title">Sanitation worker injuries</h1>
         </div>
 
         <div class="borough-label-container">
             <select id="boroughOption">
-                <option value="0">Manhattan</option>
+                <option value="0">The Bronx</option>
                 <option value="1">Brooklyn</option>
                 <option value="2">Queens</option>
-                <option value="3">The Bronx</option>
+                <option value="3">Manhattan</option>
                 <option value="4">Staten Island</option>
             </select>
             <div class="borough-label"><img src="/assets/ui/triangle.svg" alt="dropdown triangle"></div>
@@ -37,28 +37,59 @@
         <div class="left left-main-container" id="complaintDiv"></div>
 
         <!--RIGHT CONTAINER-->
-        <div class="right right-main-container">
+        <div class="right right-main-container" id="injuryDiv">
             <img src="assets/maps/191204_Bronx_Injuries_v1.png" id="map-img" alt="borough" width="90%">
             <div id='' class='map-injury'></div>
         </div>
     </div>
 
     <!--MAPS + HOVER DIVS-->
-    <div id='bronx-hover-map'>
+    <div id='bronx-hover-map' class='hover-map-container'>
         <!-- <div id='sprain-bronx' class='hover-div' onmouseover="showStat('62 Sprains')"></div> -->
-        <div id='sprain-bronx' class='hover-div'></div>
-        <div id='bruise-bronx' class='hover-div'></div>
-        <div id='cut-bronx' class='hover-div'></div>
-        <div id='scratch-bronx' class='hover-div'></div>
-        <div id='foreign-bronx' class='hover-div'></div>
-        <div id='fracture-bronx' class='hover-div'></div>
-        <div id='multiple-bronx' class='hover-div'></div>
+        <div id='sprain-bronx' class='hover-bronx-div'></div>
+        <div id='bruise-bronx' class='hover-bronx-div'></div>
+        <div id='cut-bronx' class='hover-bronx-div'></div>
+        <div id='scratch-bronx' class='hover-bronx-div'></div>
+        <div id='foreign-bronx' class='hover-bronx-div'></div>
+        <div id='fracture-bronx' class='hover-bronx-div'></div>
+        <div id='multiple-bronx' class='hover-bronx-div'></div>
     </div>
 
+
+    <div id='brooklyn-hover-map' class='hover-map-container'>
+        <div id='sprain-brooklyn' class='hover-brookyln-div'></div>
+        <div id='bruise-brooklyn' class='hover-brookyln-div'></div>
+        <div id='cut-brooklyn' class='hover-brookyln-div'></div>
+        <div id='scratch-brooklyn' class='hover-brookyln-div'></div>
+        <div id='foreign-brooklyn' class='hover-brookyln-div'></div>
+        <div id='fracture-brooklyn' class='hover-brookyln-div'></div>
+        <div id='multiple-brooklyn' class='hover-brookyln-div'></div>
+    </div>
+
+
+
+
     <!--STATS-->
-    <div id='bronx-map-stats'>
-        <p id = 'bronx-map-stats' class='map-stats'></p>
+    <div id='map-stats'>
+        <p id='borough-map-stats' class='map-stats'></p>
     </div>
 </body>
 
 </html>
+
+
+
+<!--
+
+
+    <div id='brooklyn-hover-map' class= 'hover-map-container'>
+        <div id='sprain-brooklyn' class='hover-div'></div>
+        <div id='bruise-brooklyn' class='hover-div'></div>
+        <div id='cut-brooklyn' class='hover-div'></div>
+        <div id='scratch-brooklyn' class='hover-div'></div>
+        <div id='foreign-brooklyn' class='hover-div'></div>
+        <div id='fracture-brooklyn' class='hover-div'></div>
+        <div id='multiple-brooklyn' class='hover-div'></div>
+    </div> 
+
+-->
