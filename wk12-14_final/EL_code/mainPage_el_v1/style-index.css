@@ -65,26 +65,27 @@ html,body{
 
 #ny-header{
     font-family: 'Champion-HTF-Heavyweight';
-    font-size: 1em;
+    font-size: 0.875rem;
     z-index: 2;
     position: fixed;
     text-transform: uppercase;
     letter-spacing: 0.375pt;
     text-align: center;
-    width: 7rem;
-    top: 2.5rem;
-    height: 2rem;
+    width: 6.5rem;
+    top: 2.25rem;
+    height: 1.75rem;
     /* border: 1px solid red; */
     border-bottom: 0.4em solid black;
     margin: 0 auto;
-    left:45%;
+    left:46.5vw;
 }
 
 #title-div{
     width: 100vw;
     margin: 0 auto;
     position: fixed;
-    top: 36vh;
+    top: 32vh;
+    text-align: center;
 }
 
 #title-text{
@@ -98,8 +99,8 @@ html,body{
 #start-div{
     width: 10vw;
     position: fixed;
-    top: 80vh;
-    left: 47vw;
+    top: 78vh;
+    left: 48vw;
 }
 
 #start-text{
