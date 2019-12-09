@@ -84,7 +84,7 @@ html,body{
     width: 100vw;
     margin: 0 auto;
     position: fixed;
-    top: 30vh;
+    top: 36vh;
 }
 
 #title-text{
@@ -98,7 +98,7 @@ html,body{
 #start-div{
     width: 10vw;
     position: fixed;
-    top: 75vh;
+    top: 80vh;
     left: 47vw;
 }
 

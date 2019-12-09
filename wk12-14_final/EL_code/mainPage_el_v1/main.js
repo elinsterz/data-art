@@ -53,7 +53,7 @@ function init() {
             bronxMapData();
 
         } else if (borough === 'MANHATTAN') {
-            // for (let el of document.querySelectorAll('.hover-bronx-div')) el.style.visibility = 'hidden';
+
             console.log('manhattan')
             complaintDiv.style.backgroundColor = "#D4C0B4";
             complaintNav.style.backgroundColor = "#D4C0B4";
@@ -63,10 +63,6 @@ function init() {
 
         } else if (borough === 'BROOKLYN') {
             console.log('brookyln')
-
-            for (let el of document.querySelectorAll('.hover-bronx-div')) el.style.block = 'none';
-            for (let el of document.querySelectorAll('.hover-brooklyn-div')) el.style.visibility = 'visible';
-
             brooklynMapData();
         } else if (borough === 'QUEENS') {
             console.log('queens')
@@ -141,23 +137,20 @@ function init() {
 
     /* SHOW BRONX INJURY DATA*/
     function bronxMapData() {
-        // /*removing other boroughs divs*/
-        document.getElementById('sprain-brooklyn').style.visibility = 'hidden';
-        document.getElementById('cut-brooklyn').style.visibility = 'hidden';
-        document.getElementById('bruise-brooklyn').style.visibility = 'hidden';
-        document.getElementById('foreign-brooklyn').style.visibility = 'hidden';
-        document.getElementById('multiple-brooklyn').style.visibility = 'hidden';
-        document.getElementById('scratch-brooklyn').style.visibility = 'hidden';
-        document.getElementById('fracture-brooklyn').style.visibility = 'hidden';
+        // // /*showother boroughs divs*/
+        // var divsToShow = document.getElementsByClassName("hover-bronx-div"); //divsToHide is an array
+        // for (var i = 0; i < divsToShow.length; i++) {
+        //     divsToShow[i].style.visibility = "visible"; // or
+        //     divsToShow[i].style.display = "block"; // depending on what you're doing
+        // }
+        // // /*removing other boroughs divs*/
+        // var divsToHide = document.getElementsByClassName("hover-brooklyn-div"); //divsToHide is an array
+        // for (var i = 0; i < divsToHide.length; i++) {
+        //     divsToHide[i].style.visibility = "hidden"; // or
+        //     divsToHide[i].style.display = "none"; // depending on what you're doing
+        // }
 
-        /*show bronx div */
-        document.getElementById('sprain-bronx').style.visibility = 'visible';
-        document.getElementById('cut-bronx').style.visibility = 'visible';
-        document.getElementById('bruise-bronx').style.visibility = 'visible';
-        document.getElementById('foreign-bronx').style.visibility = 'visible';
-        document.getElementById('multiple-bronx').style.visibility = 'visible';
-        document.getElementById('scratch-bronx').style.visibility = 'visible';
-        document.getElementById('fracture-bronx').style.visibility = 'visible';
+        
 
         // select backgrounds
         complaintDiv.style.backgroundColor = "#9FCFC6";
@@ -209,17 +202,17 @@ function init() {
     /* SHOW BROOKLYN INJURY DATA*/
     function brooklynMapData() {
         // /*removing other boroughs divs*/
-        document.getElementById('sprain-bronx').style.visibility = 'hidden';
-        document.getElementById('cut-bronx').style.visibility = 'hidden';
-        document.getElementById('bruise-bronx').style.visibility = 'hidden';
-        document.getElementById('foreign-bronx').style.visibility = 'hidden';
-        document.getElementById('multiple-bronx').style.visibility = 'hidden';
-        document.getElementById('scratch-bronx').style.visibility = 'hidden';
-        document.getElementById('fracture-bronx').style.visibility = 'hidden';
+        var divsToHide = document.getElementsByClassName("hover-bronx-div"); //divsToHide is an array
+        for (var i = 0; i < divsToHide.length; i++) {
+            divsToHide[i].style.visibility = "hidden"; // or
+            divsToHide[i].style.display = "none"; // depending on what you're doing
+        }
 
 
         document.getElementById('sprain-brooklyn').style.visibility = 'visible';
         document.getElementById('cut-brooklyn').style.visibility = 'visible';
+        document.getElementById('bruise-brooklyn').style.visibility = 'visible'
+
 
 
         complaintDiv.style.backgroundColor = "#D4DD8C";

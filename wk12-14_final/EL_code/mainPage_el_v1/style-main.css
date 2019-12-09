@@ -1,5 +1,4 @@
 /* SETUP FONTS */
-
 @font-face {
     font-family:'Champion-HTF-Lightweight';
     src: url('assets/fonts/Champion-HTF-Lightweight.eot');
@@ -404,26 +403,24 @@ select{
     z-index:999;
     position: absolute;
     float: right;
-    top: 12vw;
-    left: 4vw; 
-    width: 14vw;
-    height: 14vw;  
+    top: 2vw;
+    left: 6vw; 
+    width: 15vw;
+    height: 18vw;  
 }
 
-
-
-/* #bruise-brooklyn{
+ #bruise-brooklyn{
     z-index:999;
     position: absolute;
     float: right;
-    top:28vw;
-    right: 24vw; 
-    width: 13vw;
-    height: 13vw;   
+    top: 9vw;
+    right: 12vw; 
+    width: 12vw;
+    height: 10vw;   
 }
 
 
-
+/*
 #scratch-brooklyn{
     z-index:999;
     position: absolute;
