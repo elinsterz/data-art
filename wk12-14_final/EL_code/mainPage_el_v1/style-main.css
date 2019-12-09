@@ -34,8 +34,7 @@
     format('truetype');
 }
 
-/* scroll  width */
-
+/* SCROLLBAR */
 ::-webkit-scrollbar {
     width: 1.25vw;
   }
@@ -59,7 +58,6 @@
   }
 
 /* SETUP PAGE */
-
 *,
 *::after,
 *::before {
@@ -70,7 +68,7 @@
 
 html {
     font-size: 62.5%; 
-    direction : ltr;
+    overflow-x: hidden;
 }
 
 body {
@@ -287,7 +285,7 @@ select{
     height: 12vh;
     width: 15vw;
     position: fixed;
-    bottom: 2vh;
+    bottom: 6vh;
     right: 1.5vw;
     font-family: 'Monotype-PlantinHeadlineMTStd-MdCN';
     color: black;
