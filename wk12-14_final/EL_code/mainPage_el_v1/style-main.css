@@ -306,7 +306,7 @@ select{
 
 /* BRONX */ 
 #bronx-hover-map{
-    border: 1px turquoise solid;
+    /* border: 1px turquoise solid; */
     z-index: 10;
     position: fixed;
     width: 46vw;
@@ -318,7 +318,7 @@ select{
 
 .hover-bronx-div{
     z-index: 12;
-    border: 1px turquoise solid;
+    /* border: 1px turquoise solid; */
     position: fixed;
     color: rgba(255,255,255,0);
 }
@@ -399,7 +399,7 @@ select{
 
 /* BROOKLYN */ 
 #brooklyn-hover-map{
-    border: 1px green solid;
+    /* border: 1px green solid; */
     z-index: 10;
     position: fixed;
     width: 46vw;
@@ -411,24 +411,22 @@ select{
 
 .hover-brooklyn-div{
     z-index: 12;
-    border: 1px green solid;
+    /* border: 1px green solid; */
     position: fixed;
     color: rgba(255,255,255,0);
 }
 
 #sprain-brooklyn{
     z-index:990;
-    border: 1px green solid;
     position : absolute;
     float: right;
     top: 20vw;
     left: 5vw;
-    width: 17vw;
+    width: 22vw;
     height: 17vw;
 }
 
 #cut-brooklyn{
-    border: 1px green solid;
     z-index:991;
     position: absolute;
     float: right;
@@ -439,7 +437,6 @@ select{
 }
 
  #bruise-brooklyn{
-    border: 1px green solid;
     z-index:992;
     position: absolute;
     float: right;
@@ -450,7 +447,6 @@ select{
 }
 
 #scratch-brooklyn{
-    border: 1px green solid;
     z-index:993;
     position: absolute;
     float: right;
@@ -461,7 +457,6 @@ select{
 }
 
 #foreign-brooklyn{
-    border: 1px green solid;
     z-index:994;
     position: absolute;
     float: right;
@@ -472,7 +467,6 @@ select{
 }
 
 #fracture-brooklyn{
-    border: 1px green solid;
     z-index:995;
     position: absolute;
     float: right;
@@ -483,7 +477,6 @@ select{
 }
 
 #multiple-brooklyn{
-    border: 1px green solid;
     z-index:999;
     position: absolute;
     float: right;
@@ -495,7 +488,7 @@ select{
 
 /* QUEENS */ 
 #queens-hover-map{
-    border: 1px chartreuse solid;
+    /* border: 1px chartreuse solid; */
     z-index: 10;
     position: fixed;
     width: 46vw;
@@ -506,7 +499,7 @@ select{
 
 .hover-queens-div{
     z-index: 12;
-    border: 1px chartreuse solid;
+    /* border: 1px chartreuse solid; */
     position: fixed;
     color: rgba(255,255,255,0);
 }
@@ -584,7 +577,7 @@ select{
 
 /* MANHATTAN */ 
 #manhattan-hover-map{
-    border: 1px saddlebrown solid;
+    /* border: 1px saddlebrown solid; */
     z-index: 10;
     position: fixed;
     width: 46vw;
@@ -595,7 +588,7 @@ select{
 
 .hover-manhattan-div{
     z-index: 12;
-    border: 1px saddlebrown solid;
+    /* border: 1px saddlebrown solid; */
     position: fixed;
     color: rgba(255,255,255,0);
 }
@@ -604,76 +597,158 @@ select{
     z-index:1;
     position : absolute;
     float: right;
-    top: 13vw;
-    left: 13vw;
-    width: 26vw;
-    height: 22vw;
+    top: 27vw;
+    left: 8vw;
+    width: 12vw;
+    height: 15vw;
 }
 
-/*
-#cut-queens{
-    border: 1px chartreuse solid;
+#cut-manhattan{
     z-index:2;
     position: absolute;
     float: right;
-    top: 1.7vw;
-    left: 5vw; 
-    width: 15vw;
-    height: 17vw;  
+    top: 16vw;
+    left: 14vw; 
+    width: 8vw;
+    height: 11vw;  
 }
 
- #bruise-queens{
-    border: 1px chartreuse solid;
+ #bruise-manhattan{
     z-index: 3;
     position: absolute;
     float: right;
-    top: 1vw;
-    right: 12vw; 
-    width: 11vw;
+    top: 0vw;
+    right: 17vw; 
+    width: 6vw;
     height: 9vw;   
 }
 
-#scratch-queens{
-    border: 1px chartreuse solid;
-    z-index:993;
+#scratch-manhattan{
+    z-index:4;
     position: absolute;
     float: right;
-    top: 34vw;
-    right: 30vw; 
-    width: 8vw;
-    height: 7vw;  
+    top: 14vw;
+    right: 21vw; 
+    width: 4vw;
+    height: 5vw;  
 }
 
-#foreign-queens{
-    border: 1px chartreuse solid;
-    z-index:3;
+#foreign-manhattan{
+    z-index:5;
     position: absolute;
     float: right;
-    top: 1vw;
+    top: 10vw;
     right: 22vw; 
-    width: 5vw;
-    height: 6vw;  
+    width: 4vw;
+    height: 4vw;  
 }
 
-#fracture-queens{
-    border: 1px chartreuse solid;
+#fracture-manhattan{
+    z-index:6;
+    position: absolute;
+    float: right;
+    top: 25vw;
+    right: 29vw; 
+    width: 4vw;
+    height: 5vw;  
+}
+
+
+#multiple-manhattan{
+    z-index: 7;
+    position: absolute;
+    float: right;
+    top: 32vw;
+    right: 27vw; 
+    width: 5vw;
+    height: 4vw;  
+} 
+
+/* STATEN ISLAND */ 
+#staten-hover-map{
+    /* border: 1px purple solid; */
+    z-index: 10;
+    position: fixed;
+    width: 46vw;
+    height: 70vh;
+    top: 20vh;
+    right: 0;
+}
+
+.hover-staten-div{
+    z-index: 12;
+    /* border: 1px purple solid; */
+    position: fixed;
+    color: rgba(255,255,255,0);
+}
+
+#sprain-staten{
+    z-index:1;
+    position : absolute;
+    float: right;
+    top: 16vw;
+    left: 10vw;
+    width: 20vw;
+    height: 20vw;
+}
+
+#cut-staten{
+    z-index:2;
+    position: absolute;
+    float: right;
+    top: 14vw;
+    left: 18vw; 
+    width: 18vw;
+    height: 16vw;  
+}
+
+ #bruise-staten{
+    z-index: 3;
+    position: absolute;
+    float: right;
+    top: 4vw;
+    right: 10vw; 
+    width: 16vw;
+    height: 10vw;   
+}
+
+#scratch-staten{
     z-index:4;
     position: absolute;
     float: right;
     top: 10vw;
-    right: 13vw; 
-    width: 8vw;
-    height: 6vw;  
+    right: 26vw; 
+    width: 7vw;
+    height: 5vw;  
+}
+
+#foreign-staten{
+    z-index:5;
+    position: absolute;
+    float: right;
+    top: 10vw;
+    right: 9vw; 
+    width: 7vw;
+    height: 5vw;  
 }
 
 
-#multiple-queens{
-    border: 1px chartreuse solid;
-    z-index: 5;
+#fracture-staten{
+    z-index:6;
     position: absolute;
     float: right;
-    top: 6vw;
-    right: 8vw; 
+    top: 32vw;
+    right: 30vw; 
     width: 7vw;
     height: 6vw;  
+}
+
+#multiple-staten{
+    z-index: 7;
+    position: absolute;
+    float: right;
+    top: 35vw;
+    left: 2vw; 
+    width: 5vw;
+    height: 5vw;  
 } 

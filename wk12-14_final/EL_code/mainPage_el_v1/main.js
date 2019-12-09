@@ -23,6 +23,8 @@ function init() {
     // access dropdown and add a event listener to it
     var boroughDropdown = document.getElementById("boroughOption");
     boroughDropdown.addEventListener("change", changeBorough);
+
+
     //when you select a new borough, update the complaints
     function changeBorough() {
         // stop reading
@@ -41,26 +43,21 @@ function init() {
         borough = boroughChoices[index];
         // console.log(borough)
 
-        //get documents for dom
-        let complaintDiv = document.getElementById('complaintDiv');
-        let complaintNav = document.getElementById('complaintNav');
-        let injuryDiv = document.getElementById('injuryDiv');
-        let injuryNav = document.getElementById('injuryNav');
-
         //get boroughs
         let bronx = document.getElementById("bronx-hover-map");
         let brooklyn = document.getElementById("brooklyn-hover-map");
         let queens = document.getElementById('queens-hover-map');
         let manhattan = document.getElementById('manhattan-hover-map');
+        let staten = document.getElementById('staten-hover-map');
 
         //when borough changes, change style + map data
         if (borough === 'BRONX') {
             console.log('bronx')
-
             /*hide other boroughs divs*/
             brooklyn.style.visibility = 'hidden';
             queens.style.visibility = 'hidden';
             manhattan.style.visibility = 'hidden';
+            staten.style.visibility = 'hidden';
 
             bronxMapData();
         } else if (borough === 'MANHATTAN') {
@@ -69,6 +66,7 @@ function init() {
             bronx.style.visibility = 'hidden';
             brooklyn.style.visibility = 'hidden';
             queens.style.visibility = 'hidden';
+            staten.style.visibility = 'hidden';
 
             manMapData();
         } else if (borough === 'BROOKLYN') {
@@ -78,6 +76,7 @@ function init() {
             bronx.style.visibility = 'hidden';
             queens.style.visibility = 'hidden';
             manhattan.style.visibility = 'hidden';
+            staten.style.visibility = 'hidden';
 
             brooklynMapData();
         } else if (borough === 'QUEENS') {
@@ -87,21 +86,24 @@ function init() {
             bronx.style.visibility = 'hidden';
             brooklyn.style.visibility = 'hidden';
             manhattan.style.visibility = 'hidden';
+            staten.style.visibility = 'hidden';
 
             queensMapData();
         } else if (borough === 'STATEN%20ISLAND') {
             console.log('staten island')
-            complaintDiv.style.backgroundColor = "#D0B4C0";
-            complaintNav.style.backgroundColor = "#D0B4C0";
-            injuryNav.style.backgroundColor = "#E4D9DE";
-            injuryDiv.style.backgroundColor = "#E4D9DE";
-            mapImg.src = "/assets/maps/191204_StatenIsland_Injuries_v3.png"
-        }
+
+            /*hide other boroughs divs*/
+            bronx.style.visibility = 'hidden';
+            brooklyn.style.visibility = 'hidden';
+            manhattan.style.visibility = 'hidden';
+            queens.style.visibility = 'hidden';
+
+            statenMapData();
+        } 
 
         //add new complaints
         updateComplaints();
     }
-
 
     // load complaint data 
     function updateComplaints() {
@@ -143,8 +145,6 @@ function init() {
         })
 
     }
-
-
 
     //get documents for dom
     let complaintDiv = document.getElementById('complaintDiv');
@@ -311,9 +311,8 @@ function init() {
         multipleQueens.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
     }
 
-    /* SHOW QUEENS INJURY DATA*/
+    /* SHOW MANHATTAN INJURY DATA*/
     function manMapData() {
-
         //reshow the hover map
         let showMan = document.getElementById("manhattan-hover-map");
         showMan.style.visibility = 'visible';
@@ -334,43 +333,95 @@ function init() {
         sprainMan.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '83 Sprains'; })
         sprainMan.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
 
-        // //map cut
-        // let cutQueens = document.getElementById('cut-queens');
-        // cutQueens.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '45 Cut, Laceration, Puncture'; })
-        // cutQueens.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
+        //map cut
+        let cutMan = document.getElementById('cut-manhattan');
+        cutMan.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '38 Cut, Laceration, Puncture'; })
+        cutMan.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
 
-        // //map bruise
-        // let bruiseQueens = document.getElementById('bruise-queens');
-        // bruiseQueens.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '40 Contusion, Crushing, Bruising'; })
-        // bruiseQueens.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
+        //map bruise
+        let bruiseMan = document.getElementById('bruise-manhattan');
+        bruiseMan.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '31 Contusion, Crushing, Bruising'; })
+        bruiseMan.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
 
-        // //map scratch
-        // let scratchQueens = document.getElementById('scratch-queens');
-        // scratchQueens.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '3 Scratches, Superficial Wounds'; })
-        // scratchQueens.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
+        //map scratch
+        let scratchMan = document.getElementById('scratch-manhattan');
+        scratchMan.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '3 Scratches, Superficial Wounds'; })
+        scratchMan.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
 
-        // //map foreign
-        // let foreignQueens = document.getElementById('foreign-queens');
-        // foreignQueens.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '6 Foreign Body Injuries'; })
-        // foreignQueens.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
+        //map foreign
+        let foreignMan = document.getElementById('foreign-manhattan');
+        foreignMan.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '7 Foreign Body Injuries'; })
+        foreignMan.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
 
-        // //map fracture
-        // let fractureQueens = document.getElementById('fracture-queens');
-        // fractureQueens.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '10 Fractures'; })
-        // fractureQueens.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
+        //map fracture
+        let fractureMan = document.getElementById('fracture-manhattan');
+        fractureMan.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '10 Fractures'; })
+        fractureMan.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
 
-        // //map multiple
-        // let multipleQueens = document.getElementById('multiple-queens');
-        // multipleQueens.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '4 Multiple Injuries'; })
-        // multipleQueens.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
+        //map multiple
+        let multipleMan = document.getElementById('multiple-manhattan');
+        multipleMan.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '4 Multiple Injuries'; })
+        multipleMan.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
     }
 
+    /* SHOW STATEN ISLAND INJURY DATA*/
+    function statenMapData() {
+        //reshow the hover map
+        let showStaten = document.getElementById("staten-hover-map");
+        showStaten.style.visibility = 'visible';
 
+        // select backgrounds
+        complaintDiv.style.backgroundColor = "#D0B4C0";
+        complaintNav.style.backgroundColor = "#D0B4C0";
+        injuryNav.style.backgroundColor = "#E4D9DE";
+        injuryDiv.style.backgroundColor = "#E4D9DE";
+        mapImg.src = "/assets/maps/191204_StatenIsland_Injuries_v3.png"
+
+        //map stats
+        let mapStats = document.getElementsByClassName('map-stats');
+        let boroughMapStats = document.getElementById('borough-map-stats')
+
+        //map sprain
+        let sprainStaten = document.getElementById('sprain-staten');
+        sprainStaten.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '53 Sprains'; })
+        sprainStaten.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
+
+        //map cut
+        let cutStaten = document.getElementById('cut-staten');
+        cutStaten.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '17 Cut, Laceration, Puncture'; })
+        cutStaten.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
+
+        //map bruise
+        let bruiseStaten = document.getElementById('bruise-staten');
+        bruiseStaten.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '17 Contusion, Crushing, Bruising'; })
+        bruiseStaten.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
+
+        //map scratch
+        let scratchStaten = document.getElementById('scratch-staten');
+        scratchStaten.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '1 Scratches, Superficial Wounds'; })
+        scratchStaten.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
+
+        //map foreign
+        let foreignStaten = document.getElementById('foreign-staten');
+        foreignStaten.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '2 Foreign Body Injuries'; })
+        foreignStaten.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
+
+        //map fracture
+        let fractureStaten = document.getElementById('fracture-staten');
+        fractureStaten.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '2 Fractures'; })
+        fractureStaten.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
+
+        //map multiple
+        let multipleStaten = document.getElementById('multiple-staten');
+        multipleStaten.addEventListener('mouseover', () => { boroughMapStats.innerHTML = '2 Multiple Injuries'; })
+        multipleStaten.addEventListener('mouseout', () => { boroughMapStats.innerHTML = ' '; })
+    }
 }
 
 
 
-////////* DUMPSTER SECTION  *//////////
+
+////////*  DUMPSTER SECTION  *//////////
 
         // // /*removing other boroughs divs*/
         // var divsToHide = document.getElementsByClassName("hover-bronx-div"); //divsToHide is an array
@@ -419,3 +470,9 @@ function init() {
         //     divsToHide[i].style.visibility = "hidden"; // or
         //     divsToHide[i].style.display = "none"; // depending on what you're doing
         // }
+
+        //get documents for dom
+        // let complaintDiv = document.getElementById('complaintDiv');
+        // let complaintNav = document.getElementById('complaintNav');
+        // let injuryDiv = document.getElementById('injuryDiv');
+        // let injuryNav = document.getElementById('injuryNav');
